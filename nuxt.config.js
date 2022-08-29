@@ -34,7 +34,34 @@ export default {
       { hid: 'og:description' , property: 'og:description' , content: '鳳飛飛'},
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/dist/favicon.ico' }
+      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      // { rel: 'stylesheet', href: '/css/bootstrap.min.css' },
+      // { rel: 'stylesheet', href: '/css/revoulation.css' },
+      // { rel: 'stylesheet', href: '/css/plugins.min.css' },
+      // { rel: 'stylesheet', href: '/css/style.css' },
+      // { rel: 'stylesheet', href: '/css/custom.css' },
+      { rel: 'icon', type: 'image/x-icon', href: '/dist/favicon.ico' },
+      { rel: 'stylesheet', href: '/dist/css/bootstrap.min.css' },
+      { rel: 'stylesheet', href: '/dist/css/revoulation.css' },
+      { rel: 'stylesheet', href: '/dist/css/plugins.min.css' },
+      { rel: 'stylesheet', href: '/dist/css/style.css' },
+      { rel: 'stylesheet', href: '/dist/css/custom.css' },
+    ],
+    scripts: [
+      // { src: '/js/vendor/vendor.min.js' },
+      // { src: '/js/plugins.min.js' },
+      // { src: '/js/revolution.tools.min.js' },
+      // { src: '/js/revolution.extension.min.js' },
+      // { src: '/js/main.js' },
+      // { src: '/js/revoulation.js' },
+      // { src: '/js/custom.js' }
+      { src: '/dist/js/vendor/vendor.min.js' },
+      { src: '/dist/js/plugins.min.js' },
+      { src: '/dist/js/revolution.tools.min.js' },
+      { src: '/dist/js/revolution.extension.min.js' },
+      { src: '/dist/js/main.js' },
+      { src: '/dist/js/revoulation.js' },
+      { src: '/dist/js/custom.js' }
     ]
   },
   // publicRuntimeConfig: {

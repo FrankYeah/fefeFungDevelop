@@ -1,6 +1,6 @@
 <template>
   <div>
-    不
+    測試
   </div>
 </template>
 
@@ -8,6 +8,7 @@
 import { defineComponent, ref, reactive } from 'vue'
 
 export default defineComponent({
+  auth: false,
   setup (props, context) {
 
     return {

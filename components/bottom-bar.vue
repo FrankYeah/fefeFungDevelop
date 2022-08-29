@@ -1,7 +1,88 @@
 <template>
-  <div>
-    不
+  <!-- Footer -->
+  <footer id="bk-footer"
+  class="page-footer bg_color--3 pl--150 pr--150 pl_lg--30 pr_lg--30 pl_md--30 pr_md--30 pl_sm--5 pr_sm--5">
+  <!-- Start Footer Top Area -->
+  <div class="bk-footer-inner pt--50 pb--30 pt_sm--80">
+      <div class="container">
+          <div class="row">
+
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
+                  <div class="footer-widget text-var--2 menu--contact">
+                      <h2 class="widgettitle">開放時間</h2>
+                      <div class="footer-address">
+                          <div class="bk-hover">
+                              <p>週二至週日 09:30~17:00</p>
+                              <p>鳳飛飛故事館：335桃園市大溪區普濟路5號 <a href="https://goo.gl/maps/aUYWnLGBV328UerZA">(如何到達)</a></p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="footer-widget text-var--2 menu--contact">
+                      <h2 class="widgettitle">聯絡資訊</h2>
+                      <div class="footer-address">
+                          <div class="bk-hover">
+                              <p>營運單位 財團法人大嵙崁文教基金會</p>
+                              <p>33521 桃園市大溪區中山路29號</p>
+                              <p>電話：(03)388-0871</p>
+                              <p>服務信箱：<a href = "mailto:takoham85@gmail.com">takoham85@gmail.com</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-lg-5 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
+                  <div class="footer-widget text-var--2 menu--contact">
+                      <h2 class="widgettitle">休館時間</h2>
+                      <div class="footer-address">
+                          <div class="bk-hover">
+                              <p>• 每週一休館(如遇國定假日照常開放，翌日休館)</p>
+                              <p>• 農曆除夕、大年初一休館</p>
+                              <p>• 政府公告之天然災害停止上班日</p>
+                              <p>• 桃園市立大溪木藝生態博物館及營運單位 另行公告之必要<a href="https://www.takoham.org.tw/news/3/117" target="_blank">休館日</a></p>
+                          </div>
+
+
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
+                  <div class="footer-widget text-var--2 menu--instagram">
+                      <div style="max-width:70%;">
+                          <img src="img/home-logo-W.svg" alt="">
+                      </div>
+                      <div class="social-share social--transparent text-white mt--20 mb--20">
+                          <a href="https://www.facebook.com/DaxiTakoham"><i class="fab fa-facebook"></i></a>
+                          <a href="https://www.youtube.com/channel/UCX_5DKCU3VDqPcyQLyhT2Hg"><i class="fab fa-youtube"></i></a>
+                      </div>
+                      <div style="max-width:70%; margin: 0 auto;">
+                          <img src="/img/footer-icon.png" alt="">
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
   </div>
+  <!-- Start Footer Top Area -->
+
+  <!-- Start Copyright Area -->
+  <div class="copyright ptb--15 text-var-2">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-lg-12 col-md-6 col-sm-12 col-12">
+                  <div class="copyright-right text-md-left text-center">
+                      <p>鳳飛飛故事館 版權所有 Copyright (C) 2021</p>
+                      <p>建議解析度：1280x720以上　瀏覽器支援：Chrome、Firefox、Edge、Safari，Win7已不再支援IE，Win10將於2022年6月15日淘汰並停止支援IE。
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- End Copyright Area -->
+  </footer>
+  <!--// Footer -->
 </template>
 
 <script lang="ts">
