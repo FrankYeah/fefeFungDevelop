@@ -1,3 +1,5 @@
+export default function () {
+
 //load header/footer
 document.onSelectStart=function(){return false;};
 // document.body.oncopy = function(){event.returnValue=false;}
@@ -431,3 +433,5 @@ var eventRecord = new Vue({
 });
 
 
+
+}

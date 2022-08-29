@@ -59,9 +59,9 @@ export default {
       { src: '/dist/js/plugins.min.js' },
       { src: '/dist/js/revolution.tools.min.js' },
       { src: '/dist/js/revolution.extension.min.js' },
-      { src: '/dist/js/main.js' },
+      // { src: '/dist/js/main.js' },
       { src: '/dist/js/revoulation.js' },
-      { src: '/dist/js/custom.js' }
+      // { src: '/dist/js/custom.js' }
     ]
   },
   // publicRuntimeConfig: {

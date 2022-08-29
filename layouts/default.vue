@@ -221,6 +221,8 @@ import $ from 'jquery'
 import { defineComponent, ref, reactive, onMounted } from 'vue'
 import headerBar from '@/components/header-bar.vue'
 import bottomBar from '@/components/bottom-bar.vue'
+import myMain from '@/static/js/main.js';
+import myCustom from '@/static/js/custom.js';
 
 export default defineComponent({
   components: {
@@ -230,17 +232,8 @@ export default defineComponent({
   setup (props, context) {
 
     onMounted(() => {
-
-      $('.popup-mobile-click').on('click', function (e) {
-        e.preventDefault(),
-            function () {
-              document.body.setAttribute('class', 'popup-mobile-menu-wrapper')
-              // document.html.style.overflow = 'hidden'
-                // $body.addClass('popup-mobile-menu-wrapper'), $html.css({
-                //     overflow: "hidden"
-                // });
-            }()
-      });
+      myMain()
+      myCustom()
 
     })
 
