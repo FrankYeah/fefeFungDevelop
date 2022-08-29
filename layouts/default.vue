@@ -2,7 +2,7 @@
   <div class="template-color-1 template-font-1">
 
     <!-- Start PReloader -->
-    <!-- <div id="page-preloader" class="page-loading clearfix">
+    <div id="page-preloader" class="page-loading clearfix">
         <div class="page-load-inner">
             <div class="preloader-wrap">
                 <div class="wrap-2">
@@ -10,7 +10,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- End PReloader -->
 
 
@@ -217,7 +217,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, reactive } from 'vue'
+import $ from 'jquery'
+import { defineComponent, ref, reactive, onMounted } from 'vue'
 import headerBar from '@/components/header-bar.vue'
 import bottomBar from '@/components/bottom-bar.vue'
 
@@ -227,6 +228,22 @@ export default defineComponent({
     bottomBar: bottomBar,
   },
   setup (props, context) {
+
+    onMounted(() => {
+
+      $('.popup-mobile-click').on('click', function (e) {
+        e.preventDefault(),
+            function () {
+              document.body.setAttribute('class', 'popup-mobile-menu-wrapper')
+              // document.html.style.overflow = 'hidden'
+                // $body.addClass('popup-mobile-menu-wrapper'), $html.css({
+                //     overflow: "hidden"
+                // });
+            }()
+      });
+
+    })
+
 
     return {
     }

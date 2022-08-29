@@ -47,7 +47,7 @@ export default {
       { rel: 'stylesheet', href: '/dist/css/style.css' },
       { rel: 'stylesheet', href: '/dist/css/custom.css' },
     ],
-    scripts: [
+    script: [
       // { src: '/js/vendor/vendor.min.js' },
       // { src: '/js/plugins.min.js' },
       // { src: '/js/revolution.tools.min.js' },
@@ -275,6 +275,10 @@ export default {
       new webpack.ProvidePlugin({
         'window.Quill': 'quill/dist/quill.js',
         'Quill': 'quill/dist/quill.js'
+      }),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        // ...etc.
       })
     ]
   }
