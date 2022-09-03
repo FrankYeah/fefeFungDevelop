@@ -1,3 +1,6 @@
+export default function () {
+
+
 (function () {
 
     jQuery("#rev_slider_1_1").show().revolution({
@@ -69,7 +72,7 @@ jsFileLocation:"//localhost/revslider-standalone/revslider/public/assets/js/",
         delay:9000,
         navigation: {
             keyboardNavigation:"off",
-            keyboard_direction: "horizontal", 
+            keyboard_direction: "horizontal",
             mouseScrollNavigation:"off",
              mouseScrollReverse:"default",
             onHoverStop:"off",
@@ -550,7 +553,7 @@ jsFileLocation:"//localhost/revslider-standalone/revslider/public/assets/js/",
 
 
     /* =========================
-    One Page Slider 
+    One Page Slider
     ==========================*/
 
     jQuery("#rev_slider_12_1").show().revolution({
@@ -593,7 +596,7 @@ jsFileLocation:"//localhost/revslider-standalone/revslider/public/assets/js/",
 
 
     /* =========================
-    Landing Slider 
+    Landing Slider
     ==========================*/
 
     jQuery("#rev_slider_13_1").show().revolution({
@@ -636,7 +639,7 @@ jsFileLocation:"//localhost/revslider-standalone/revslider/public/assets/js/",
 
 
     /* =========================
-    Product Landing Slider 
+    Product Landing Slider
     ==========================*/
 
     jQuery("#rev_slider_14_1").show().revolution({
@@ -679,7 +682,7 @@ jsFileLocation:"//localhost/revslider-standalone/revslider/public/assets/js/",
 
 
     /* =========================
-    Home Service Slider 
+    Home Service Slider
     ==========================*/
 
     jQuery("#rev_slider_15_1").show().revolution({
@@ -1176,3 +1179,5 @@ jsFileLocation:"//localhost/revslider-standalone/revslider/public/assets/js/",
 
 
 })(jQuery);
+
+}
