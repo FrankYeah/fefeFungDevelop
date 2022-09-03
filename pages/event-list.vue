@@ -221,7 +221,6 @@
                         <div class="col-12">
 
                             <!-- Start Single Blog -->
-                            {{ eventRecordContent }}
                             <div class="blog-overlay move-up wow"
                               v-for="(item, index) in eventRecordContent"
                               :key="index"
