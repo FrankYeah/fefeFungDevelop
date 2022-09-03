@@ -1,7 +1,7 @@
 <template>
-  <div>
+<div class="template-color-1 template-font-1">
 
-  </div>
+</div>
 </template>
 
 <script lang="ts">
