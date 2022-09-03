@@ -38,7 +38,7 @@
                                     <nav class="page_nav">
                                         <ul class="mainmenu">
 
-                                            <li class="lavel-1"><a href="index.html"><span>首頁</span></a></li>
+                                            <li class="lavel-1"><nuxt-link to="/"><span>首頁</span></nuxt-link></li>
                                             <li class="lavel-1"><a href="new-event.html"><span>最新活動</span></a></li>
                                             <li class="lavel-1"><a href="visit.html"><span>參觀資訊</span></a></li>
 
