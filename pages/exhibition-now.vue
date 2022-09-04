@@ -7,7 +7,7 @@
         <div class="page-load-inner">
             <div class="preloader-wrap">
                 <div class="wrap-2">
-                    <div class=""> <img src="img/ajax-loader.gif" alt="Brook Preloader"></div>
+                    <div class=""> <img src="~/assets/img/ajax-loader.gif" alt="Brook Preloader"></div>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
                             <div class="header-left flex-20">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img src="img/home-logo-W.svg" alt="鳳飛飛故事館">
+                                        <img src="~/assets/img/home-logo-W.svg" alt="鳳飛飛故事館">
                                     </a>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@
                 <div class="mobileheader">
                     <div class="logo">
                         <a href="index.html">
-                            <img src="img/home-logo.svg" alt="Multipurpose">
+                            <img src="~/assets/img/home-logo.svg" alt="Multipurpose">
                         </a>
                     </div>
                     <a class="mobile-close" href="#"></a>
@@ -144,7 +144,7 @@
                         <div class="breadcaump-inner text-center">
                             <div class="newheading pb--70">
                                 <div class="newheading-img">
-                                    <img src="img/CD-icon3.svg" alt="">
+                                    <img src="~/assets/img/CD-icon3.svg" alt="">
                                 </div>
                                 <h2>本期展覽</h2>
                             </div>
@@ -175,7 +175,7 @@
                             class="portfolio-right portfolio-details-gallery text-left pl_md--40 pr_md--40 pl_sm--20 pr_sm--20 mr--50 mr_sm--0">
                             <!-- Start Portfolio Image -->
                             <div class="portfolio-image mb--50">
-                                <img src="img/event-1.jpg" alt="">
+                                <img src="~/assets/img/event-1.jpg" alt="">
                             </div>
                             <!-- End Portfolio Image -->
                         </div>
@@ -215,7 +215,7 @@
                             class="portfolio-right portfolio-details-gallery text-left pl_md--40 pr_md--40 pl_sm--20 pr_sm--20 mr--50 mr_sm--0">
                             <!-- Start Portfolio Image -->
                             <div class="portfolio-image mb--50">
-                                <img src="img/event-2.jpg" alt="">
+                                <img src="~/assets/img/event-2.jpg" alt="">
                             </div>
                             <!-- End Portfolio Image -->
                         </div>
@@ -248,7 +248,7 @@
                             class="portfolio-right portfolio-details-gallery text-left pl_md--40 pr_md--40 pl_sm--20 pr_sm--20 mr--50 mr_sm--0">
                             <!-- Start Portfolio Image -->
                             <div class="portfolio-image mb--50">
-                                <img src="img/event-3.jpg" alt="">
+                                <img src="~/assets/img/event-3.jpg" alt="">
                             </div>
                             <!-- End Portfolio Image -->
                         </div>
@@ -285,7 +285,7 @@
                             class="portfolio-right portfolio-details-gallery text-left pl_md--40 pr_md--40 pl_sm--20 pr_sm--20 mr--50 mr_sm--0">
                             <!-- Start Portfolio Image -->
                             <div class="portfolio-image mb--50">
-                                <img src="img/event-4.jpg" alt="">
+                                <img src="~/assets/img/event-4.jpg" alt="">
                             </div>
                             <!-- End Portfolio Image -->
                         </div>
@@ -323,7 +323,7 @@
                             class="portfolio-right portfolio-details-gallery text-left pl_md--40 pr_md--40 pl_sm--20 pr_sm--20 mr--50 mr_sm--0">
                             <!-- Start Portfolio Image -->
                             <div class="portfolio-image mb--50">
-                                <img src="img/event-5.jpg" alt="">
+                                <img src="~/assets/img/event-5.jpg" alt="">
                             </div>
                             <!-- End Portfolio Image -->
                         </div>
@@ -356,7 +356,7 @@
                             class="portfolio-right portfolio-details-gallery text-left pl_md--40 pr_md--40 pl_sm--20 pr_sm--20 mr--50 mr_sm--0">
                             <!-- Start Portfolio Image -->
                             <div class="portfolio-image mb--50">
-                                <img src="img/event-6.jpg" alt="">
+                                <img src="~/assets/img/event-6.jpg" alt="">
                             </div>
                             <!-- End Portfolio Image -->
                         </div>
@@ -390,7 +390,7 @@
                             class="portfolio-right portfolio-details-gallery text-left pl_md--40 pr_md--40 pl_sm--20 pr_sm--20 mr--50 mr_sm--0">
                             <!-- Start Portfolio Image -->
                             <div class="portfolio-image mb--50">
-                                <img src="img/event-7.jpg" alt="">
+                                <img src="~/assets/img/event-7.jpg" alt="">
                             </div>
                             <!-- End Portfolio Image -->
                         </div>
@@ -427,7 +427,7 @@
                             class="portfolio-right portfolio-details-gallery text-left pl_md--40 pr_md--40 pl_sm--20 pr_sm--20 mr--50 mr_sm--0">
                             <!-- Start Portfolio Image -->
                             <div class="portfolio-image mb--50">
-                                <img src="img/event-8.jpg" alt="">
+                                <img src="~/assets/img/event-8.jpg" alt="">
                             </div>
                             <!-- End Portfolio Image -->
                         </div>
