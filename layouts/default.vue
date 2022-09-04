@@ -1,23 +1,45 @@
 <template>
   <div>
     <nuxt/>
+    <bottomBar v-if="isShowBottom" />
   </div>
 </template>
 
 <script lang="ts">
 // import $ from 'jquery'
-import { defineComponent, ref, reactive, onMounted } from 'vue'
-// import bottomBar from '@/components/bottom-bar.vue'
+import { defineComponent, ref, reactive, onMounted, watch } from 'vue'
+import { useStore, useRoute, useRouter } from '@nuxtjs/composition-api'
+import bottomBar from '@/components/bottom-bar.vue'
 import myMain from '@/static/js/main.js';
 import myRevoulation from '@/static/js/revoulation.js';
 
 export default defineComponent({
   components: {
-    // bottomBar: bottomBar,
+    bottomBar: bottomBar,
   },
   setup (props, context) {
 
+    const isShowBottom = ref<boolean>(true)
+    const route = useRoute()
+
+    watch(
+      () => route,
+      (newValue, oldValue) => {
+        if(newValue.value.name == 'coming-soon') {
+          isShowBottom.value = false
+        } else {
+          isShowBottom.value = true
+        }
+      },
+      {
+        deep: false,
+        immediate: true
+      }
+    )
+
+
     return {
+      isShowBottom
     }
   }
 })

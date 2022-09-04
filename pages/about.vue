@@ -209,10 +209,6 @@
         <!--// Page Conttent -->
     </div>
 
-
-    <!-- <headerBar/>
-    <nuxt/>
-    <bottomBar/> -->
   </div>
 </template>
 
@@ -225,9 +221,6 @@ import myRevoulation from '@/static/js/revoulation.js';
 
 export default defineComponent({
   auth: false,
-  components: {
-    bottomBar: bottomBar,
-  },
   setup (props, context) {
 
     onMounted(() => {
