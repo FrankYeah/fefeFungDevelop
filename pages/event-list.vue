@@ -268,59 +268,58 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 // import $ from 'jquery'
-import { defineComponent, ref, reactive, onMounted } from 'vue'
-import bottomBar from '@/components/bottom-bar.vue'
 import myMain from '@/static/js/main.js';
 import myRevoulation from '@/static/js/revoulation.js';
 
-export default defineComponent({
+export default {
   auth: false,
+  layout: 'default',
   components: {
-    bottomBar: bottomBar,
+
   },
-  setup (props, context) {
+  props: {
 
-    onMounted(() => {
-      myMain()
-      myRevoulation()
-    })
-
-    interface events {
-      title: string,
-      date:  string,
-      category: string,
-      link: string
-    };
-
-    const eventRecordContent = ref<events[]> ([
-      {
-            title: '心肝寶貝的故事盒',
-            date: '2021-11-19',
-            category:'大嵙崁文教基金會',
-            link:'https://www.beclass.com/rid=25465ad6194c73497ae6'
-        },
-        {
-            title: '鳳友徵集令．鳳飛飛故事館',
-            date: '2021-09-09',
-            category:'大嵙崁文教基金會',
-            link:'https://www.takoham.org.tw/news/4/53'
-        },
-        {
-            title: '《大河與小飛》捐款贈繪本',
-            date: '2021-08-25',
-            category:'大嵙崁文教基金會',
-            link:'https://www.takoham.org.tw/news/4/8'
-        },
-    ]);
-
-
+  },
+  data () {
     return {
-      eventRecordContent
+      eventRecordContent: [
+      {
+        title: '心肝寶貝的故事盒',
+        date: '2021-11-19',
+        category:'大嵙崁文教基金會',
+        link:'https://www.beclass.com/rid=25465ad6194c73497ae6'
+      },
+      {
+        title: '鳳友徵集令．鳳飛飛故事館',
+        date: '2021-09-09',
+        category:'大嵙崁文教基金會',
+        link:'https://www.takoham.org.tw/news/4/53'
+      },
+      {
+        title: '《大河與小飛》捐款贈繪本',
+        date: '2021-08-25',
+        category:'大嵙崁文教基金會',
+        link:'https://www.takoham.org.tw/news/4/8'
+      },
+    ]
     }
+  },
+  mounted () {
+    myMain()
+    myRevoulation()
+  },
+  destroyed () {
+
+  },
+  computed: {
+
+  },
+  methods: {
+
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>
@@ -328,3 +327,5 @@ export default defineComponent({
 .default {
 
 }
+
+</style>

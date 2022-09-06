@@ -199,31 +199,23 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 // import $ from 'jquery'
-import { defineComponent, ref, reactive, onMounted } from 'vue'
-import bottomBar from '@/components/bottom-bar.vue'
 import myMain from '@/static/js/main.js';
 import myRevoulation from '@/static/js/revoulation.js';
 
-export default defineComponent({
+export default {
   auth: false,
+  layout: 'default',
   components: {
-    bottomBar: bottomBar,
+
   },
-  setup (props, context) {
+  props: {
 
-    onMounted(() => {
-      myMain()
-      myRevoulation()
-    })
-
-    interface events {
-      title: string,
-      year:  string
-    };
-
-    const eventRecordContent = ref<events[]> ([
+  },
+  data () {
+    return {
+      eventRecordContent: [
       {
             title: '第一首歌【初見一日】出版，以林茜為名，收錄於歌林金曲獎唱片專輯。',
             year:'1971',
@@ -400,18 +392,30 @@ export default defineComponent({
             title: '肺癌病逝，葬於桃園大溪的佛光山寶塔寺。',
             year:'2012',
         },
-    ]);
-
-
-    return {
-      eventRecordContent
+    ]
     }
+  },
+  mounted () {
+    myMain()
+    myRevoulation()
+  },
+  destroyed () {
+
+  },
+  computed: {
+
+  },
+  methods: {
+
   }
-})
+}
 </script>
+
 
 <style lang="scss" scoped>
 
 .default {
 
 }
+
+</style>

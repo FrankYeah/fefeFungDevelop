@@ -164,20 +164,46 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, reactive } from 'vue'
+<script>
+// import $ from 'jquery'
+import myMain from '@/static/js/main.js';
+import myRevoulation from '@/static/js/revoulation.js';
 
-export default defineComponent({
-  setup (props, context) {
+export default {
+  auth: false,
+  layout: 'default',
+  components: {
 
+  },
+  props: {
+
+  },
+  data () {
     return {
+
     }
+  },
+  mounted () {
+    myMain()
+    myRevoulation()
+  },
+  destroyed () {
+
+  },
+  computed: {
+
+  },
+  methods: {
+
   }
-})
+}
 </script>
+
 
 <style lang="scss" scoped>
 
 .default {
 
 }
+
+</style>

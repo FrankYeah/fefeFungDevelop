@@ -1961,35 +1961,23 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 // import $ from 'jquery'
-import { defineComponent, ref, reactive, onMounted } from 'vue'
-import bottomBar from '@/components/bottom-bar.vue'
 import myMain from '@/static/js/main.js';
 import myRevoulation from '@/static/js/revoulation.js';
 
-export default defineComponent({
+export default {
   auth: false,
+  layout: 'default',
   components: {
-    bottomBar: bottomBar,
+
   },
-  setup (props, context) {
+  props: {
 
-    onMounted(() => {
-      myMain()
-      myRevoulation()
-    })
-
-    interface events {
-      toptitle?:string,
-      title: string,
-      date:  string,
-      category: string,
-      images: string
-      link: string
-    };
-
-    const musicContent = ref<events[]> ([
+  },
+  data () {
+    return {
+      musicContent: [
       {
         title: '歌林金曲唱片',
         date: '1971年9月',
@@ -2549,18 +2537,30 @@ export default defineComponent({
             images: 'img/music/08環球唱片/鳳聲歲月.jpg',
             link: '#'
         }
-    ])
-
-
-    return {
-      musicContent
+    ]
     }
+  },
+  mounted () {
+    myMain()
+    myRevoulation()
+  },
+  destroyed () {
+
+  },
+  computed: {
+
+  },
+  methods: {
+
   }
-})
+}
 </script>
+
 
 <style lang="scss" scoped>
 
 .default {
 
 }
+
+</style>

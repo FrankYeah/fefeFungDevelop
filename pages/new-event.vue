@@ -200,35 +200,23 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 // import $ from 'jquery'
-import { defineComponent, ref, reactive, onMounted } from 'vue'
-import bottomBar from '@/components/bottom-bar.vue'
 import myMain from '@/static/js/main.js';
 import myRevoulation from '@/static/js/revoulation.js';
 
-export default defineComponent({
+export default {
   auth: false,
+  layout: 'default',
   components: {
-    bottomBar: bottomBar,
+
   },
-  setup (props, context) {
+  props: {
 
-    onMounted(() => {
-      myMain()
-      myRevoulation()
-    })
-
-    interface events {
-      title: string,
-      date:  string,
-      category: string,
-      link: string,
-      images: string,
-      link2: string
-    };
-
-    const eventRecordContent = ref<events[]> ([
+  },
+  data () {
+    return {
+      eventRecordContent: [
       // {
             //     title: '鳳飛飛故事館｜線上預約參觀，開放預約囉！',
             //     date: '2021.12.25',
@@ -445,14 +433,23 @@ export default defineComponent({
                 images: 'img/newEvent/20210727pic0.jpg',
                 link2: 'https://www.takoham.org.tw/'
             },
-    ])
-
-
-    return {
-      eventRecordContent
+    ]
     }
+  },
+  mounted () {
+    myMain()
+    myRevoulation()
+  },
+  destroyed () {
+
+  },
+  computed: {
+
+  },
+  methods: {
+
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>
@@ -460,3 +457,5 @@ export default defineComponent({
 .default {
 
 }
+
+</style>

@@ -5,45 +5,48 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 // import $ from 'jquery'
-import { defineComponent, ref, reactive, onMounted, watch } from 'vue'
-import { useStore, useRoute, useRouter } from '@nuxtjs/composition-api'
-import bottomBar from '@/components/bottom-bar.vue'
 import myMain from '@/static/js/main.js';
 import myRevoulation from '@/static/js/revoulation.js';
+import bottomBar from '@/components/bottom-bar.vue'
 
-export default defineComponent({
+export default {
+  auth: false,
   components: {
     bottomBar: bottomBar,
   },
-  setup (props, context) {
+  props: {
 
-    const isShowBottom = ref<boolean>(true)
-    const route = useRoute()
-
-    watch(
-      () => route,
-      (newValue, oldValue) => {
-        if(newValue.value.name == 'coming-soon') {
-          isShowBottom.value = false
-        } else {
-          isShowBottom.value = true
-        }
-      },
-      {
-        deep: false,
-        immediate: true
-      }
-    )
-
-
+  },
+  data () {
     return {
-      isShowBottom
+      isShowBottom: false
     }
+  },
+  mounted () {
+    myMain()
+    myRevoulation()
+    console.log('123')
+
+    // if(newValue.value.name == 'coming-soon') {
+    //       isShowBottom.value = false
+    //     } else {
+    //       isShowBottom.value = true
+    //     }
+  },
+  destroyed () {
+
+  },
+  computed: {
+
+  },
+  methods: {
+
   }
-})
+}
 </script>
+
 
 <style lang="scss">
 
