@@ -36,7 +36,7 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: '/css/bootstrap.min.css' },
-      { rel: 'stylesheet', href: '/css/revoulation.css' },
+      // { rel: 'stylesheet', href: '/css/revoulation.css' },
       { rel: 'stylesheet', href: '/css/plugins.min.css' },
       { rel: 'stylesheet', href: '/css/style.css' },
       { rel: 'stylesheet', href: '/css/custom.css' },
@@ -49,10 +49,10 @@ export default {
       // { rel: 'stylesheet', href: '/dist/css/custom.css' },
     ],
     script: [
-      { src: '/js/vendor/vendor.min.js' },
-      { src: '/js/plugins.min.js' },
-      { src: '/js/revolution.tools.min.js' },
-      { src: '/js/revolution.extension.min.js' },
+      // { src: '/js/vendor/vendor.min.js' },
+      // { src: '/js/plugins.min.js' },
+      // { src: '/js/revolution.tools.min.js' },
+      // { src: '/js/revolution.extension.min.js' },
 
       // { src: '/js/main.js' },
       // { src: '/js/revoulation.js' },

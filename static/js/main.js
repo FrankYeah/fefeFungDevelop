@@ -74,7 +74,7 @@ export default function () {
     /*=======================
     	01. Wow Active
     ======================*/
-    new WOW().init();
+    // new WOW().init();
 
     /*==================================
     	02. Counter Up

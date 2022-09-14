@@ -2,7 +2,7 @@
   <div class="template-color-1 template-font-2">
     <!-- Add your site or application content here -->
 
-    <div id="page-preloader" class="page-loading clearfix">
+    <!-- <div id="page-preloader" class="page-loading clearfix">
       <div class="page-load-inner">
         <div class="preloader-wrap">
           <div class="wrap-2">
@@ -12,7 +12,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div id="wrapper" class="wrapper">
       <header
@@ -730,7 +730,11 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-12">
-                <div class="section-title text-center wow move-up">
+                <div class="section-title text-center"
+                  data-aos="fade-right"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-delay="2700"
+                >
                   <div class="dp-flex section-title-top">
                     <div class="head-img">
                       <img src="img/CD-icon2.svg" alt="" />
@@ -745,8 +749,10 @@
             <div class="row mt--70 mt_sm--20 mt_md--30">
               <!-- Start Single Portfolio -->
               <div
-                class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow"
-                data-wow-delay=".15s"
+                class="col-lg-4 col-md-6 col-sm-6 col-12"
+                data-aos="fade-up"
+        data-aos-easing="ease-in-sine"
+        data-aos-delay="2700"
               >
                 <div class="portfolio with-caption mt_mobile--30">
                   <div class="thumb">
@@ -770,8 +776,10 @@
 
               <!-- Start Single Portfolio -->
               <div
-                class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow"
-                data-wow-delay=".15s"
+                class="col-lg-4 col-md-6 col-sm-6 col-12"
+                data-aos="fade-up"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-delay="2700"
               >
                 <div class="portfolio with-caption mt_mobile--30">
                   <div class="thumb">
@@ -796,8 +804,10 @@
 
               <!-- Start Single Portfolio -->
               <div
-                class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow"
-                data-wow-delay=".16s"
+                class="col-lg-4 col-md-6 col-sm-6 col-12"
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-delay="2700"
               >
                 <div class="portfolio with-caption mt_sm--30 mt_md--30">
                   <div class="thumb">
@@ -829,7 +839,11 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-12">
-                  <div class="section-title text-center white-text wow move-up">
+                  <div class="section-title text-center white-text"
+                  data-aos="fade-up"
+        data-aos-easing="ease-in-sine"
+        data-aos-delay="700"
+                  >
                     <div class="dp-flex section-title-top">
                       <div class="head-img">
                         <img src="img/CD-icon4.svg" alt="" />
@@ -874,7 +888,11 @@
 
               <div class="col-lg-6">
                 <div class="row row--0">
-                  <div class="col-lg-12 wow move-up">
+                  <div class="col-lg-12"
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-delay="700"
+                  >
                     <!-- Start Single Portfolio -->
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
@@ -884,7 +902,11 @@
                     <!-- End Single Portfolio -->
                   </div>
 
-                  <div class="col-lg-6 wow move-up">
+                  <div class="col-lg-6"
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-delay="700"
+                  >
                     <!-- Start Single Portfolio -->
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
@@ -894,7 +916,11 @@
                     <!-- End Single Portfolio -->
                   </div>
 
-                  <div class="col-lg-6 wow move-up">
+                  <div class="col-lg-6"
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-delay="700"
+                  >
                     <!-- Start Single Portfolio -->
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
@@ -1328,25 +1354,50 @@
   </div>
 </template>
 
+
+
 <script>
+
+// if (process.browser) { // Here we introduce... According to the environment wow.js
+//   var {WOW} = require('wowjs')
+// }
+
 // import $ from 'jquery'
-import myMain from "@/static/js/main.js";
-import myRevoulation from "@/static/js/revoulation.js";
+// import myMain from "@/static/js/main.js";
+// import myRevoulation from "@/static/js/revoulation.js";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import Swiper from "swiper/swiper-bundle.min";
 import "swiper/swiper-bundle.min.css";
 
 export default {
   auth: false,
   layout: "default",
-
   components: {},
   props: {},
   data() {
     return {};
   },
   async mounted() {
-    myMain();
-    myRevoulation();
+    AOS.init()
+
+    // this.$nextTick(() => {
+
+    //   if (process.browser) { // On the page mounted In the life cycle Instantiate according to the environment WOW
+    //     new WOW({
+    //       boxClass: 'wow', // 欲套用wow.js的class
+    //       animateClass: 'animated', // 欲修改設定animat.css 的類別名稱
+    //       offset: 0, // 當用戶滾動並到達這個距離時才開始執行動畫
+    //       mobile: true, // 是否在行動裝置上執行動畫
+    //       live: false, // 非同步產生的內容是否要套用
+    //       callback: null,
+    //       scrollContainer: null
+    //     }).init()
+    //   }
+    // })
+
+    // myMain();
+    // myRevoulation();
     await this.$nextTick();
     new Swiper(this.$refs.swiper, {
       navigation: {
