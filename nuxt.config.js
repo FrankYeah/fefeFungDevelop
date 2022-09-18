@@ -54,9 +54,9 @@ export default {
       { src: '/js/revolution.tools.min.js' },
       { src: '/js/revolution.extension.min.js' },
 
-      // { src: '/js/main.js' },
-      // { src: '/js/revoulation.js' },
-      // { src: '/js/custom.js' }
+      { src: '/js/main.js' },
+      { src: '/js/revoulation.js' },
+      { src: '/js/custom.js' }
 
       // { src: '/dist/js/vendor/vendor.min.js' },
       // { src: '/dist/js/plugins.min.js' },
@@ -75,9 +75,9 @@ export default {
   //     version: 3,
   //   }
   // },
-  // script: [
-  //   { src: 'https://www.google.com/recaptcha/api.js?render=reCAPTCHA_6LfZwN0gAAAAABAMKIjG-aS32OCl90qYNFWa6LIY' }
-  // ],
+  script: [
+    { src: 'https://www.google.com/recaptcha/api.js?render=reCAPTCHA_6LfZwN0gAAAAABAMKIjG-aS32OCl90qYNFWa6LIY' }
+  ],
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~assets/styles/global.css',
@@ -101,7 +101,7 @@ export default {
     '~/plugins/moments',
     { src: '~/plugins/gtag'},
     { src: '~plugins/vue-quill-editor.js', ssr: false },
-
+   
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -228,6 +228,13 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extend (config, { isDev, isClient }) {
+      config.module.rules.push(
+        {
+          test: /.js$/,
+          exclude: /js/,
+          use: 'babel-loader'
+        }      
+      )
       if (!isDev) {
           config.output.publicPath = './_nuxt/'
       }
@@ -254,7 +261,7 @@ export default {
       },
       order: 'cssnanoLast'
     },
-    vendor: ['vue-lazyload', 'element-ui'],
+    vendor: ['vue-lazyload', 'element-ui',"jquery"],
     html:{
       minify:{
         collapseBooleanAttributes: true,
@@ -278,7 +285,6 @@ export default {
       }),
       new webpack.ProvidePlugin({
         $: 'jquery',
-        // ...etc.
       })
     ]
   }

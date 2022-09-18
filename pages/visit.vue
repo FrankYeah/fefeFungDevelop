@@ -5,7 +5,9 @@
       <div class="page-load-inner">
         <div class="preloader-wrap">
           <div class="wrap-2">
-            <div><img src="img/ajax-loader.gif" alt="Brook Preloader" /></div>
+            <div class="">
+              <img src="img/ajax-loader.gif" alt="Brook Preloader" />
+            </div>
           </div>
         </div>
       </div>
@@ -33,7 +35,9 @@
                 <!-- Header Left -->
                 <div class="header-left flex-20">
                   <div class="logo">
-                    <NuxtLink to="/"><img src="img/home-logo-01.svg" alt="鳳飛飛故事館" /></NuxtLink>
+                    <NuxtLink to="/"
+                      ><img src="img/home-logo-W.svg" alt="鳳飛飛故事館"
+                    /></NuxtLink>
                   </div>
                 </div>
                 <!-- Mainmenu Wrap -->
@@ -42,7 +46,7 @@
                     <nav class="page_nav">
                       <ul class="mainmenu">
                         <li class="lavel-1">
-                          <NuxtLink to="/">首頁</NuxtLink>
+                          <nuxt-link to="/"><span>首頁</span></nuxt-link>
                         </li>
                         <li class="lavel-1">
                           <NuxtLink to="new-event">最新活動</NuxtLink>
@@ -56,10 +60,14 @@
                           <!-- Start Dropdown Menu -->
                           <ul class="dropdown__menu">
                             <li>
-                              <NuxtLink to="exhibition-now"><span>本期展覽</span></NuxtLink>
+                              <NuxtLink to="exhibition-now"
+                                ><span>本期展覽</span></NuxtLink
+                              >
                             </li>
                             <li>
-                              <NuxtLink to="exhibition-past"><span>過去展覽</span></NuxtLink>
+                              <NuxtLink to="exhibition-past"
+                                ><span>過去展覽</span></NuxtLink
+                              >
                             </li>
                           </ul>
                           <!-- End Dropdown Menu -->
@@ -154,28 +162,22 @@
           </div>
           <div class="menu-content">
             <ul class="menulist object-custom-menu">
-              <li>
-                <NuxtLink to="/">首頁</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink to="new-event">最新活動</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink to="visit">參觀資訊</NuxtLink>
-              </li>
+              <li><NuxtLink to="/">首頁</NuxtLink></li>
+              <li><NuxtLink to="new-event">最新活動</NuxtLink></li>
+              <li><NuxtLink to="visit">參觀資訊</NuxtLink></li>
 
               <li class="has-mega-menu">
                 <a href="#"><span>展覽資訊</span></a>
                 <ul class="object-submenu">
                   <li>
                     <NuxtLink to="exhibition-now"
-                                ><span>本期展覽</span></NuxtLink
-                              >
+                      ><span>本期展覽</span></NuxtLink
+                    >
                   </li>
                   <li>
                     <NuxtLink to="exhibition-past"
-                                ><span>過去展覽</span></NuxtLink
-                              >
+                      ><span>過去展覽</span></NuxtLink
+                    >
                   </li>
                 </ul>
               </li>
@@ -184,33 +186,23 @@
                 <a href="#"><span>飛飛風采</span></a>
                 <ul class="object-submenu">
                   <li>
-                    <NuxtLink to="style-music"
-                                ><span>音樂作品</span></NuxtLink
-                              >
+                    <NuxtLink to="style-music"><span>音樂作品</span></NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="style-awards"
-                                ><span>獎項紀錄</span></NuxtLink
-                              >
+                    <NuxtLink to="style-awards"><span>獎項紀錄</span></NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="style-voice"
-                                ><span>飛飛聲影</span></NuxtLink
-                              >
+                    <NuxtLink to="style-voice"><span>飛飛聲影</span></NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="style-list"
-                                ><span>飛飛大事記</span></NuxtLink
-                              >
+                    <NuxtLink to="style-list"><span>飛飛大事記</span></NuxtLink>
                   </li>
                 </ul>
               </li>
               <li>
-                <NuxtLink to="journey"
-                            ><span>飛飛踩點</span></NuxtLink
-                          >
+                <NuxtLink to="journey"><span>飛飛踩點</span></NuxtLink>
               </li>
-              <!-- <li><a href="smalltalk.html"><span>飛飛敲敲話</span></a></li> -->
+              <!--<li><a href="smalltalk.html"><span>飛飛敲敲話</span></a></li> -->
               <!-- <li><a href="event-list.html"><span>活動記事</span></a></li> -->
               <li>
                 <NuxtLink to="about"><span>關於我們</span></NuxtLink>
@@ -221,36 +213,29 @@
       </div>
       <!-- End Popup Menu -->
 
-      <!-- Start Breadcaump Area -->
       <div
         class="
           breadcaump-area
-          pt--170
-          pt_lg--170
-          pt_md--250
-          pt_sm--100
-          pb--40
-          pb_sm--0
-          bg_image--8
-          breadcaump-title-bar breadcaump-title-white
+          pt--100
+          pt_lg--90
+          pt_md--90
+          pt_sm--10
+          pb--20
+          breadcaump-title-bar
+          sm_d-none
         "
       >
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-              <div class="breadcaump-inner text-center">
-                <div class="newheading pb--70 pb_sm--0">
-                  <div class="newheading-img">
-                    <img src="img/CD-icon3.svg" alt="" />
-                  </div>
-                  <h2>活動記事</h2>
-                </div>
+              <div class="breadcaump-inner">
                 <div class="breadcrumb-insite">
                   <ul class="core-breadcaump">
-                    <li><NuxtLink to="/">首頁</NuxtLink></li>
-                    <li class="current">活動記事</li>
+                    <li><NuxtLink to="/"><span>首頁</span></NuxtLink></li>
+                    <li class="current">參觀資訊</li>
                   </ul>
                 </div>
+                <h1 class="mt--20">參觀資訊</h1>
               </div>
             </div>
           </div>
@@ -260,129 +245,76 @@
 
       <!-- Page Conttent -->
       <main class="page-content">
-        <!-- Start Blog Grid Area -->
-        <div
-          class="
-            bk-blog-grid-area
-            pt--40
-            pb--100
-            pt_md--5
-            pb_md--80
-            pb_sm--80
-            pt_sm--5
-            bg_color--1
-          "
-        >
+        <!-- Start Career Area -->
+        <div class="brook-career-area pb--70 pt_md--70 pt_sm--100">
           <div class="container">
-            <!-- Start Counterup Area -->
             <div
-              class="
-                brook-counterup-area
-                ptb--100
-                ptb-md--80
-                ptb-sm--60
-                bg_color--1
-                sm_d-none
-              "
+              class="thumbnail mb--60 sm_d-none thumbnail-click"
+              style="cursor: pointer"
             >
-              <div class="container">
-                <div class="row">
-                  <!-- Start Single Counter -->
-                  <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <div class="brook-counter text-center">
-                      <div class="icon">
-                        <img src="img/processing.svg" alt="" />
-                      </div>
-                      <div class="content">
-                        <span class="count">3</span>
-                        <h6 class="heading heading-h6">進行中活動</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Single Counter -->
-
-                  <!-- Start Single Counter -->
-                  <div class="col-lg-4 col-md-4 col-sm-6 col-12 mt_mobile--40">
-                    <div class="brook-counter text-center">
-                      <div class="icon">
-                        <img src="img/past.svg" alt="" />
-                      </div>
-                      <div class="content">
-                        <span class="count">12</span>
-                        <h6 class="heading heading-h6">過去活動</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Single Counter -->
-
-                  <!-- Start Single Counter -->
-                  <div class="col-lg-4 col-md-4 col-sm-6 col-12 mt_sm--40">
-                    <div class="brook-counter text-center">
-                      <div class="icon">
-                        <img src="img/involve.svg" alt="" />
-                      </div>
-                      <div class="content">
-                        <span class="count">10789</span>
-                        <h6 class="heading heading-h6">參加人數</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Single Counter -->
-                </div>
-              </div>
+              <img class="w-100" src="img/map-new.png" alt="參觀資訊" />
             </div>
-            <!-- End Counterup Area -->
-
-            <div id="eventRecord" class="row">
+            <div class="row">
+              <!-- Start Single Career -->
               <div class="col-12">
-                <!-- Start Single Blog -->
-                <div
-                  class="blog-overlay wow animate__fadeInUp"
-                  data-wow-iteration="1"
-                  v-for="(item, index) in eventRecordContent"
-                  :key="index"
-                >
-                  <div class="blog-grid-minimal overlay-image-list">
-                    <div
-                      class="grid-overlay"
-                      style="background-image: url(img/eventhistory-1.jpg)"
-                    ></div>
-                    <div class="post-content">
-                      <h5 class="heading">
-                        <a :href="item.link">{{ item.title }}</a>
-                      </h5>
-                      <div class="post-meta">
-                        <div class="post-date">{{ item.date }}</div>
-                        <div class="post-category">
-                          <a :href="item.link">{{ item.category }}</a>
-                        </div>
+                <div class="career mb--30">
+                  <div class="inner">
+                    <div class="content">
+                      <h5 class="heading heading-h5 head-gray-bg">開放時間</h5>
+                      <div class="desc mt--25">
+                        <p>週二至週日 09:30~17:00</p>
                       </div>
-                      <div class="post-arrow">
-                        <a :href="item.link"
-                          ><span class="fa fa-arrow-right"></span
-                        ></a>
+                    </div>
+
+                    <div class="content mt--35">
+                      <h5 class="heading heading-h5 head-gray-bg">館舍位置</h5>
+                      <div class="desc mt--25">
+                        <p>鳳飛飛故事館（335桃園市大溪區普濟路5號）</p>
+                      </div>
+                    </div>
+
+                    <div class="content mt--35">
+                      <h5 class="heading heading-h5 head-gray-bg">休館時間</h5>
+                      <div class="desc mt--25">
+                        <p>△每週一休館 (如遇國定假日照常開放，翌日休館)</p>
+                        <p>△農曆除夕、大年初一休館</p>
+                        <p>△政府公告之天然災害停止上班日</p>
+                        <p>△本館另行公告之必要休館日</p>
+                        <p>
+                          <a href="https://www.takoham.org.tw/news/3/117"
+                            >△111年連假休館日詳細資訊</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="content mt--35">
+                      <h5 class="heading heading-h5 head-gray-bg">聯絡資訊</h5>
+                      <div class="desc mt--25">
+                        <p>財團法人大嵙崁文教基金會</p>
+                        <p>聯絡地址：335桃園市大溪區中山路29號</p>
+                        <p>服務電話： (03)388-0871</p>
+                        <p>服務信箱：takoham85@gmail.com</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- End Single Blog -->
-
-                <!-- Start Pagenation -->
-                <!-- <div class="brook-pagination-wrapper text-center pt--80">
-                                <ul class="brook-pagination">
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                                </ul>
-                            </div> -->
-                <!-- End Pagenation -->
               </div>
+              <!-- End Single Career -->
             </div>
           </div>
         </div>
-        <!-- End Blog Grid Area -->
+        <!-- End Career Area -->
       </main>
       <!--// Page Conttent -->
+
+      <div id="PopImg" class="thumbnail mb--60 sm_d-none">
+        <div class="overlay"></div>
+        <div class="thumbnail-img">
+          <img class="w-100" src="img/map-new.png" alt="參觀資訊" />
+        </div>
+        <div class="close-img">×</div>
+      </div>
     </div>
   </div>
 </template>
@@ -390,55 +322,28 @@
 <script>
 // import $ from 'jquery'
 import myMain from "@/static/js/main.js";
-// import myRevoulation from '@/static/js/revoulation.js';
-if (process.browser) {
-  // 在这里根据环境引入wow.js
-  var { WOW } = require("wowjs");
-}
+import myRevoulation from "@/static/js/revoulation.js";
+import custom from "@/static/js/custom.js";
+
 export default {
   auth: false,
   layout: "default",
   components: {},
   props: {},
   data() {
-    return {
-      eventRecordContent: [
-        {
-          title: "心肝寶貝的故事盒",
-          date: "2021-11-19",
-          category: "大嵙崁文教基金會",
-          link: "https://www.beclass.com/rid=25465ad6194c73497ae6",
-        },
-        {
-          title: "鳳友徵集令．鳳飛飛故事館",
-          date: "2021-09-09",
-          category: "大嵙崁文教基金會",
-          link: "https://www.takoham.org.tw/news/4/53",
-        },
-        {
-          title: "《大河與小飛》捐款贈繪本",
-          date: "2021-08-25",
-          category: "大嵙崁文教基金會",
-          link: "https://www.takoham.org.tw/news/4/8",
-        },
-      ],
-    };
+    return {};
   },
   mounted() {
     myMain();
-    // myRevoulation()
-    this.$nextTick(() => {
-      if (process.browser) {
-        new WOW({ animateClass: "animate__animated" }).init();
-        // 在页面mounted生命周期里面 根据环境实例化WOW
-      }
-    });
+    myRevoulation();
+    custom();
   },
   destroyed() {},
   computed: {},
   methods: {},
 };
 </script>
+
 
 <style lang="scss" scoped>
 .default {

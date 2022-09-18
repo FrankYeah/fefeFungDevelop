@@ -1,57 +1,46 @@
 <template>
   <div>
-    <nuxt/>
+    <nuxt />
     <bottomBar v-if="isShowBottom" />
   </div>
 </template>
 
 <script>
 // import $ from 'jquery'
-import myMain from '@/static/js/main.js';
-import myRevoulation from '@/static/js/revoulation.js';
-import bottomBar from '@/components/bottom-bar.vue'
+import myMain from "@/static/js/main.js";
+import myRevoulation from "@/static/js/revoulation.js";
+import bottomBar from "@/components/bottom-bar.vue";
 
 export default {
   auth: false,
   components: {
     bottomBar: bottomBar,
   },
-  props: {
-
-  },
-  data () {
+  props: {},
+  data() {
     return {
-      isShowBottom: false
-    }
+      isShowBottom: true,
+    };
   },
-  mounted () {
-    myMain()
-    myRevoulation()
-    console.log('123')
+  mounted() {
+    myMain();
+    myRevoulation();
 
-    // if(newValue.value.name == 'coming-soon') {
-    //       isShowBottom.value = false
-    //     } else {
-    //       isShowBottom.value = true
-    //     }
+    // if (newValue.value.name == "coming-soon") {
+    //   isShowBottom.value = false;
+    // } else {
+    //   isShowBottom.value = true;
+    // }
   },
-  destroyed () {
-
-  },
-  computed: {
-
-  },
-  methods: {
-
-  }
-}
+  destroyed() {},
+  computed: {},
+  methods: {},
+};
 </script>
 
 
 <style lang="scss">
-
 .default {
-
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -59,30 +48,105 @@ export default {
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, img, ins, kbd, q, s, samp,
-small, strike,  sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 html {
   width: 100%;
@@ -91,32 +155,36 @@ html {
 body {
   width: 100%;
   height: 100%;
-	line-height: 1;
+  line-height: 1;
   margin: 0px;
   padding: 0px;
   // font-family: 'Noto Sans TC', 'Noto Sans SC' ,sans-serif;
   font-size: 14px;
   line-height: 1.3;
-  color: #AC9EA1;
-  font-family: 'SF';
-  background: #FBFBFB;
+  color: #ac9ea1;
+  font-family: "SF";
+  background: #fbfbfb;
   overflow: auto;
   // font-family: 'SF Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,PingFang TC,Hiragino Sans GB,Microsoft JhengHei,sans-serif!important';
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 a {
@@ -125,7 +193,7 @@ a {
   cursor: pointer;
 
   &:hover {
-      opacity: 0.8;
+    opacity: 0.8;
   }
 }
 
@@ -134,27 +202,27 @@ input {
   margin: 0px;
   outline: none;
   border: 0px;
- -webkit-appearance: none;
- -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &:focus {
     outline: none;
   }
 
   &::placeholder {
-    color: #8D8D8D;
+    color: #8d8d8d;
   }
 }
 
 textarea {
-  font-family: 'SF';
+  font-family: "SF";
 
   &:focus {
     outline: none;
   }
 
   &::placeholder {
-    color: #D2D2D2;
+    color: #d2d2d2;
   }
 }
 
@@ -168,45 +236,41 @@ button {
 }
 
 input[type="checkbox" i] {
-    background-color: initial;
-    cursor: default;
-    appearance: auto;
-    box-sizing: border-box;
-    margin: 3px 3px 3px 4px;
-    padding: initial;
-    border: initial;
+  background-color: initial;
+  cursor: default;
+  appearance: auto;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: initial;
+  border: initial;
 }
 
 input {
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: -internal-light-dark(black, white);
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
-    margin: 0em;
-    padding: 1px 2px;
-    border-width: 2px;
-    border-style: inset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial;
+  writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  margin: 0em;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
 }
 
-@media( max-width: 1023px ){
-
+@media (max-width: 1023px) {
   .default {
-
   }
-
 }
-
 </style>

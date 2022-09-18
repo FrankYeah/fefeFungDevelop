@@ -33,14 +33,17 @@
               <div class="header__wrapper mr--0">
                 <div class="header-left flex-20">
                   <div class="logo logo-top">
-                    <a href="index.html">
+                    <NuxtLink to="/"
+                      ><img src="img/home-logo-01.svg" alt="鳳飛飛故事館"
+                    /></NuxtLink>
+                    <!-- <a href="index.html">
                       <img src="img/home-logo-01.svg" alt="鳳飛飛故事館" />
-                    </a>
+                    </a> -->
                   </div>
                   <div class="logo logo-sticky">
-                    <a href="index.html">
-                      <img src="img/home-logo-W.svg" alt="鳳飛飛故事館" />
-                    </a>
+                    <NuxtLink to="/"
+                      ><img src="img/home-logo-01.svg" alt="鳳飛飛故事館"
+                    /></NuxtLink>
                   </div>
                 </div>
                 <div class="header-flex-right flex-80">
@@ -48,26 +51,26 @@
                     <nav class="page_nav">
                       <ul class="mainmenu">
                         <li class="lavel-1">
-                          <a href="index.html"><span>首頁</span></a>
+                          <NuxtLink to="/">首頁</NuxtLink>
                         </li>
                         <li class="lavel-1">
-                          <a href="new-event.html"><span>最新活動</span></a>
+                          <NuxtLink to="new-event">最新活動</NuxtLink>
                         </li>
                         <li class="lavel-1">
-                          <a href="visit.html"><span>參觀資訊</span></a>
+                          <NuxtLink to="visit">參觀資訊</NuxtLink>
                         </li>
 
                         <li class="lavel-1 with--drop slide-dropdown">
                           <a href="#"><span>展覽資訊</span></a>
                           <ul class="dropdown__menu">
                             <li>
-                              <a href="exhibition-now.html"
-                                ><span>本期展覽</span></a
+                              <NuxtLink to="exhibition-now"
+                                ><span>本期展覽</span></NuxtLink
                               >
                             </li>
                             <li>
-                              <a href="exhibition-past.html"
-                                ><span>過去展覽</span></a
+                              <NuxtLink to="exhibition-past"
+                                ><span>過去展覽</span></NuxtLink
                               >
                             </li>
                           </ul>
@@ -76,33 +79,35 @@
                           <a href="#"><span>飛飛風采</span></a>
                           <ul class="dropdown__menu">
                             <li>
-                              <a href="style-music.html"
-                                ><span>音樂作品</span></a
+                              <NuxtLink to="style-music"
+                                ><span>音樂作品</span></NuxtLink
                               >
                             </li>
                             <li>
-                              <a href="style-awards.html"
-                                ><span>獎項紀錄</span></a
+                              <NuxtLink to="style-awards"
+                                ><span>獎項紀錄</span></NuxtLink
                               >
                             </li>
                             <li>
-                              <a href="style-voice.html"
-                                ><span>飛飛聲影</span></a
+                              <NuxtLink to="style-voice"
+                                ><span>飛飛聲影</span></NuxtLink
                               >
                             </li>
                             <li>
-                              <a href="style-list.html"
-                                ><span>飛飛大事記</span></a
+                              <NuxtLink to="style-list"
+                                ><span>飛飛大事記</span></NuxtLink
                               >
                             </li>
                           </ul>
                         </li>
 
                         <li class="lavel-1">
-                          <a href="journey.html"><span>飛飛踩點</span></a>
+                          <NuxtLink to="journey"
+                            ><span>飛飛踩點</span></NuxtLink
+                          >
                         </li>
                         <li class="lavel-1">
-                          <a href="about.html"><span>關於我們</span></a>
+                          <NuxtLink to="about"><span>關於我們</span></NuxtLink>
                         </li>
                       </ul>
                     </nav>
@@ -138,7 +143,7 @@
           </div>
         </div>
 
-        <!-- <div class="copyright-alert">
+        <div class="copyright-alert">
           <p>
             本網站所使用之素材，部分經所有權人授權使用，仍有一部份為網路素材，若您為所有權人請您與我們聯絡。<a
               id="CRclose"
@@ -147,39 +152,43 @@
               >關閉</a
             >
           </p>
-        </div> -->
+        </div>
       </header>
 
       <div class="popup-mobile-manu popup-mobile-visiable">
         <div class="inner">
           <div class="mobileheader">
             <div class="logo">
-              <a href="index.html">
-                <img src="img/home-logo.svg" alt="鳳飛飛故事館" />
-              </a>
+              <NuxtLink to="/"
+                ><img src="img/home-logo.svg" alt="鳳飛飛故事館"
+              /></NuxtLink>
             </div>
             <a class="mobile-close" href="#"></a>
           </div>
           <div class="menu-content">
             <ul class="menulist object-custom-menu">
               <li>
-                <a href="index.html"><span>首頁</span></a>
+                <NuxtLink to="/">首頁</NuxtLink>
               </li>
               <li>
-                <a href="new-event.html"><span>最新活動</span></a>
+                <NuxtLink to="new-event">最新活動</NuxtLink>
               </li>
               <li>
-                <a href="visit.html"><span>參觀資訊</span></a>
+                <NuxtLink to="visit">參觀資訊</NuxtLink>
               </li>
 
               <li class="has-mega-menu">
                 <a href="#"><span>展覽資訊</span></a>
                 <ul class="object-submenu">
                   <li>
-                    <a href="exhibition-now.html"><span>本期展覽</span></a>
+                    <NuxtLink to="exhibition-now"
+                      ><span>本期展覽</span></NuxtLink
+                    >
                   </li>
                   <li>
-                    <a href="exhibition-past.html"><span>過去展覽</span></a>
+                    <NuxtLink to="exhibition-past"
+                      ><span>過去展覽</span></NuxtLink
+                    >
                   </li>
                 </ul>
               </li>
@@ -188,31 +197,31 @@
                 <a href="#"><span>飛飛風采</span></a>
                 <ul class="object-submenu">
                   <li>
-                    <a href="style-music.html"><span>音樂作品</span></a>
+                    <NuxtLink to="style-music"><span>音樂作品</span></NuxtLink>
                   </li>
                   <li>
-                    <a href="style-awards.html"><span>獎項紀錄</span></a>
+                    <NuxtLink to="style-awards"><span>獎項紀錄</span></NuxtLink>
                   </li>
                   <li>
-                    <a href="style-voice.html"><span>飛飛聲影</span></a>
+                    <NuxtLink to="style-voice"><span>飛飛聲影</span></NuxtLink>
                   </li>
                   <li>
-                    <a href="style-list.html"><span>飛飛大事記</span></a>
+                    <NuxtLink to="style-list"><span>飛飛大事記</span></NuxtLink>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="journey.html"><span>飛飛踩點</span></a>
+                <NuxtLink to="journey"><span>飛飛踩點</span></NuxtLink>
               </li>
               <li>
-                <a href="about.html"><span>關於我們</span></a>
+                <NuxtLink to="about"><span>關於我們</span></NuxtLink>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <client-only>
-        <div  class="swiper mySwiper " ref="swiper">
+        <div class="swiper mySwiper" ref="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="img/slider-1.jpg" />
@@ -229,6 +238,8 @@
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
+
+          <div class="swiper-pagination"></div>
         </div>
       </client-only>
       <!--  <div class="slider-revoluation slider-business">
@@ -722,15 +733,47 @@
         </div>
       </div> -->
       <!-- END REVOLUTION SLIDER -->
+      <!-- <div class="tt">
+        <div
+          class="wowTEst wow animate__backInLeft"
+          data-wow-delay="1.5s"
+          data-wow-iteration="1"
+        ></div>
+      </div> -->
+      <!-- <div class="bk-service-area section-ptb-xl fefe-bg--1">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div
+                class="section-title text-center wow animate__backInUp"
+                data-wow-delay="1.5s"
+                data-wow-iteration="1"
+              >
+                <div class="dp-flex section-title-top">
+                  <div class="head-img">
+                    <img src="img/CD-icon2.svg" alt="" />
+                  </div>
+                  <h3>鳳飛飛故事館</h3>
+                </div>
 
+                <h2>鳳飛飛的故事不只鳳飛飛 鳳飛飛的故事還有鳳迷跟你跟我</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
       <!-- Page Conttent -->
-      <main class="page-content">
+
+      <main>
         <!-- Start Service Area -->
         <div class="bk-service-area section-ptb-xl fefe-bg--1">
           <div class="container">
             <div class="row">
               <div class="col-lg-12">
-                <div class="section-title text-center wow move-up">
+                <div
+                  class="section-title text-center wow animate__fadeInUp"
+                  data-wow-iteration="1"
+                >
                   <div class="dp-flex section-title-top">
                     <div class="head-img">
                       <img src="img/CD-icon2.svg" alt="" />
@@ -742,11 +785,13 @@
                 </div>
               </div>
             </div>
+
             <div class="row mt--70 mt_sm--20 mt_md--30">
               <!-- Start Single Portfolio -->
               <div
-                class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow"
-                data-wow-delay=".15s"
+                class="col-lg-4 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
+                data-wow-delay=".5s"
+                data-wow-iteration="1"
               >
                 <div class="portfolio with-caption mt_mobile--30">
                   <div class="thumb">
@@ -770,8 +815,9 @@
 
               <!-- Start Single Portfolio -->
               <div
-                class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow"
-                data-wow-delay=".15s"
+                class="col-lg-4 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
+                data-wow-delay=".5s"
+                data-wow-iteration="1"
               >
                 <div class="portfolio with-caption mt_mobile--30">
                   <div class="thumb">
@@ -796,8 +842,9 @@
 
               <!-- Start Single Portfolio -->
               <div
-                class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow"
-                data-wow-delay=".16s"
+                class="col-lg-4 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
+                data-wow-delay=".6s"
+                data-wow-iteration="1"
               >
                 <div class="portfolio with-caption mt_sm--30 mt_md--30">
                   <div class="thumb">
@@ -829,7 +876,16 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-12">
-                  <div class="section-title text-center white-text wow move-up">
+                  <div
+                    class="
+                      section-title
+                      text-center
+                      white-text
+                      wow
+                      animate__fadeInUp
+                    "
+                    data-wow-iteration="1"
+                  >
                     <div class="dp-flex section-title-top">
                       <div class="head-img">
                         <img src="img/CD-icon4.svg" alt="" />
@@ -874,17 +930,26 @@
 
               <div class="col-lg-6">
                 <div class="row row--0">
-                  <div class="col-lg-12 wow move-up">
-                    <!-- Start Single Portfolio -->
+                  <!-- <div
+                    class="col-lg-12 wow animate__fadeInUp"
+                    data-wow-iteration="1"
+                  >
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
-                        <img src="img/portfolio-2.jpg" alt="鳳飛飛故事館" />
+                        
                       </div>
                     </div>
-                    <!-- End Single Portfolio -->
-                  </div>
-
-                  <div class="col-lg-6 wow move-up">
+                  </div> -->
+                  <img
+                    class="col-lg-12 wow animate__fadeInUp"
+                    data-wow-iteration="1"
+                    src="img/portfolio-2.jpg"
+                    alt="鳳飛飛故事館"
+                  />
+                  <div
+                    class="col-lg-6 wow animate__fadeInUp"
+                    data-wow-iteration="1"
+                  >
                     <!-- Start Single Portfolio -->
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
@@ -894,14 +959,15 @@
                     <!-- End Single Portfolio -->
                   </div>
 
-                  <div class="col-lg-6 wow move-up">
-                    <!-- Start Single Portfolio -->
+                  <div
+                    class="col-lg-6 wow animate__fadeInUp"
+                    data-wow-iteration="1"
+                  >
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
                         <img src="img/portfolio-4.jpg" alt="鳳飛飛故事館" />
                       </div>
                     </div>
-                    <!-- End Single Portfolio -->
                   </div>
                 </div>
               </div>
@@ -915,16 +981,24 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 col-12">
-                <div class="section-title wow move-up">
+                <div
+                  class="section-title wow animate__fadeInUp"
+                  data-wow-iteration="1"
+                >
                   <h3 class="theme-color">台灣一代歌后</h3>
                   <h3 class="theme-color">一個傳奇 一個希望</h3>
                   <h2>
                     鳳飛飛 所具備的群眾魅力 是空前絕後的 在鳳飛飛的故事、歌聲裡
                     為大家帶來了溫暖、療癒 她是我們的一代歌后！一個傳奇！
                   </h2>
-                  <a class="bk-btn theme-btn add-mt" href="style-list.html"
-                    >更多內容</a
+                  <NuxtLink to="style-list"
+                    ><a class="bk-btn theme-btn add-mt"
+                      >更多內容</a
+                    ></NuxtLink
                   >
+                  <!-- <a class="bk-btn theme-btn add-mt" href="style-list.html"
+                    >更多內容</a
+                  > -->
                 </div>
               </div>
 
@@ -937,7 +1011,10 @@
               >
                 <div class="speakers-number-wrap">
                   <!-- Start Single Count -->
-                  <div class="number-wrap wow move-up">
+                  <div
+                    class="number-wrap wow animate__fadeInUp"
+                    data-wow-iteration="1"
+                  >
                     <span class="count theme-color">100</span>
                     <div class="content">
                       <h6>張專輯以上</h6>
@@ -951,7 +1028,10 @@
                   <!-- End Single Count -->
 
                   <!-- Start Single Count -->
-                  <div class="number-wrap mt--40 wow move-up">
+                  <div
+                    class="number-wrap mt--40 wow animate__fadeInUp"
+                    data-wow-iteration="1"
+                  >
                     <span class="count theme-color">40</span>
                     <div class="content">
                       <h6>座獎項以上</h6>
@@ -990,16 +1070,19 @@
                     <h3 class="theme-color">飛飛踩點</h3>
                   </div>
                   <div class="heading-right">
-                    <a href="journey.html"
-                      >更多景點 <i class="fa fa-arrow-right"></i>
-                    </a>
+                    <NuxtLink to="journey"
+                      >更多景點 <i class="fa fa-arrow-right"></i
+                    ></NuxtLink>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
               <!-- Start Single Team -->
-              <div class="col-lg-3 col-md-6 col-sm-6 col-12 wow move-up">
+              <div
+                class="col-lg-3 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
+                data-wow-iteration="1"
+              >
                 <div class="team team_style--1">
                   <!-- Image Wrap -->
                   <div class="image-wrap">
@@ -1043,7 +1126,10 @@
               <!-- End Single Team -->
 
               <!-- Start Single Team -->
-              <div class="col-lg-3 col-md-6 col-sm-6 col-12 wow move-up">
+              <div
+                class="col-lg-3 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
+                data-wow-iteration="1"
+              >
                 <div class="team team_style--1">
                   <!-- Image Wrap -->
                   <div class="image-wrap">
@@ -1087,7 +1173,10 @@
               <!-- End Single Team -->
 
               <!-- Start Single Team -->
-              <div class="col-lg-3 col-md-6 col-sm-6 col-12 wow move-up">
+              <div
+                class="col-lg-3 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
+                data-wow-iteration="1"
+              >
                 <div class="team team_style--1">
                   <!-- Image Wrap -->
                   <div class="image-wrap">
@@ -1131,7 +1220,10 @@
               <!-- End Single Team -->
 
               <!-- Start Single Team -->
-              <div class="col-lg-3 col-md-6 col-sm-6 col-12 wow move-up">
+              <div
+                class="col-lg-3 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
+                data-wow-iteration="1"
+              >
                 <div class="team team_style--1">
                   <!-- Image Wrap -->
                   <div class="image-wrap">
@@ -1334,7 +1426,13 @@ import myMain from "@/static/js/main.js";
 import myRevoulation from "@/static/js/revoulation.js";
 import Swiper from "swiper/swiper-bundle.min";
 import "swiper/swiper-bundle.min.css";
+import custom from "@/static/js/custom.js";
+// import plugins from "@/static/js/plugins.js";
 
+if (process.browser) {
+  // 在这里根据环境引入wow.js
+  var { WOW } = require("wowjs");
+}
 export default {
   auth: false,
   layout: "default",
@@ -1347,12 +1445,42 @@ export default {
   async mounted() {
     myMain();
     myRevoulation();
+    custom();
+    // plugins();
+
     await this.$nextTick();
     new Swiper(this.$refs.swiper, {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
+        renderBullet: (index, className) => {
+          return (
+            '<span class="' + className + '">' + `0${index + 1}` + "</span>"
+          );
+        },
+      },
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          // will set `translateZ(-400px)` on previous slides
+          translate: [0, 0, -400],
+        },
+        next: {
+          // will set `translateX(100%)` on next slides
+          translate: ["100%", 0, 0],
+        },
+      },
+    });
+    this.$nextTick(() => {
+      if (process.browser) {
+        new WOW({ animateClass: "animate__animated" }).init();
+        // 在页面mounted生命周期里面 根据环境实例化WOW
+      }
     });
   },
   destroyed() {},
@@ -1362,6 +1490,10 @@ export default {
 </script>
 
 <style scoped>
+body,
+html {
+  overflow-x: hidden;
+}
 .swiper {
   width: 100%;
   height: 100vh;
@@ -1385,5 +1517,22 @@ export default {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+.swiper-pagination {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.mySwiper >>> .swiper-pagination-bullet {
+  background-color: rgba(180, 66, 66, 0) !important;
+  height: 30px;
+  width: 30px;
+  color: #fff;
+  opacity: 1;
+  margin-right: 20px;
+}
+.mySwiper >>> .swiper-pagination-bullet-active {
+  border-bottom: 3px #fff solid;
+  border-radius: 0;
 }
 </style>

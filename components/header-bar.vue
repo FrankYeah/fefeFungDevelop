@@ -26,9 +26,7 @@
                             <!-- Header Left -->
                             <div class="header-left flex-20">
                                 <div class="logo">
-                                    <a href="index.html">
-                                        <img src="img/home-logo-W.svg" alt="鳳飛飛故事館">
-                                    </a>
+                                    <NuxtLink to="/"><img src="img/home-logo-W.svg" alt="鳳飛飛故事館"></NuxtLink>
                                 </div>
                             </div>
                             <!-- Mainmenu Wrap -->
@@ -37,16 +35,20 @@
                                     <nav class="page_nav">
                                         <ul class="mainmenu">
 
-                                            <li class="lavel-1"><a href="index.html"><span>首頁</span></a></li>
-                                            <li class="lavel-1"><a href="new-event.html"><span>最新活動</span></a></li>
-                                            <li class="lavel-1"><a href="visit.html"><span>參觀資訊</span></a></li>
+                                            <li class="lavel-1"><NuxtLink to="/">首頁</NuxtLink></li>
+                                            <li class="lavel-1"><NuxtLink to="new-event">最新活動</NuxtLink></li>
+                                            <li class="lavel-1"><NuxtLink to="visit">參觀資訊</NuxtLink></li>
 
                                             <li class="lavel-1 with--drop slide-dropdown"><a
                                                     href="#"><span>展覽資訊</span></a>
                                                 <!-- Start Dropdown Menu -->
                                                 <ul class="dropdown__menu">
-                                                    <li><a href="exhibition-now.html"><span>本期展覽</span></a></li>
-                                                    <li><a href="exhibition-past.html"><span>過去展覽</span></a></li>
+                                                    <li><NuxtLink to="exhibition-now"
+                                ><span>本期展覽</span></NuxtLink
+                              ></li>
+                                                    <li><NuxtLink to="exhibition-past"
+                                ><span>過去展覽</span></NuxtLink
+                              ></li>
                                                 </ul>
                                                 <!-- End Dropdown Menu -->
                                             </li>
@@ -54,18 +56,28 @@
                                                     href="#"><span>飛飛風采</span></a>
                                                 <!-- Start Dropdown Menu -->
                                                 <ul class="dropdown__menu">
-                                                    <li><a href="style-music.html"><span>音樂作品</span></a></li>
-                                                    <li><a href="style-awards.html"><span>獎項紀錄</span></a></li>
-                                                    <li><a href="style-voice.html"><span>飛飛聲影</span></a></li>
-                                                    <li><a href="style-list.html"><span>飛飛大事記</span></a></li>
+                                                    <li><NuxtLink to="style-music"
+                                ><span>音樂作品</span></NuxtLink
+                              ></li>
+                                                    <li><NuxtLink to="style-awards"
+                                ><span>獎項紀錄</span></NuxtLink
+                              ></li>
+                                                    <li><NuxtLink to="style-voice"
+                                ><span>飛飛聲影</span></NuxtLink
+                              ></li>
+                                                    <li><NuxtLink to="style-list"
+                                ><span>飛飛大事記</span></NuxtLink
+                              ></li>
                                                 </ul>
                                                 <!-- End Dropdown Menu -->
                                             </li>
 
-                                            <li class="lavel-1"><a href="journey.html"><span>飛飛踩點</span></a></li>
+                                            <li class="lavel-1"><NuxtLink to="journey"
+                            ><span>飛飛踩點</span></NuxtLink
+                          ></li>
                                             <!-- <li class="lavel-1"><a href="smalltalk.html"><span>飛飛敲敲話</span></a></li> -->
                                             <!-- <li class="lavel-1"><a href="event-list.html"><span>活動記事</span></a></li> -->
-                                            <li class="lavel-1"><a href="about.html"><span>關於我們</span></a></li>
+                                            <li class="lavel-1"><NuxtLink to="about"><span>關於我們</span></NuxtLink></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -104,29 +116,43 @@
                 </div>
                 <div class="menu-content">
                     <ul class="menulist object-custom-menu">
-                        <li><a href="index.html"><span>首頁</span></a></li>
-                        <li><a href="new-event.html"><span>最新活動</span></a></li>
-                        <li><a href="visit.html"><span>參觀資訊</span></a></li>
+                        <li><NuxtLink to="/">首頁</NuxtLink></li>
+                        <li><NuxtLink to="new-event">最新活動</NuxtLink></li>
+                        <li><NuxtLink to="visit">參觀資訊</NuxtLink></li>
 
                         <li class="has-mega-menu"><a href="#"><span>展覽資訊</span></a>
                             <ul class="object-submenu">
-                                <li><a href="exhibition-now.html"><span>本期展覽</span></a></li>
-                                <li><a href="exhibition-past.html"><span>過去展覽</span></a></li>
+                                <li><NuxtLink to="exhibition-now"
+                                ><span>本期展覽</span></NuxtLink
+                              ></li>
+                                <li><NuxtLink to="exhibition-past"
+                                ><span>過去展覽</span></NuxtLink
+                              ></li>
                             </ul>
                         </li>
 
                         <li class="has-mega-menu"><a href="#"><span>飛飛風采</span></a>
                             <ul class="object-submenu">
-                                <li><a href="style-music.html"><span>音樂作品</span></a></li>
-                                <li><a href="style-awards.html"><span>獎項紀錄</span></a></li>
-                                <li><a href="style-voice.html"><span>飛飛聲影</span></a></li>
-                                <li><a href="style-list.html"><span>飛飛大事記</span></a></li>
+                                <li><NuxtLink to="style-music"
+                                ><span>音樂作品</span></NuxtLink
+                              ></li>
+                                <li><NuxtLink to="style-awards"
+                                ><span>獎項紀錄</span></NuxtLink
+                              ></li>
+                                <li><NuxtLink to="style-voice"
+                                ><span>飛飛聲影</span></NuxtLink
+                              ></li>
+                                <li><NuxtLink to="style-list"
+                                ><span>飛飛大事記</span></NuxtLink
+                              ></li>
                             </ul>
                         </li>
-                        <li><a href="journey.html"><span>飛飛踩點</span></a></li>
+                        <li><NuxtLink to="journey"
+                            ><span>飛飛踩點</span></NuxtLink
+                          ></li>
                         <!--<li><a href="smalltalk.html"><span>飛飛敲敲話</span></a></li> -->
                         <!-- <li><a href="event-list.html"><span>活動記事</span></a></li> -->
-                        <li><a href="about.html"><span>關於我們</span></a></li>
+                        <li><NuxtLink to="about"><span>關於我們</span></NuxtLink></li>
 
                     </ul>
                 </div>
@@ -150,7 +176,7 @@
 
                             <div class="breadcrumb-insite">
                                 <ul class="core-breadcaump">
-                                    <li><a href="index.html">首頁</a></li>
+                                    <li><NuxtLink to="/">首頁</NuxtLink></li>
                                     <li class="current">關於我們</li>
                                 </ul>
                             </div>

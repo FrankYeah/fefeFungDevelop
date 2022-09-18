@@ -1,7 +1,7 @@
 <template>
   <!-- Footer -->
   <footer id="bk-footer"
-  class="page-footer bg_color--3 pl--150 pr--150 pl_lg--30 pr_lg--30 pl_md--30 pr_md--30 pl_sm--5 pr_sm--5">
+  class="page-footer bg_color--3 pl--150 pr--150 pl_lg--30 pr_lg--30 pl_md--30 pr_md--30 pl_sm--5 pr_sm--5" style="background: #000000;">
   <!-- Start Footer Top Area -->
   <div class="bk-footer-inner pt--50 pb--30 pt_sm--80">
       <div class="container">
