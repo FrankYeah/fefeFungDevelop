@@ -101,7 +101,6 @@ export default {
     '~/plugins/moments',
     { src: '~/plugins/gtag'},
     { src: '~plugins/vue-quill-editor.js', ssr: false },
-    { src: '~/plugins/waypoints', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
