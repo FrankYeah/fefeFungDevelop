@@ -33,16 +33,16 @@
               <div class="header__wrapper mr--0">
                 <div class="header-left flex-20">
                   <div class="logo logo-top">
-                    <NuxtLink to="/"
+                    <a to="/"
                       ><img src="img/home-logo-01.svg" alt="鳳飛飛故事館"
-                    /></NuxtLink>
+                    /></a>
                     <!-- <a href="index.html">
                       <img src="img/home-logo-01.svg" alt="鳳飛飛故事館" />
                     </a> -->
                   </div>
                   <div class="logo logo-sticky">
                     <NuxtLink to="/"
-                      ><img src="img/home-logo-01.svg" alt="鳳飛飛故事館"
+                      ><img src="img/home-logo-白.svg" alt="鳳飛飛故事館"
                     /></NuxtLink>
                   </div>
                 </div>
@@ -51,13 +51,13 @@
                     <nav class="page_nav">
                       <ul class="mainmenu">
                         <li class="lavel-1">
-                          <NuxtLink to="/">首頁</NuxtLink>
+                          <NuxtLink to="/"><span>首頁</span></NuxtLink>
                         </li>
                         <li class="lavel-1">
-                          <NuxtLink to="new-event">最新活動</NuxtLink>
+                          <NuxtLink to="new-event"><span>最新活動</span></NuxtLink>
                         </li>
                         <li class="lavel-1">
-                          <NuxtLink to="visit">參觀資訊</NuxtLink>
+                          <NuxtLink to="visit"><span>參觀資訊</span></NuxtLink>
                         </li>
 
                         <li class="lavel-1 with--drop slide-dropdown">
@@ -168,13 +168,13 @@
           <div class="menu-content">
             <ul class="menulist object-custom-menu">
               <li>
-                <NuxtLink to="/">首頁</NuxtLink>
+                <NuxtLink to="/"><span>首頁</span></NuxtLink>
               </li>
               <li>
-                <NuxtLink to="new-event">最新活動</NuxtLink>
+                <NuxtLink to="new-event"><span>最新活動</span></NuxtLink>
               </li>
               <li>
-                <NuxtLink to="visit">參觀資訊</NuxtLink>
+                <NuxtLink to="visit"><span>參觀資訊</span></NuxtLink>
               </li>
 
               <li class="has-mega-menu">
@@ -1022,7 +1022,9 @@
                     class="number-wrap wow animate__fadeInUp"
                     data-wow-iteration="1"
                   >
-                    <span class="waypoint" style="color:#6001D2">{{ count1 }}</span>
+                    <span ref="waypoint" style="color: #6001d2">{{
+                      count1
+                    }}</span>
                     <div class="content">
                       <h6>張專輯以上</h6>
                       <p>
@@ -1039,7 +1041,7 @@
                     class="number-wrap mt--40 wow animate__fadeInUp"
                     data-wow-iteration="1"
                   >
-                    <span  style="color:#6001D2">{{ count2 }}</span>
+                    <span style="color: #6001d2">{{ count2 }}</span>
                     <div class="content">
                       <h6>座獎項以上</h6>
                       <p>
@@ -1434,7 +1436,6 @@ import myRevoulation from "@/static/js/revoulation.js";
 import Swiper from "swiper/swiper-bundle.min";
 import "swiper/swiper-bundle.min.css";
 import custom from "@/static/js/custom.js";
-// import plugins from "@/static/js/plugins.js";
 
 if (process.browser) {
   // 在这里根据环境引入wow.js
@@ -1453,84 +1454,69 @@ export default {
       count2: 0,
     };
   },
-  async mounted() {
+  mounted() {
     myMain();
     myRevoulation();
     custom();
-    // plugins();
-
-    this.waypoint = new window.Waypoint.Inview({
-      element: document.querySelector(".waypoint"),
-
-      entered: this.count(this),
-
-      exited: (direction) => {
-        console.log(direction);
-        this.waypointed = false;
-      },
-    });
-    await this.$nextTick();
-    new Swiper(this.$refs.swiper, {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        type: "bullets",
-        clickable: true,
-        renderBullet: (index, className) => {
-          return (
-            '<span class="' + className + '">' + `0${index + 1}` + "</span>"
-          );
-        },
-      },
-      effect: "creative",
-      creativeEffect: {
-        prev: {
-          // will set `translateZ(-400px)` on previous slides
-          translate: [0, 0, -400],
-        },
-        next: {
-          // will set `translateX(100%)` on next slides
-          translate: ["100%", 0, 0],
-        },
-      },
-    });
 
     this.$nextTick(() => {
+
+      window.addEventListener("scroll", this.handleScroll());
+
+      new Swiper(this.$refs.swiper, {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+          renderBullet: (index, className) => {
+            return (
+              '<span class="' + className + '">' + `0${index + 1}` + "</span>"
+            );
+          },
+        },
+        effect: "creative",
+        creativeEffect: {
+          prev: {
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ["100%", 0, 0],
+          },
+        },
+      });
       if (process.browser) {
         new WOW({ animateClass: "animate__animated" }).init();
-        // 在页面mounted生命周期里面 根据环境实例化WOW
       }
     });
-  },
-  beforeDestroy() {
-    this.waypoint.destroy();
   },
   destroyed() {},
   computed: {},
   methods: {
-    count(t) {
+    handleScroll() {
       var count = 0;
       var th = this;
-      console.log("t")
-      
       return function () {
-       
-        if (count < 1) {
-          for (let index = 0; index < 100; index++) {
-            setTimeout(() => {
-              th.count1++;
-            },`${index * 10}`);
+        this.currentScroll = window.pageYOffset; 
+
+        if (this.currentScroll >= 1852) {
+          if (count < 1) {
+            for (let index = 0; index < 100; index++) {
+              setTimeout(() => {
+                th.count1++;
+              }, `${index * 10}`);
+            }
+            for (let index = 0; index < 40; index++) {
+              setTimeout(() => {
+                th.count2++;
+              }, `${index * 15}`);
+            }
           }
-          for (let index = 0; index < 40; index++) {
-            setTimeout(() => {
-              th.count2++;
-            },`${index * 15}`);
-          }
+          count++;
         }
-         count++;
       };
     },
   },
