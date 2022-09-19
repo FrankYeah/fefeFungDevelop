@@ -39,7 +39,8 @@
                                             <li class="lavel-1"><NuxtLink to="new-event">最新活動</NuxtLink></li>
                                             <li class="lavel-1"><NuxtLink to="visit">參觀資訊</NuxtLink></li>
 
-                                            <li class="lavel-1 with--drop slide-dropdown"><a
+                                            <li class="lavel-1 with--drop slide-dropdown">
+                                                <a
                                                     href="#"><span>展覽資訊</span></a>
                                                 <!-- Start Dropdown Menu -->
                                                 <ul class="dropdown__menu">

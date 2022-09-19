@@ -35,12 +35,11 @@
                 <!-- Header Left -->
                 <div class="header-left flex-20">
                   <div class="logo">
-                    <a href="index.html">
-                      <img
+                    <NuxtLink to="/"><img
                         src="~/assets/img/home-logo-W.svg"
                         alt="鳳飛飛故事館"
-                      />
-                    </a>
+                      /></NuxtLink>
+                  
                   </div>
                 </div>
                 <!-- Mainmenu Wrap -->
