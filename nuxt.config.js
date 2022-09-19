@@ -54,9 +54,9 @@ export default {
       { src: '/js/revolution.tools.min.js' },
       { src: '/js/revolution.extension.min.js' },
 
-      { src: '/js/main.js' },
-      { src: '/js/revoulation.js' },
-      { src: '/js/custom.js' }
+      // { src: '/js/main.js' },
+      // { src: '/js/revoulation.js' },
+      // { src: '/js/custom.js' }
 
       // { src: '/dist/js/vendor/vendor.min.js' },
       // { src: '/dist/js/plugins.min.js' },
@@ -101,7 +101,7 @@ export default {
     '~/plugins/moments',
     { src: '~/plugins/gtag'},
     { src: '~plugins/vue-quill-editor.js', ssr: false },
-   
+    { src: '~/plugins/waypoints', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

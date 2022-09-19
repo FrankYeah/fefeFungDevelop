@@ -795,17 +795,20 @@
               >
                 <div class="portfolio with-caption mt_mobile--30">
                   <div class="thumb">
-                    <a href="new-event.html">
-                      <img src="img/home-01.jpg" alt="最新活動" />
-                    </a>
+                    <NuxtLink to="new-event"
+                      ><img src="img/home-01.jpg" alt="最新活動"
+                    /></NuxtLink>
                   </div>
                   <div class="caption-bottom text-left">
-                    <div class="info dp-flex">
-                      <div class="info-img">
+                    <div
+                      class="info dp-flex"
+                      style="display: flex; align-items: "
+                    >
+                      <div class="info-img" style="center;margin-top:0;">
                         <img src="img/newevent-icon.svg" alt="" />
                       </div>
                       <h5 class="heading heading-h5">
-                        <a href="new-event.html">最新活動</a>
+                        <NuxtLink to="new-event">最新活動</NuxtLink>
                       </h5>
                     </div>
                   </div>
@@ -821,18 +824,21 @@
               >
                 <div class="portfolio with-caption mt_mobile--30">
                   <div class="thumb">
-                    <a href="visit.html">
-                      <img src="img/home-02.jpg" alt="參觀資訊" />
-                    </a>
+                    <NuxtLink to="visit"
+                      ><img src="img/home-02.jpg" alt="參觀資訊"
+                    /></NuxtLink>
                   </div>
-                  <div class="caption-bottom text-left">
-                    <div class="info dp-flex">
-                      <div class="info-img">
+                  <div class="caption-bottom">
+                    <div
+                      class="info"
+                      style="display: flex; align-items: center"
+                    >
+                      <div class="info-img" style="center;margin-top:0;">
                         <img src="img/exibition-icon.svg" alt="" />
                       </div>
 
                       <h5 class="heading heading-h5">
-                        <a href="visit.html">參觀資訊</a>
+                        <NuxtLink to="visit">參觀資訊</NuxtLink>
                       </h5>
                     </div>
                   </div>
@@ -848,17 +854,20 @@
               >
                 <div class="portfolio with-caption mt_sm--30 mt_md--30">
                   <div class="thumb">
-                    <a href="exhibition-now.html">
-                      <img src="img/home-03.jpg" alt="展覽介紹" />
-                    </a>
+                    <NuxtLink to="exhibition-now"
+                      ><img src="img/home-03.jpg" alt="展覽介紹"
+                    /></NuxtLink>
                   </div>
                   <div class="caption-bottom text-left">
-                    <div class="info dp-flex">
-                      <div class="info-img">
+                    <div
+                      class="info dp-flex"
+                      style="display: flex; align-items: center"
+                    >
+                      <div class="info-img" style="center;margin-top:0;">
                         <img src="img/visit-icon.svg" alt="" />
                       </div>
                       <h5 class="heading heading-h5">
-                        <a href="exhibition-now.html">展覽介紹</a>
+                        <NuxtLink to="exhibition-now">展覽介紹</NuxtLink>
                       </h5>
                     </div>
                   </div>
@@ -992,9 +1001,7 @@
                     為大家帶來了溫暖、療癒 她是我們的一代歌后！一個傳奇！
                   </h2>
                   <NuxtLink to="style-list"
-                    ><a class="bk-btn theme-btn add-mt"
-                      >更多內容</a
-                    ></NuxtLink
+                    ><a class="bk-btn theme-btn add-mt">更多內容</a></NuxtLink
                   >
                   <!-- <a class="bk-btn theme-btn add-mt" href="style-list.html"
                     >更多內容</a
@@ -1015,7 +1022,7 @@
                     class="number-wrap wow animate__fadeInUp"
                     data-wow-iteration="1"
                   >
-                    <span class="count theme-color">100</span>
+                    <span class="waypoint" style="color:#6001D2">{{ count1 }}</span>
                     <div class="content">
                       <h6>張專輯以上</h6>
                       <p>
@@ -1032,7 +1039,7 @@
                     class="number-wrap mt--40 wow animate__fadeInUp"
                     data-wow-iteration="1"
                   >
-                    <span class="count theme-color">40</span>
+                    <span  style="color:#6001D2">{{ count2 }}</span>
                     <div class="content">
                       <h6>座獎項以上</h6>
                       <p>
@@ -1440,7 +1447,11 @@ export default {
   components: {},
   props: {},
   data() {
-    return {};
+    return {
+      waypointed: false,
+      count1: 0,
+      count2: 0,
+    };
   },
   async mounted() {
     myMain();
@@ -1448,6 +1459,16 @@ export default {
     custom();
     // plugins();
 
+    this.waypoint = new window.Waypoint.Inview({
+      element: document.querySelector(".waypoint"),
+
+      entered: this.count(this),
+
+      exited: (direction) => {
+        console.log(direction);
+        this.waypointed = false;
+      },
+    });
     await this.$nextTick();
     new Swiper(this.$refs.swiper, {
       navigation: {
@@ -1476,6 +1497,7 @@ export default {
         },
       },
     });
+
     this.$nextTick(() => {
       if (process.browser) {
         new WOW({ animateClass: "animate__animated" }).init();
@@ -1483,9 +1505,35 @@ export default {
       }
     });
   },
+  beforeDestroy() {
+    this.waypoint.destroy();
+  },
   destroyed() {},
   computed: {},
-  methods: {},
+  methods: {
+    count(t) {
+      var count = 0;
+      var th = this;
+      console.log("t")
+      
+      return function () {
+       
+        if (count < 1) {
+          for (let index = 0; index < 100; index++) {
+            setTimeout(() => {
+              th.count1++;
+            },`${index * 10}`);
+          }
+          for (let index = 0; index < 40; index++) {
+            setTimeout(() => {
+              th.count2++;
+            },`${index * 15}`);
+          }
+        }
+         count++;
+      };
+    },
+  },
 };
 </script>
 
