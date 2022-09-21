@@ -4,6 +4,9 @@
       <NuxtLink to="/about">
         <el-button type="success">關於頁面</el-button>
       </NuxtLink>
+      <NuxtLink v-if="userData.role == 'ROLE_ADMIN'" to="/register">
+        <el-button type="primary">前往註冊</el-button>
+      </NuxtLink>
       <el-button @click="logout()" type="primary">登出</el-button>
       <div class="control-text">當前帳號：{{ userData.name }}</div>
       <div class="control-text">當前權限：{{ userData.role }}</div>

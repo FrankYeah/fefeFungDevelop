@@ -4,11 +4,15 @@
       <NuxtLink to="/about">
         <el-button type="success">關於頁面</el-button>
       </NuxtLink>
+      <NuxtLink v-if="isLogin" to="/control">
+        <el-button type="primary">前往後台</el-button>
+      </NuxtLink>
       <NuxtLink to="/login">
-        <el-button type="primary">登入</el-button>
+        <el-button type="primary">前往登入</el-button>
       </NuxtLink>
     </el-row>
     <el-row class="register-box">
+      <div class="register-head">註冊頁面</div>
       <el-input class="register-input" v-model="account.userName" placeholder="帳號"></el-input>
       <div>(帳號限制：電子信箱)</div>
       <el-input type="password" class="register-input" v-model="account.userPassword" placeholder="密碼"></el-input>
@@ -31,7 +35,6 @@
 import myMain from "@/static/js/main.js";
 import myRevoulation from "@/static/js/revoulation.js";
 export default {
-  auth: false,
   layout: 'default',
   components: {
     loading: require('~/components/loading.vue').default,
@@ -42,6 +45,12 @@ export default {
   },
   data () {
     return {
+      userData: {
+        name: '',
+        password: '',
+        role: ''
+      },
+      isLogin: false,
       isLoading: false,
       account: {
         userName: '',
@@ -53,6 +62,14 @@ export default {
   mounted () {
     myMain();
     myRevoulation();
+    //
+    this.userData = this.$store.state.auth.user.myInfo
+    if(this.userData.role != 'ROLE_ADMIN') {
+      this.$router.push('/login')
+    }
+    if(this.$auth.loggedIn) {
+      this.isLogin = true
+    }
 
   },
   destroyed () {
@@ -105,6 +122,12 @@ export default {
 
   &-btn {
     margin: 20px 0px;
+  }
+
+  &-head {
+    font-size: 24px;
+    margin: 20px 0px 10px;
+    color: black;
   }
 }
 </style>

@@ -4,11 +4,9 @@
       <NuxtLink to="/about">
         <el-button type="success">關於頁面</el-button>
       </NuxtLink>
-      <NuxtLink to="/register">
-        <el-button type="primary">註冊</el-button>
-      </NuxtLink>
     </el-row>
     <el-row class="register-box">
+      <div class="register-head">登入頁面</div>
       <el-input class="register-input" v-model="account.userName" placeholder="帳號"></el-input>
       <div>(帳號限制：電子信箱)</div>
       <el-input type="password" class="register-input" v-model="account.userPassword" placeholder="密碼"></el-input>
@@ -48,6 +46,10 @@ export default {
   mounted () {
     myMain();
     myRevoulation();
+
+    if(this.$auth.loggedIn) {
+      this.$router.push('/control')
+    }
 
   },
   destroyed () {
@@ -112,6 +114,12 @@ export default {
 
   &-btn {
     margin: 20px 0px;
+  }
+
+  &-head {
+    font-size: 24px;
+    margin: 20px 0px 10px;
+    color: black;
   }
 }
 </style>
