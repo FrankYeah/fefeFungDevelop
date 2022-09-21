@@ -7,8 +7,8 @@
 
 <script>
 // import $ from 'jquery'
-import myMain from "@/static/js/main.js";
-import myRevoulation from "@/static/js/revoulation.js";
+// import myMain from "@/static/js/main.js";
+// import myRevoulation from "@/static/js/revoulation.js";
 import bottomBar from "@/components/bottom-bar.vue";
 
 export default {
@@ -23,8 +23,8 @@ export default {
     };
   },
   mounted() {
-    myMain();
-    myRevoulation();
+    // myMain();
+    // myRevoulation();
 
     // if (newValue.value.name == "coming-soon") {
     //   isShowBottom.value = false;

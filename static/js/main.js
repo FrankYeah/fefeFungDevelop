@@ -226,16 +226,16 @@ export default function () {
     	06. Blog Activation
     =====================================*/
 
-    $('.blog-slick-initial').slick({
-        slidesToShow: 1,
-        autoplay: false,
-        autoplaySpeed: 5000,
-        easing: 'ease-in-out',
-        dots: false,
-        arrows: true,
-        prevArrow: '<button class="blog-arrow-prev"><i class="fa fa-angle-left"></i></button>',
-        nextArrow: '<button class="blog-arrow-next"><i class="fa fa-angle-right"></i></button>',
-    });
+    // $('.blog-slick-initial').slick({
+    //     slidesToShow: 1,
+    //     autoplay: false,
+    //     autoplaySpeed: 5000,
+    //     easing: 'ease-in-out',
+    //     dots: false,
+    //     arrows: true,
+    //     prevArrow: '<button class="blog-arrow-prev"><i class="fa fa-angle-left"></i></button>',
+    //     nextArrow: '<button class="blog-arrow-next"><i class="fa fa-angle-right"></i></button>',
+    // });
 
     /*===========================
     	07. Youtub Popup

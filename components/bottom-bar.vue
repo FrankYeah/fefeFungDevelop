@@ -87,8 +87,8 @@
 
 <script>
 // import $ from 'jquery'
-import myMain from '@/static/js/main.js';
-import myRevoulation from '@/static/js/revoulation.js';
+// import myMain from '@/static/js/main.js';
+// import myRevoulation from '@/static/js/revoulation.js';
 
 export default {
   auth: false,
@@ -105,8 +105,8 @@ export default {
     }
   },
   mounted () {
-    myMain()
-    myRevoulation()
+    // myMain()
+    // myRevoulation()
   },
   destroyed () {
 
