@@ -9,7 +9,7 @@
       </NuxtLink>
       <el-button @click="logout()" type="primary">登出</el-button>
       <div class="control-text">當前帳號：{{ userData.name }}</div>
-      <div class="control-text">當前權限：{{ userData.role }}</div>
+      <div class="control-text">當前權限：{{ userData.role == 'ROLE_ADMIN' ? '管理權限' : '一般權限' }}</div>
     </el-row>
     <!-- 切換 -->
     <el-row class="control-basic">
@@ -42,7 +42,7 @@
               <div v-if="user.role == 'ROLE_ADMIN' && user.name != userData.name"></div>
               <el-input v-else class="control-input" v-model="user.password" placeholder="密碼"></el-input>
             </div>
-            <div class="control-table-head">{{ user.role }}</div>
+            <div class="control-table-head">{{ user.role == 'ROLE_ADMIN' ? '管理權限' : '一般權限' }}</div>
             <div class="control-table-head">
               <div v-if="user.role == 'ROLE_ADMIN' && user.name != userData.name"></div>
               <el-button v-else @click="editUser(index)" type="primary">修改</el-button>
