@@ -22,6 +22,15 @@ export default {
       isShowBottom: true,
     };
   },
+  watch: {
+  '$route.name': {
+      handler: function(route) {
+        let paragraph = document.querySelector('html')
+        paragraph.style.overflow = "inherit"
+      },
+      deep: true
+    },
+  },
   mounted() {
     // myMain();
     // myRevoulation();

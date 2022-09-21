@@ -30,7 +30,7 @@
                   <nav class="page_nav">
                     <ul class="mainmenu">
                       <li class="lavel-1">
-                        <nuxt-link to="/"><span>首頁</span></nuxt-link>
+                        <NuxtLink to="/"><span>首頁</span></NuxtLink>
                       </li>
                       <li class="lavel-1">
                         <NuxtLink to="new-event"
@@ -133,89 +133,96 @@
     </header>
     <!--// Header -->
 
-   <!-- Start Popup Menu -->
-      <div class="popup-mobile-manu popup-mobile-visiable">
-        <div class="inner">
-          <div class="mobileheader">
-            <div class="logo">
-              <NuxtLink to="/" @click="menuClose()">
-                <img src="img/home-logo.svg" alt="Multipurpose" />
-              </NuxtLink>
-            </div>
-            <a class="mobile-close" href="#"></a>
+    <!-- Start Popup Menu -->
+    <div class="popup-mobile-manu popup-mobile-visiable">
+      <div class="inner">
+        <div class="mobileheader">
+          <div class="logo">
+            <NuxtLink to="/">
+              <img
+                @click="menuClose()"
+                src="img/home-logo.svg"
+                alt="Multipurpose"
+              />
+            </NuxtLink>
           </div>
-          <div class="menu-content">
-            <ul class="menulist object-custom-menu">
-              <NuxtLink to="/">
-                <li class="manu-li" @click="menuClose()"><span>首頁</span></li></NuxtLink
-              >
+          <a class="mobile-close" href="#"></a>
+        </div>
+        <div class="menu-content">
+          <ul class="menulist object-custom-menu">
+            <NuxtLink to="/">
+              <li @click="menuClose()" class="manu-li">
+                <span>首頁</span>
+              </li></NuxtLink
+            >
 
-              <NuxtLink to="new-event"
-                ><li class="manu-li" @click="menuClose()"><span>最新活動</span></li></NuxtLink
-              >
+            <NuxtLink to="new-event"
+              ><li class="manu-li" @click="menuClose()">
+                <span>最新活動</span>
+              </li></NuxtLink
+            >
 
-              <NuxtLink to="visit"
-                ><li class="manu-li" @click="menuClose()"><span>參觀資訊</span></li></NuxtLink
-              >
+            <NuxtLink to="visit"
+              ><li class="manu-li" @click="menuClose()">
+                <span>參觀資訊</span>
+              </li></NuxtLink
+            >
 
-              <li class="has-mega-menu">
-                <a href="#"><span>展覽資訊</span></a>
-                <ul class="object-submenu">
-                  
-                    <NuxtLink to="exhibition-now" 
-                      ><li @click="menuClose()"><span>本期展覽</span> </li></NuxtLink
-                    >
-                 
-                  
-                    <NuxtLink to="exhibition-past" 
-                      ><li @click="menuClose()"><span>過去展覽</span></li></NuxtLink
-                    >
-                  
-                </ul>
-              </li>
-
-              <li class="has-mega-menu">
-                <a href="#"><span>飛飛風采</span></a>
-                <ul class="object-submenu">
-                  
-                    <NuxtLink to="style-music" 
-                      ><li @click="menuClose()"><span>音樂作品</span> </li></NuxtLink
-                    >
-                 
-                 
-                    <NuxtLink to="style-awards" 
-                      > <li @click="menuClose()"><span>獎項紀錄</span></li></NuxtLink
-                    >
-                  
-                 
-                    <NuxtLink to="style-voice" 
-                      > <li @click="menuClose()"><span>飛飛聲影</span></li></NuxtLink
-                    >
-                  
-                  
-                    <NuxtLink to="style-list"
-                      > <li @click="menuClose()"><span>飛飛大事記</span></li></NuxtLink
-                    >
-                  
-                </ul>
-              </li>
-              
-                <NuxtLink to="journey" 
-                  > <li class="manu-li" @click="menuClose()"><span>飛飛踩點</span></li></NuxtLink
+            <li class="has-mega-menu">
+              <a href="#"><span>展覽資訊</span></a>
+              <ul class="object-submenu">
+                <NuxtLink to="exhibition-now"
+                  ><li @click="menuClose()"><span>本期展覽</span></li></NuxtLink
                 >
-              
-              <!--<li><a href="smalltalk.html"><span>飛飛敲敲話</span></a></li> -->
-              <!-- <li><a href="event-list.html"><span>活動記事</span></a></li> -->
-             
-                <NuxtLink to="about" 
-                  > <li class="manu-li" @click="menuClose()"><span>關於我們</span> </li></NuxtLink
+
+                <NuxtLink to="exhibition-past"
+                  ><li @click="menuClose()"><span>過去展覽</span></li></NuxtLink
                 >
-             
-            </ul>
-          </div>
+              </ul>
+            </li>
+
+            <li class="has-mega-menu">
+              <a href="#"><span>飛飛風采</span></a>
+              <ul class="object-submenu">
+                <NuxtLink to="style-music"
+                  ><li @click="menuClose()"><span>音樂作品</span></li></NuxtLink
+                >
+
+                <NuxtLink to="style-awards">
+                  <li @click="menuClose()"><span>獎項紀錄</span></li></NuxtLink
+                >
+
+                <NuxtLink to="style-voice">
+                  <li @click="menuClose()"><span>飛飛聲影</span></li></NuxtLink
+                >
+
+                <NuxtLink to="style-list">
+                  <li @click="menuClose()">
+                    <span>飛飛大事記</span>
+                  </li></NuxtLink
+                >
+              </ul>
+            </li>
+
+            <NuxtLink to="journey">
+              <li class="manu-li" @click="menuClose()">
+                <span>飛飛踩點</span>
+              </li></NuxtLink
+            >
+
+            <!--<li><a href="smalltalk.html"><span>飛飛敲敲話</span></a></li> -->
+            <!-- <li><a href="event-list.html"><span>活動記事</span></a></li> -->
+
+            <NuxtLink to="about">
+              <li class="manu-li" @click="menuClose()">
+                <span>關於我們</span>
+              </li></NuxtLink
+            >
+          </ul>
         </div>
       </div>
-      <!-- End Popup Menu -->
+    </div>
+    <!-- End Popup Menu -->
   </div>
 </template>
 
@@ -230,40 +237,33 @@ export default {
   data() {
     return {};
   },
-  mounted() {
-
-  },
+  mounted() {},
   destroyed() {},
   computed: {},
   methods: {
-        removeClass(elements,classname) {
-    // elements 為空字串或空陣列
-    if (!elements) { return; }
- 
-    // 如果是字串則 querySelectorAll，只有一個元素則轉成陣列(方便處理)
-    if (typeof(elements) === 'string') {
-        elements = document.getElementsByTagName(elements);
-    }else if (elements.tagName) { elements = [elements]; }
- 
-    // 新增要尋找的 classanme RE
-    var reg = new RegExp('(^| )' + classname + '($| )', 'g');
- 
-    // 利用 RE 去取代為空白
-    for (var i=0; i < elements.length; i++) {
-        elements[i].className = elements[i].className.replace(reg,' ');
-    }
-},
-    menuClose() {
-      console.log("最新活動");
-      
-      this.removeClass("body",'popup-mobile-menu-wrapper')
-      // let allBody = document.getElementsByTagName("body");
-      // console.log("allBody", allBody);
+    removeClass(elements, classname) {
+      // elements 為空字串或空陣列
+      if (!elements) {
+        return;
+      }
 
-      
-      // $body.removeClass('popup-mobile-menu-wrapper'), $html.css({
-      //     overflow: ""
-      // })
+      // 如果是字串則 querySelectorAll，只有一個元素則轉成陣列(方便處理)
+      if (typeof elements === "string") {
+        elements = document.getElementsByTagName(elements);
+      } else if (elements.tagName) {
+        elements = [elements];
+      }
+
+      // 新增要尋找的 classanme RE
+      var reg = new RegExp("(^| )" + classname + "($| )", "g");
+
+      // 利用 RE 去取代為空白
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].className = elements[i].className.replace(reg, " ");
+      }
+    },
+    menuClose() {
+      this.removeClass("body", "popup-mobile-menu-wrapper");
     },
   },
 };

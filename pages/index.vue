@@ -171,70 +171,83 @@
           <div class="menu-content">
             <ul class="menulist object-custom-menu">
               <NuxtLink to="/">
-                <li class="manu-li" @click="menuClose()"><span>首頁</span></li></NuxtLink
+                <li class="manu-li" @click="menuClose()">
+                  <span>首頁</span>
+                </li></NuxtLink
               >
 
               <NuxtLink to="new-event"
-                ><li class="manu-li" @click="menuClose()"><span>最新活動</span></li></NuxtLink
+                ><li class="manu-li" @click="menuClose()">
+                  <span>最新活動</span>
+                </li></NuxtLink
               >
 
               <NuxtLink to="visit"
-                ><li class="manu-li" @click="menuClose()"><span>參觀資訊</span></li></NuxtLink
+                ><li class="manu-li" @click="menuClose()">
+                  <span>參觀資訊</span>
+                </li></NuxtLink
               >
 
               <li class="has-mega-menu">
                 <a href="#"><span>展覽資訊</span></a>
                 <ul class="object-submenu">
-                  
-                    <NuxtLink to="exhibition-now" 
-                      ><li @click="menuClose()"><span>本期展覽</span> </li></NuxtLink
-                    >
-                 
-                  
-                    <NuxtLink to="exhibition-past" 
-                      ><li @click="menuClose()"><span>過去展覽</span></li></NuxtLink
-                    >
-                  
+                  <NuxtLink to="exhibition-now"
+                    ><li @click="menuClose()">
+                      <span>本期展覽</span>
+                    </li></NuxtLink
+                  >
+
+                  <NuxtLink to="exhibition-past"
+                    ><li @click="menuClose()">
+                      <span>過去展覽</span>
+                    </li></NuxtLink
+                  >
                 </ul>
               </li>
 
               <li class="has-mega-menu">
                 <a href="#"><span>飛飛風采</span></a>
                 <ul class="object-submenu">
-                  
-                    <NuxtLink to="style-music" 
-                      ><li @click="menuClose()"><span>音樂作品</span> </li></NuxtLink
-                    >
-                 
-                 
-                    <NuxtLink to="style-awards" 
-                      > <li @click="menuClose()"><span>獎項紀錄</span></li></NuxtLink
-                    >
-                  
-                 
-                    <NuxtLink to="style-voice" 
-                      > <li @click="menuClose()"><span>飛飛聲影</span></li></NuxtLink
-                    >
-                  
-                  
-                    <NuxtLink to="style-list"
-                      > <li @click="menuClose()"><span>飛飛大事記</span></li></NuxtLink
-                    >
-                  
+                  <NuxtLink to="style-music"
+                    ><li @click="menuClose()">
+                      <span>音樂作品</span>
+                    </li></NuxtLink
+                  >
+
+                  <NuxtLink to="style-awards">
+                    <li @click="menuClose()">
+                      <span>獎項紀錄</span>
+                    </li></NuxtLink
+                  >
+
+                  <NuxtLink to="style-voice">
+                    <li @click="menuClose()">
+                      <span>飛飛聲影</span>
+                    </li></NuxtLink
+                  >
+
+                  <NuxtLink to="style-list">
+                    <li @click="menuClose()">
+                      <span>飛飛大事記</span>
+                    </li></NuxtLink
+                  >
                 </ul>
               </li>
-              
-                <NuxtLink to="journey" 
-                  > <li class="manu-li" @click="menuClose()"><span>飛飛踩點</span></li></NuxtLink
-                >
-              
+
+              <NuxtLink to="journey">
+                <li class="manu-li" @click="menuClose()">
+                  <span>飛飛踩點</span>
+                </li></NuxtLink
+              >
+
               <!--<li><a href="smalltalk.html"><span>飛飛敲敲話</span></a></li> -->
               <!-- <li><a href="event-list.html"><span>活動記事</span></a></li> -->
-             
-                <NuxtLink to="about" 
-                  > <li class="manu-li" @click="menuClose()"><span>關於我們</span> </li></NuxtLink
-                >
-             
+
+              <NuxtLink to="about">
+                <li class="manu-li" @click="menuClose()">
+                  <span>關於我們</span>
+                </li></NuxtLink
+              >
             </ul>
           </div>
         </div>
@@ -1457,10 +1470,6 @@ import Swiper from "swiper/swiper-bundle.min";
 import "swiper/swiper-bundle.min.css";
 import custom from "@/static/js/custom.js";
 
-if (process.browser) {
-  // 在这里根据环境引入wow.js
-  var { WOW } = require("wowjs");
-}
 export default {
   auth: false,
   layout: "default",
@@ -1470,12 +1479,17 @@ export default {
   data() {
     return {
       waypointed: false,
-      count1: 0,
-      count2: 0,
-      isShowInfo:false
+      count1: 100,
+      count2: 40,
+      isShowInfo: false,
+      key: 0,
     };
   },
   mounted() {
+    if (process.browser) {
+      // 在这里根据环境引入wow.js
+      var { WOW } = require("wowjs");
+    }
     myMain();
     myRevoulation();
     custom();
@@ -1524,6 +1538,8 @@ export default {
 
         if (this.currentScroll >= 1852) {
           if (count < 1) {
+            th.count1 = 0;
+            th.count2 = 0;
             for (let index = 0; index < 100; index++) {
               setTimeout(() => {
                 th.count1++;
@@ -1571,9 +1587,9 @@ export default {
       //     overflow: ""
       // })
     },
-    handleInfoVisible(){
-      this.isShowInfo = this.isShowInfo?false:true
-    }
+    handleInfoVisible() {
+      this.isShowInfo = this.isShowInfo ? false : true;
+    },
   },
 };
 </script>

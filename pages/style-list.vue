@@ -86,6 +86,8 @@
 </template>
 
 <script>
+import myMain from "@/static/js/main.js";
+import myRevoulation from "@/static/js/revoulation.js";
 // import $ from 'jquery'
 if (process.browser) {
   // 在这里根据环境引入wow.js
@@ -284,6 +286,8 @@ export default {
     }
   },
   mounted () {
+     myMain();
+    myRevoulation();
    this.$nextTick(() => {
       if (process.browser) {
         new WOW({ animateClass: "animate__animated" }).init();
