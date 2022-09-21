@@ -42,7 +42,7 @@
             <div class="control-table-head">{{ user.role }}</div>
             <div class="control-table-head">
               <div v-if="user.role == 'ROLE_ADMIN' && user.name != userData.name"></div>
-              <el-button @click="editUser(index)" type="primary">修改</el-button>
+              <el-button v-else @click="editUser(index)" type="primary">修改</el-button>
             </div>
           </div>
         </div>
