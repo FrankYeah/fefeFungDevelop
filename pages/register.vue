@@ -4,8 +4,8 @@
       <NuxtLink to="/about">
         <el-button type="success">關於頁面</el-button>
       </NuxtLink>
-      <NuxtLink to="/register">
-        <el-button type="primary">註冊</el-button>
+      <NuxtLink to="/login">
+        <el-button type="primary">登入</el-button>
       </NuxtLink>
     </el-row>
     <el-row class="register-box">
@@ -13,8 +13,12 @@
       <div>(帳號限制：電子信箱)</div>
       <el-input type="password" class="register-input" v-model="account.userPassword" placeholder="密碼"></el-input>
       <div>(密碼限制：長度6~16位碼大小寫英文加數字)</div>
+      <div class="register-radio">
+        <el-radio v-model="account.userRole" label="ROLE_USER">一般權限</el-radio>
+        <el-radio v-model="account.userRole" label="ROLE_ADMIN">管理權限</el-radio>
+      </div>
       <div>
-        <el-button class="register-btn" @click="login()" type="primary">登入</el-button>
+        <el-button class="register-btn" @click="register()" type="primary">註冊</el-button>
       </div>
     </el-row>
     <loading v-if="isLoading" />
@@ -42,6 +46,7 @@ export default {
       account: {
         userName: '',
         userPassword: '',
+        userRole: 'ROLE_USER'
       }
     }
   },
@@ -57,36 +62,24 @@ export default {
 
   },
   methods: {
-    login() {
+    register() {
       this.isLoading = true
-      var bodyFormData = new FormData()
-      bodyFormData.append('userName', this.account.userName)
-      bodyFormData.append('userPassword', this.account.userPassword)
+      console.log(this.account)
       // aA123456789@gmail.com
-      this.$auth.loginWith('local', { data: bodyFormData })
-      .then(res => {
-        this.isLoading = false
-        if(res.data.states == 403) {
+      this.$axios.post(`/auth/register`, this.account)
+        .then( res => {
+          this.isLoading = false
           this.$message({
-            message: '登入失敗！請重新輸入帳號密碼',
-            type: 'error'
-          })
-        } else {
-          this.$message({
-            message: '登入成功！',
+            message: '註冊成功！',
             type: 'success'
           })
-          this.$router.push('/control')
-        }
-      })
-      .catch((err) => {
-        this.isLoading = false
-        this.$message({
-          message: '登入失敗！請重新輸入帳號密碼',
-          type: 'error'
+          this.$router.push('/login')
         })
-        console.log(err)
-      })
+        .catch(res => {
+          console.log(res)
+          this.$message.error('註冊錯誤，請稍後再試')
+          this.isLoading = false
+        })
     }
   }
 }

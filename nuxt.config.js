@@ -202,9 +202,9 @@ export default {
           // autoFetch: true
         },
         endpoints: {
-          login: { url: '/api/login', method: 'post' },
-          logout: { url: '/logout', method: 'post' },
-          user: { url: '/api/user', method: 'get' }
+          login: { url: '/auth/login', method: 'post' },
+          logout: { url: '/auth/logout', method: 'post' },
+          user: { url: '/user/myInfo', method: 'get' }
         }
       }
     },
@@ -232,7 +232,7 @@ export default {
           test: /.js$/,
           exclude: /js/,
           use: 'babel-loader'
-        }      
+        }
       )
       if (!isDev) {
           config.output.publicPath = './_nuxt/'

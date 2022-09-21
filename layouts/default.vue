@@ -22,28 +22,29 @@ export default {
       isShowBottom: true,
     };
   },
+  mounted() {
+    this.judgeBottom()
+  },
+  methods: {
+    judgeBottom() {
+      console.log('?')
+      if (this.$route.name == "login" || 'register' || 'control') {
+          this.isShowBottom = false;
+        } else {
+          this.isShowBottom = true;
+        }
+    }
+  },
   watch: {
   '$route.name': {
       handler: function(route) {
         let paragraph = document.querySelector('html')
         paragraph.style.overflow = "inherit"
+        this.judgeBottom()
       },
       deep: true
     },
   },
-  mounted() {
-    // myMain();
-    // myRevoulation();
-
-    // if (newValue.value.name == "coming-soon") {
-    //   isShowBottom.value = false;
-    // } else {
-    //   isShowBottom.value = true;
-    // }
-  },
-  destroyed() {},
-  computed: {},
-  methods: {},
 };
 </script>
 
