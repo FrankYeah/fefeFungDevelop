@@ -7,7 +7,7 @@
       <NuxtLink v-if="isLogin" to="/control">
         <el-button type="primary">前往後台</el-button>
       </NuxtLink>
-      <NuxtLink to="/login">
+      <NuxtLink v-if="!isLogin" to="/login">
         <el-button type="primary">前往登入</el-button>
       </NuxtLink>
     </el-row>
@@ -20,7 +20,7 @@
       <div>(密碼限制：長度6~16位碼大小寫英文加數字)</div>
       <div class="register-radio">
         <el-radio v-model="account.userRole" label="ROLE_USER">一般權限</el-radio>
-        <el-radio v-model="account.userRole" label="ROLE_ADMIN">管理權限</el-radio>
+        <!-- <el-radio v-model="account.userRole" label="ROLE_ADMIN">管理權限</el-radio> -->
       </div>
       <div>
         <el-button class="register-btn" @click="register()" type="primary">註冊</el-button>
@@ -37,7 +37,7 @@ import myMain from "@/static/js/main.js";
 import myRevoulation from "@/static/js/revoulation.js";
 export default {
   layout: 'default',
-  auth: false,
+  // auth: false,
   components: {
     loading: require('~/components/loading.vue').default,
 
@@ -67,14 +67,13 @@ export default {
     myRevoulation();
 
     // takoham3880871
-    //
-    // this.userData = this.$store.state.auth.user.myInfo
-    // if(this.userData.role != 'ROLE_ADMIN') {
-    //   this.$router.push('/login')
-    // }
-    // if(this.$auth.loggedIn) {
-    //   this.isLogin = true
-    // }
+    this.userData = this.$store.state.auth.user.myInfo
+    if(this.userData.role != 'ROLE_ADMIN') {
+      this.$router.push('/login')
+    }
+    if(this.$auth.loggedIn) {
+      this.isLogin = true
+    }
 
   },
   destroyed () {
