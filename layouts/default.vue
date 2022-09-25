@@ -23,12 +23,12 @@ export default {
     };
   },
   mounted() {
-    this.$router.push('/blank')
     this.judgeBottom()
+    this.$router.push('/blank')
   },
   methods: {
     judgeBottom() {
-      if (this.$route.name == "login" || 'register' || 'control') {
+      if (this.$route.name == "login" || this.$route.name == 'register' || this.$route.name == 'control') {
           this.isShowBottom = false;
         } else {
           this.isShowBottom = true;
