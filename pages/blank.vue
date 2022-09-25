@@ -16,12 +16,14 @@ export default {
   props: {},
   data() {
     return {
-      isFromIndex: false
+      isFromIndex: false,
+      fromPage: ''
     };
   },
   beforeRouteEnter (to, from, next) {
     // https://www.cnblogs.com/crazycode2/p/7823423.html
     next(vm => {
+      vm.fromPage = from.name
       if(from.name == 'index') {
         vm.isFromIndex = true
       }
@@ -31,7 +33,7 @@ export default {
     if(this.isFromIndex == true) {
       this.$router.push('/')
     } else {
-      this.$router.go(-1)
+      this.$router.push(`/${this.fromPage}`)
     }
 
     myMain();
