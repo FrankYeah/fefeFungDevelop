@@ -16,6 +16,7 @@
       <el-input class="register-input" v-model="account.userName" placeholder="帳號"></el-input>
       <div>(帳號限制：電子信箱)</div>
       <el-input type="password" class="register-input" v-model="account.userPassword" placeholder="密碼"></el-input>
+      <el-input type="password" class="register-input" v-model="userPasswordRe" placeholder="再次密碼"></el-input>
       <div>(密碼限制：長度6~16位碼大小寫英文加數字)</div>
       <div class="register-radio">
         <el-radio v-model="account.userRole" label="ROLE_USER">一般權限</el-radio>
@@ -36,6 +37,7 @@ import myMain from "@/static/js/main.js";
 import myRevoulation from "@/static/js/revoulation.js";
 export default {
   layout: 'default',
+  auth: false,
   components: {
     loading: require('~/components/loading.vue').default,
 
@@ -52,6 +54,7 @@ export default {
       },
       isLogin: false,
       isLoading: false,
+      userPasswordRe: '',
       account: {
         userName: '',
         userPassword: '',
@@ -62,14 +65,16 @@ export default {
   mounted () {
     myMain();
     myRevoulation();
+
+    // takoham3880871
     //
-    this.userData = this.$store.state.auth.user.myInfo
-    if(this.userData.role != 'ROLE_ADMIN') {
-      this.$router.push('/login')
-    }
-    if(this.$auth.loggedIn) {
-      this.isLogin = true
-    }
+    // this.userData = this.$store.state.auth.user.myInfo
+    // if(this.userData.role != 'ROLE_ADMIN') {
+    //   this.$router.push('/login')
+    // }
+    // if(this.$auth.loggedIn) {
+    //   this.isLogin = true
+    // }
 
   },
   destroyed () {
@@ -82,6 +87,12 @@ export default {
     register() {
       this.isLoading = true
       console.log(this.account)
+
+      if(this.account.userPassword != this.userPasswordRe) {
+        this.$message.error('兩次密碼輸入不同')
+        this.isLoading = false
+        return
+      }
       // aA123456789@gmail.com
       this.$axios.post(`/auth/register`, this.account)
         .then( res => {

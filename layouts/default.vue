@@ -23,11 +23,11 @@ export default {
     };
   },
   mounted() {
+    this.$router.push('/blank')
     this.judgeBottom()
   },
   methods: {
     judgeBottom() {
-      console.log('?')
       if (this.$route.name == "login" || 'register' || 'control') {
           this.isShowBottom = false;
         } else {
