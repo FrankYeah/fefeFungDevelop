@@ -1494,6 +1494,8 @@ export default {
     myRevoulation();
     custom();
 
+    // 09/25 10:50 把原程式碼刪除
+
     this.$nextTick(() => {
       window.addEventListener("scroll", this.handleScroll());
 
