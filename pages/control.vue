@@ -13,46 +13,23 @@
     </el-row>
     <!-- 切換 -->
     <el-row class="control-basic">
-      <el-switch
-        v-if="userData.role == 'ROLE_ADMIN'"
-        v-model="switchBtn.auth"
-        active-text="管理權限"
-        active-color="#13ce66"
-        inactive-color="grey">
-      </el-switch>
+
+      <el-radio-group v-model="switchBtn" fill="green">
+        <el-radio-button label="auth">管理</el-radio-button>
+        <el-radio-button label="home">首頁</el-radio-button>
+        <el-radio-button label="bottom">頁尾</el-radio-button>
+        <el-radio-button label="newEvent">最新消息</el-radio-button>
+      </el-radio-group>
+
+      <div @click="callTest()">測試</div>
 
     </el-row>
 
     <!-- 管理權限 -->
-    <div v-if="switchBtn.auth">
-      <div class="control-head">管理權限</div>
-      <div class="control-table">
-        <div class="control-table-row">
-          <div class="control-table-head">帳號</div>
-          <div class="control-table-head">密碼</div>
-          <div class="control-table-head">權限</div>
-          <div class="control-table-head">修改</div>
-        </div>
-        <div v-for="(user, index) in allUsers"
-         :key="index"
-        >
-          <div class="control-table-row">
-            <div class="control-table-head">{{ user.name }}</div>
-            <div class="control-table-head">
-              <div v-if="user.role == 'ROLE_ADMIN' && user.name != userData.name"></div>
-              <el-input v-else class="control-input" v-model="user.password" placeholder="密碼"></el-input>
-            </div>
-            <div class="control-table-head">{{ user.role == 'ROLE_ADMIN' ? '管理權限' : '一般權限' }}</div>
-            <div class="control-table-head">
-              <div v-if="user.role == 'ROLE_ADMIN' && user.name != userData.name"></div>
-              <el-button v-else @click="editUser(index)" type="primary">修改</el-button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <controlAuth v-if="switchBtn == 'auth'" />
 
 
-    </div>
+
     <!--  -->
     <loading v-if="isLoading" />
   </div>
@@ -66,6 +43,7 @@ export default {
   layout: 'default',
   components: {
     loading: require('~/components/loading.vue').default,
+    controlAuth: require('~/components/control-auth.vue').default,
 
   },
   props: {
@@ -79,19 +57,12 @@ export default {
         password: '',
         role: ''
       },
-      switchBtn: {
-        auth: false
-      },
-      // 管理權限
-      allUsers: [
-        { name: '', password: '', role: '' }
-      ]
+      switchBtn: '',
     }
   },
   mounted () {
     myMain();
     myRevoulation();
-    //
     this.userData = this.$store.state.auth.user.myInfo
 
   },
@@ -108,121 +79,63 @@ export default {
         location.reload()
       }, 300)
     },
-    findAllUser() {
-      this.isLoading = true
-      this.$axios.get(`/user/findAllUsers`)
+    callTest() {
+      // formdata
+      this.$axios.get(`/api/func/content/A02`)
         .then( res => {
-          console.log(res)
-          this.allUsers = res.data.allUsers
-          for(let i = 0; i < this.allUsers.length; i++) {
-            this.allUsers[i].password = ''
-          }
-          function sortArray(a, b) {
-            if (a.role < b.role) {
-                return 1;
-            }
-            if (a.role > b.role) {
-                return -1;
-            }
-            return 0;
-        }
-          this.allUsers = this.allUsers.sort(sortArray)
-          this.isLoading = false
+
         })
         .catch(res => {
           console.log(res)
-          this.$message.error('取得使用者失敗，請稍後再試')
           this.isLoading = false
         })
-    },
-    editUser(index) {
-      this.isLoading = true
-      // aA123456789@gmail.com
-      this.$axios.put(`/auth/update`, {
-        userName: this.allUsers[index].name,
-        userPassword: this.allUsers[index].password,
-        userRole: this.allUsers[index].role
-      })
+
+
+      this.$axios.get(`/api/func/content/A02/B02`)
         .then( res => {
-          this.$message({
-            message: '修改成功！',
-            type: 'success'
-          })
-          console.log(res)
-          this.isLoading = false
+
         })
         .catch(res => {
           console.log(res)
-          this.$message.error('修改失敗，請稍後再試')
+          this.isLoading = false
+        })
+
+      this.$axios.get(`/api/func/content/A03`)
+        .then( res => {
+
+        })
+        .catch(res => {
+          console.log(res)
+          this.isLoading = false
+        })
+
+      this.$axios.get(`/api/func/content/A04`)
+        .then( res => {
+
+        })
+        .catch(res => {
+          console.log(res)
+          this.isLoading = false
+        })
+
+
+      this.$axios.get(`/api/sys/sysModule`)
+        .then( res => {
+
+        })
+        .catch(res => {
+          console.log(res)
           this.isLoading = false
         })
     }
   },
   watch: {
-  'switchBtn.auth': {
-      handler: function(auth) {
-        if(auth == true) {
-          this.findAllUser()
-        }
-      },
-    },
+
   },
 }
 </script>
 
 <style lang="scss" scoped>
 
-.control {
-  padding: 30px;
 
-  &-basic {
-    margin: 20px 0px 0px;
-  }
-
-  &-box {
-    margin: 50px 0px 0px;
-    width: 300px;
-  }
-
-  &-input {
-    margin: 8px 0px;
-    width: 150px;
-  }
-
-  &-radio {
-    margin: 10px 0px;
-  }
-
-  &-btn {
-    margin: 20px 0px;
-  }
-
-  &-head {
-    font-size: 24px;
-    margin: 20px 0px 10px;
-    color: black;
-  }
-
-  &-text {
-    margin: 8px 0px 0px;
-    color: black;
-  }
-
-  &-table {
-
-    &-row {
-      display: flex;
-    }
-
-    &-head {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 200px;
-      padding: 10px;
-      border: 0.5px solid black;
-      color: black;
-    }
-  }
-}
 </style>
