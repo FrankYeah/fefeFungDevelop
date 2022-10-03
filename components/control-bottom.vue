@@ -31,6 +31,7 @@
             </div>
           </div>
         </div>
+        <!-- <input type="file" @change="uploadFile" ref="file"> -->
       <loading v-if="isLoading" />
       </div>
   </div>
@@ -43,6 +44,7 @@ export default {
   },
   data() {
     return {
+      file: null,
       allData: null,
       isLoading: false,
     }
@@ -70,6 +72,10 @@ export default {
         })
 
     },
+    // uploadFile() {
+    //   this.file = this.$refs.file.files[0]
+    //   console.log(this.file)
+    // },
     editData(indexR, content) {
       this.isLoading = true
       var bodyFormData = new FormData()
@@ -79,12 +85,10 @@ export default {
       bodyFormData.append('content', content)
       bodyFormData.append('url', '')
 
-      this.$axios({
-        method: "post",
-        url: "http://34.81.176.39:8081/fongff/api/func/content",
-        data: bodyFormData,
-        headers: { "Content-Type": "multipart/form-data" },
-      })
+      this.$axios.post(`/api/func/content`,
+      bodyFormData,
+      { headers: { "Content-Type": "multipart/form-data" }, }
+      )
         .then( res => {
           console.log(res)
           this.isLoading = false
