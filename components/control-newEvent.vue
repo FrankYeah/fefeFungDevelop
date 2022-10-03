@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="control-head">首頁</div>
+    <div class="control-head">最新消息</div>
     <loading v-if="isLoading" />
   </div>
 </template>

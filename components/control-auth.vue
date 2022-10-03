@@ -25,6 +25,7 @@
           </div>
         </div>
       </div>
+      <loading v-if="isLoading" />
     </div>
 </template>
 
@@ -33,8 +34,12 @@ export default {
   props: {
 
   },
+  components: {
+    loading: require('~/components/loading.vue').default,
+  },
   data() {
     return {
+      isLoading: false,
       userData: {
         name: '',
         password: '',

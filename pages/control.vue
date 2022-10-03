@@ -21,12 +21,13 @@
         <el-radio-button label="newEvent">最新消息</el-radio-button>
       </el-radio-group>
 
-      <div @click="callTest()">測試</div>
-
     </el-row>
 
     <!-- 管理權限 -->
     <controlAuth v-if="switchBtn == 'auth'" />
+    <controlHome v-else-if="switchBtn == 'home'" />
+    <controlBottom v-else-if="switchBtn == 'bottom'" />
+    <controlNewEvent v-else-if="switchBtn == 'newEvent'" />
 
 
 
@@ -44,6 +45,9 @@ export default {
   components: {
     loading: require('~/components/loading.vue').default,
     controlAuth: require('~/components/control-auth.vue').default,
+    controlHome: require('~/components/control-home.vue').default,
+    controlBottom: require('~/components/control-bottom.vue').default,
+    controlNewEvent: require('~/components/control-newEvent.vue').default,
 
   },
   props: {
@@ -79,55 +83,6 @@ export default {
         location.reload()
       }, 300)
     },
-    callTest() {
-      // formdata
-      this.$axios.get(`/api/func/content/A02`)
-        .then( res => {
-
-        })
-        .catch(res => {
-          console.log(res)
-          this.isLoading = false
-        })
-
-
-      this.$axios.get(`/api/func/content/A02/B02`)
-        .then( res => {
-
-        })
-        .catch(res => {
-          console.log(res)
-          this.isLoading = false
-        })
-
-      this.$axios.get(`/api/func/content/A03`)
-        .then( res => {
-
-        })
-        .catch(res => {
-          console.log(res)
-          this.isLoading = false
-        })
-
-      this.$axios.get(`/api/func/content/A04`)
-        .then( res => {
-
-        })
-        .catch(res => {
-          console.log(res)
-          this.isLoading = false
-        })
-
-
-      this.$axios.get(`/api/sys/sysModule`)
-        .then( res => {
-
-        })
-        .catch(res => {
-          console.log(res)
-          this.isLoading = false
-        })
-    }
   },
   watch: {
 
