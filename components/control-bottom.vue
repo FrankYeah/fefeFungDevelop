@@ -3,14 +3,24 @@
     <div class="control-head">頁尾</div>
     <div class="control-table">
         <div class="control-table-row">
+          <div class="control-table-head control-table-width-short">顯示/隱藏</div>
           <div class="control-table-head">標題</div>
           <div class="control-table-head control-table-width-long">內容</div>
-          <div class="control-table-head">修改</div>
+          <div class="control-table-head control-table-width-short">修改者</div>
+          <div class="control-table-head control-table-width-short">修改日</div>
+          <div class="control-table-head control-table-width-short">修改</div>
         </div>
         <div v-for="(data, index) in allData"
          :key="index"
         >
           <div class="control-table-row">
+            <div class="control-table-head control-table-width-short">
+              <el-switch
+                v-model="data.states"
+                active-color="#13ce66"
+                inactive-color="grey">
+              </el-switch>
+            </div>
             <div v-if="index == 0" class="control-table-head">參觀資訊圖片</div>
             <div v-else class="control-table-head">{{ data.title }}</div>
             <div class="control-table-head control-table-width-long">
@@ -26,7 +36,9 @@
                 placeholder=""
               ></el-input>
            </div>
-            <div class="control-table-head">
+            <div class="control-table-head control-table-width-short">{{ data.auth }}</div>
+            <div class="control-table-head control-table-width-short">{{ data.postDate }}</div>
+            <div class="control-table-head control-table-width-short">
               <el-button @click="editData(data.sysFuncId.indexR, data.content)" type="primary">修改</el-button>
             </div>
           </div>
