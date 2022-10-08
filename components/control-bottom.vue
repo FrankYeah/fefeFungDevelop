@@ -21,14 +21,17 @@
                 inactive-color="grey">
               </el-switch>
             </div>
-            <div v-if="index == 0" class="control-table-head">參觀資訊圖片</div>
-            <div v-else class="control-table-head">{{ data.title }}</div>
-            <div class="control-table-head control-table-width-long">
-              <el-input v-if="index == 0"
+            <div class="control-table-head">
+              <el-input
                 class="control-input"
-                v-model="data.image"
+                v-model="data.title"
                 placeholder=""
               ></el-input>
+            </div>
+            <div class="control-table-head control-table-width-long control-table-col">
+              <input v-if="index == 0" type="file" @change="uploadFile" id="file" ref="myFiles">
+              <br>
+              <img v-if="index == 0" class="control-table-img" :src="data.image" alt="image">
               <el-input v-else type="textarea"
                 :autosize="{ minRows: 6, maxRows: 10}"
                 class="control-input"
@@ -39,7 +42,7 @@
             <div class="control-table-head control-table-width-short">{{ data.auth }}</div>
             <div class="control-table-head control-table-width-short">{{ data.postDate }}</div>
             <div class="control-table-head control-table-width-short">
-              <el-button @click="editData(data.sysFuncId.indexR, data.content)" type="primary">修改</el-button>
+              <el-button @click="editData(index)" type="primary">修改</el-button>
             </div>
           </div>
         </div>
@@ -84,20 +87,27 @@ export default {
         })
 
     },
-    // uploadFile() {
-    //   this.file = this.$refs.file.files[0]
-    //   console.log(this.file)
-    // },
-    editData(indexR, content) {
+    uploadFile(event) {
+      // console.log(this.$refs.file[0])
+      this.file = event.target.files[0]
+      console.log(event.target.files[0])
+    },
+    editData(index) {
       this.isLoading = true
       var bodyFormData = new FormData()
-      bodyFormData.append('file', '')
-      bodyFormData.append('sysFuncId.module', 'A03')
-      bodyFormData.append('sysFuncId.indexR', indexR)
-      bodyFormData.append('content', content)
-      bodyFormData.append('url', '')
+      if(this.allData[index].indexR == 22 && this.file != null) {
+        alert('1111')
+        bodyFormData.append('file', this.file)
+      } else {
+        bodyFormData.append('file', '')
+      }
+      bodyFormData.append('module', 'A03')
+      bodyFormData.append('title', this.allData[index].title)
+      bodyFormData.append('indexR', this.allData[index].indexR)
+      bodyFormData.append('category', this.allData[index].category)
+      bodyFormData.append('content', this.allData[index].content)
 
-      this.$axios.post(`/api/func/content`,
+      this.$axios.put(`/api/func/content`,
       bodyFormData,
       { headers: { "Content-Type": "multipart/form-data" }, }
       )

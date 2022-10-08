@@ -56,6 +56,14 @@
       color: black;
     }
 
+    &-img {
+      width: 300px;
+    }
+
+    &-col {
+      flex-direction: column;
+    }
+
     &-width-long {
       width: 400px;
     }
