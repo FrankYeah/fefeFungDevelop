@@ -18,7 +18,10 @@
               <el-switch
                 v-model="data.states"
                 active-color="#13ce66"
-                inactive-color="grey">
+                inactive-color="grey"
+                :active-value="0"
+                :inactive-value="1"
+              >
               </el-switch>
             </div>
             <div class="control-table-head">
@@ -74,7 +77,7 @@ export default {
   methods: {
     getData() {
       this.isLoading = true
-      this.$axios.get(`/api/func/content/A03`)
+      this.$axios.get(`/api/func/content/module/A03`)
         .then( res => {
           this.allData = res.data.data
           console.log(this.allData)
@@ -96,15 +99,15 @@ export default {
       this.isLoading = true
       var bodyFormData = new FormData()
       if(this.allData[index].indexR == 22 && this.file != null) {
-        alert('1111')
         bodyFormData.append('file', this.file)
       } else {
         bodyFormData.append('file', '')
       }
-      bodyFormData.append('module', 'A03')
+      bodyFormData.append('states', this.allData[index].states)
+      bodyFormData.append('module', this.allData[index].module)
       bodyFormData.append('title', this.allData[index].title)
       bodyFormData.append('indexR', this.allData[index].indexR)
-      bodyFormData.append('category', this.allData[index].category)
+      bodyFormData.append('category', 'footer')
       bodyFormData.append('content', this.allData[index].content)
 
       this.$axios.put(`/api/func/content`,
@@ -113,6 +116,7 @@ export default {
       )
         .then( res => {
           console.log(res)
+          this.getData()
           this.isLoading = false
 
         })
