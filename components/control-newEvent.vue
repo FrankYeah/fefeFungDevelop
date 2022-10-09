@@ -8,7 +8,7 @@
           <div class="control-table-head">內容</div>
           <div class="control-table-head">圖片</div>
           <div class="control-table-head">外部連結</div>
-          <div class="control-table-head">更新日期</div>
+          <div class="control-table-head">消息日期</div>
           <div class="control-table-head control-table-width-short">修改</div>
         </div>
         <div>
@@ -55,7 +55,7 @@
           <div class="control-table-head">內容</div>
           <div class="control-table-head">圖片</div>
           <div class="control-table-head">外部連結</div>
-          <div class="control-table-head">更新日期</div>
+          <div class="control-table-head">消息日期</div>
           <div class="control-table-head control-table-width-short">修改者</div>
           <div class="control-table-head control-table-width-short">修改日</div>
           <div class="control-table-head control-table-width-short">修改</div>
@@ -169,7 +169,7 @@ export default {
       bodyFormData.append('url', this.allData[index].url)
       bodyFormData.append('content', this.allData[index].content)
       bodyFormData.append('indexR', this.allData[index].indexR)
-      bodyFormData.append('category', 'footer')
+      bodyFormData.append('category', 'news')
 
       this.$axios.put(`/api/func/content`,
       bodyFormData,
@@ -194,7 +194,7 @@ export default {
       bodyFormData.append('title', this.add.title)
       bodyFormData.append('url', this.add.url)
       bodyFormData.append('content', this.add.content)
-      bodyFormData.append('category', 'footer')
+      bodyFormData.append('category', 'news')
 
       this.$axios.post(`/api/func/content`,
       bodyFormData,
