@@ -83,7 +83,7 @@
               ></el-input>
             </div>
             <div class="control-table-head control-table-col">
-              <input class="control-table-short-img" type="file" @change="uploadFile" id="file" ref="myFiles">
+              <input class="control-table-short-img" type="file" @change="uploadFile($event, index)" id="file" ref="myFiles">
               <br>
               <img class="control-table-short-img" :src="data.image" alt="image">
             </div>
@@ -156,15 +156,13 @@ export default {
         })
 
     },
-    uploadFile(event) {
-      // console.log(this.$refs.file[0])
-      this.file = event.target.files[0]
-      console.log(event.target.files[0])
+    uploadFile(event, index) {
+      this.allData[index].file = event.target.files[0]
     },
     editData(index) {
       this.isLoading = true
       var bodyFormData = new FormData()
-      bodyFormData.append('file', this.file)
+      bodyFormData.append('file', this.allData[index].file)
       bodyFormData.append('states', this.allData[index].states)
       bodyFormData.append('module', this.allData[index].module)
       bodyFormData.append('title', this.allData[index].title)
