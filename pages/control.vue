@@ -17,7 +17,7 @@
       <el-radio-group v-model="switchBtn" fill="green">
         <el-radio-button label="auth">管理</el-radio-button>
         <el-radio-button label="home">首頁</el-radio-button>
-        <el-radio-button label="bottom">頁尾</el-radio-button>
+        <el-radio-button label="bottom">頁尾 / 最新消息</el-radio-button>
         <el-radio-button label="newEvent">最新消息</el-radio-button>
       </el-radio-group>
 

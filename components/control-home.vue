@@ -288,12 +288,25 @@ export default {
     editData(index) {
       this.isLoading = true
       var bodyFormData = new FormData()
-      bodyFormData.append('file', this.allData[index].file)
+
+      if(this.allData[index].file != null) {
+        bodyFormData.append('file', this.allData[index].file)
+      }
+
+      if(this.allData[index].title != null) {
+        bodyFormData.append('title', this.allData[index].title)
+      }
+
+      if(this.allData[index].url != null) {
+        bodyFormData.append('url', this.allData[index].url)
+      }
+
+      if(this.allData[index].content != null) {
+        bodyFormData.append('content', this.allData[index].content)
+      }
+
       bodyFormData.append('states', this.allData[index].states)
       bodyFormData.append('module', this.allData[index].module)
-      bodyFormData.append('title', this.allData[index].title)
-      bodyFormData.append('url', this.allData[index].url)
-      bodyFormData.append('content', this.allData[index].content)
       bodyFormData.append('indexR', this.allData[index].indexR)
       bodyFormData.append('category', this.allData[index].category)
 
