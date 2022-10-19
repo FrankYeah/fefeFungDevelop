@@ -6,7 +6,7 @@
         <div class="preloader-wrap">
           <div class="wrap-2">
             <div class="">
-              <img src="img/ajax-loader.gif" alt="Brook Preloader" />
+              <img src="/img/ajax-loader.gif" alt="Brook Preloader" />
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@
                   </p>
                   <div class="testimonial-info">
                     <div class="post-thumbnail">
-                      <img src="img/clint-1.svg" alt="clint image" />
+                      <img src="/img/clint-1.svg" alt="clint image" />
                     </div>
                     <div class="clint-info">
                       <h6>鄭文燦</h6>
@@ -103,7 +103,7 @@
                   </p>
                   <div class="testimonial-info">
                     <div class="post-thumbnail">
-                      <img src="img/clint-2.svg" alt="clint image" />
+                      <img src="/img/clint-2.svg" alt="clint image" />
                     </div>
                     <div class="clint-info">
                       <h6>黃子佼</h6>
@@ -133,7 +133,7 @@
                   </p>
                   <div class="testimonial-info">
                     <div class="post-thumbnail">
-                      <img src="img/clint-4.svg" alt="clint image" />
+                      <img src="/img/clint-4.svg" alt="clint image" />
                     </div>
                     <div class="clint-info">
                       <h6>黃韻玲</h6>
@@ -162,7 +162,7 @@
                   </p>
                   <div class="testimonial-info">
                     <div class="post-thumbnail">
-                      <img src="img/clint-3.svg" alt="clint image" />
+                      <img src="/img/clint-3.svg" alt="clint image" />
                     </div>
                     <div class="clint-info">
                       <h6>梁修身</h6>
@@ -245,7 +245,7 @@
                         </p>
                         <div class="testimonial-info">
                           <div class="post-thumbnail">
-                            <img src="img/clint-1.svg" alt="clint image" />
+                            <img src="/img/clint-1.svg" alt="clint image" />
                           </div>
                           <div class="clint-info">
                             <h6>鄭文燦</h6>
@@ -275,7 +275,7 @@
                         </p>
                         <div class="testimonial-info">
                           <div class="post-thumbnail">
-                            <img src="img/clint-2.svg" alt="clint image" />
+                            <img src="/img/clint-2.svg" alt="clint image" />
                           </div>
                           <div class="clint-info">
                             <h6>黃子佼</h6>
@@ -305,7 +305,7 @@
                         </p>
                         <div class="testimonial-info">
                           <div class="post-thumbnail">
-                            <img src="img/clint-4.svg" alt="clint image" />
+                            <img src="/img/clint-4.svg" alt="clint image" />
                           </div>
                           <div class="clint-info">
                             <h6>黃韻玲</h6>
@@ -334,7 +334,7 @@
                         </p>
                         <div class="testimonial-info">
                           <div class="post-thumbnail">
-                            <img src="img/clint-3.svg" alt="clint image" />
+                            <img src="/img/clint-3.svg" alt="clint image" />
                           </div>
                           <div class="clint-info">
                             <h6>梁修身</h6>

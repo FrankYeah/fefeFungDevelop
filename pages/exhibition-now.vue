@@ -6,7 +6,7 @@
         <div class="preloader-wrap">
           <div class="wrap-2">
             <div class="">
-              <img src="~/assets/img/ajax-loader.gif" alt="Brook Preloader" />
+              <img src="~/assets//img/ajax-loader.gif" alt="Brook Preloader" />
             </div>
           </div>
         </div>

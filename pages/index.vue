@@ -7,7 +7,7 @@
         <div class="preloader-wrap">
           <div class="wrap-2">
             <div class="">
-              <img src="img/ajax-loader.gif" alt="Brook Preloader" />
+              <img src="/img/ajax-loader.gif" alt="Brook Preloader" />
             </div>
           </div>
         </div>
@@ -34,7 +34,7 @@
                 <div class="header-left flex-20">
                   <div class="logo logo-top">
                     <a to="/"
-                      ><img src="img/home-logo-01.svg" alt="鳳飛飛故事館"
+                      ><img src="/img/home-logo-01.svg" alt="鳳飛飛故事館"
                     /></a>
                     <!-- <a href="index.html">
                       <img src="img/home-logo-01.svg" alt="鳳飛飛故事館" />
@@ -42,7 +42,7 @@
                   </div>
                   <div class="logo logo-sticky">
                     <NuxtLink to="/"
-                      ><img src="img/home-logo-白.svg" alt="鳳飛飛故事館"
+                      ><img src="/img/home-logo-白.svg" alt="鳳飛飛故事館"
                     /></NuxtLink>
                   </div>
                 </div>
@@ -54,24 +54,24 @@
                           <NuxtLink to="/"><span>首頁</span></NuxtLink>
                         </li>
                         <li class="lavel-1">
-                          <NuxtLink to="new-event"
+                          <NuxtLink to="/new-event"
                             ><span>最新活動</span></NuxtLink
                           >
                         </li>
                         <li class="lavel-1">
-                          <NuxtLink to="visit"><span>參觀資訊</span></NuxtLink>
+                          <NuxtLink to="/visit"><span>參觀資訊</span></NuxtLink>
                         </li>
 
                         <li class="lavel-1 with--drop slide-dropdown">
                           <a href="#"><span>展覽資訊</span></a>
                           <ul class="dropdown__menu">
                             <li>
-                              <NuxtLink to="exhibition-now"
+                              <NuxtLink to="/exhibition-now"
                                 ><span>本期展覽</span></NuxtLink
                               >
                             </li>
                             <li>
-                              <NuxtLink to="exhibition-past"
+                              <NuxtLink to="/exhibition-past"
                                 ><span>過去展覽</span></NuxtLink
                               >
                             </li>
@@ -81,22 +81,22 @@
                           <a href="#"><span>飛飛風采</span></a>
                           <ul class="dropdown__menu">
                             <li>
-                              <NuxtLink to="style-music"
+                              <NuxtLink to="/style-music"
                                 ><span>音樂作品</span></NuxtLink
                               >
                             </li>
                             <li>
-                              <NuxtLink to="style-awards"
+                              <NuxtLink to="/style-awards"
                                 ><span>獎項紀錄</span></NuxtLink
                               >
                             </li>
                             <li>
-                              <NuxtLink to="style-voice"
+                              <NuxtLink to="/style-voice"
                                 ><span>飛飛聲影</span></NuxtLink
                               >
                             </li>
                             <li>
-                              <NuxtLink to="style-list"
+                              <NuxtLink to="/style-list"
                                 ><span>飛飛大事記</span></NuxtLink
                               >
                             </li>
@@ -104,12 +104,12 @@
                         </li>
 
                         <li class="lavel-1">
-                          <NuxtLink to="journey"
+                          <NuxtLink to="/journey"
                             ><span>飛飛踩點</span></NuxtLink
                           >
                         </li>
                         <li class="lavel-1">
-                          <NuxtLink to="about"><span>關於我們</span></NuxtLink>
+                          <NuxtLink to="/about"><span>關於我們</span></NuxtLink>
                         </li>
                       </ul>
                     </nav>
@@ -163,7 +163,7 @@
           <div class="mobileheader">
             <div class="logo">
               <NuxtLink to="/" @click="menuClose()">
-                <img src="img/home-logo.svg" alt="Multipurpose" />
+                <img src="/img/home-logo.svg" alt="Multipurpose" />
               </NuxtLink>
             </div>
             <a class="mobile-close" href="#"></a>
@@ -176,14 +176,14 @@
                 </li></NuxtLink
               >
 
-              <NuxtLink to="new-event"
+              <NuxtLink to="/new-event"
                 ><li class="manu-li" @click="menuClose()">
                   <span>最新活動</span>
                 </li></NuxtLink
               >
 
               <NuxtLink to="visit"
-                ><li class="manu-li" @click="menuClose()">
+                ><li class="/manu-li" @click="menuClose()">
                   <span>參觀資訊</span>
                 </li></NuxtLink
               >
@@ -191,13 +191,13 @@
               <li class="has-mega-menu">
                 <a href="#"><span>展覽資訊</span></a>
                 <ul class="object-submenu">
-                  <NuxtLink to="exhibition-now"
+                  <NuxtLink to="/exhibition-now"
                     ><li @click="menuClose()">
                       <span>本期展覽</span>
                     </li></NuxtLink
                   >
 
-                  <NuxtLink to="exhibition-past"
+                  <NuxtLink to="/exhibition-past"
                     ><li @click="menuClose()">
                       <span>過去展覽</span>
                     </li></NuxtLink
@@ -208,25 +208,25 @@
               <li class="has-mega-menu">
                 <a href="#"><span>飛飛風采</span></a>
                 <ul class="object-submenu">
-                  <NuxtLink to="style-music"
+                  <NuxtLink to="/style-music"
                     ><li @click="menuClose()">
                       <span>音樂作品</span>
                     </li></NuxtLink
                   >
 
-                  <NuxtLink to="style-awards">
+                  <NuxtLink to="/style-awards">
                     <li @click="menuClose()">
                       <span>獎項紀錄</span>
                     </li></NuxtLink
                   >
 
-                  <NuxtLink to="style-voice">
+                  <NuxtLink to="/style-voice">
                     <li @click="menuClose()">
                       <span>飛飛聲影</span>
                     </li></NuxtLink
                   >
 
-                  <NuxtLink to="style-list">
+                  <NuxtLink to="/style-list">
                     <li @click="menuClose()">
                       <span>飛飛大事記</span>
                     </li></NuxtLink
@@ -234,7 +234,7 @@
                 </ul>
               </li>
 
-              <NuxtLink to="journey">
+              <NuxtLink to="/journey">
                 <li class="manu-li" @click="menuClose()">
                   <span>飛飛踩點</span>
                 </li></NuxtLink
@@ -243,7 +243,7 @@
               <!--<li><a href="smalltalk.html"><span>飛飛敲敲話</span></a></li> -->
               <!-- <li><a href="event-list.html"><span>活動記事</span></a></li> -->
 
-              <NuxtLink to="about">
+              <NuxtLink to="/about">
                 <li class="manu-li" @click="menuClose()">
                   <span>關於我們</span>
                 </li></NuxtLink
@@ -257,16 +257,16 @@
         <div class="swiper mySwiper" ref="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="img/slider-1.jpg" />
+              <img style="width:100%" src="/img/slider-1.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="img/slider-2.jpg" />
+              <img src="/img/slider-2.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="img/slider-3.jpg" />
+              <img src="/img/slider-3.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="img/slider-4.jpg" />
+              <img src="/img/slider-4.jpg" />
             </div>
           </div>
           <div class="swiper-button-next"></div>
@@ -809,7 +809,7 @@
                 >
                   <div class="dp-flex section-title-top">
                     <div class="head-img">
-                      <img src="img/CD-icon2.svg" alt="" />
+                      <img src="/img/CD-icon2.svg" alt="" />
                     </div>
                     <h3>鳳飛飛故事館</h3>
                   </div>
@@ -829,7 +829,7 @@
                 <div class="portfolio with-caption mt_mobile--30">
                   <div class="thumb">
                     <NuxtLink to="new-event"
-                      ><img src="img/home-01.jpg" alt="最新活動"
+                      ><img src="/img/home-01.jpg" alt="最新活動"
                     /></NuxtLink>
                   </div>
                   <div class="caption-bottom text-left">
@@ -838,7 +838,7 @@
                       style="display: flex; align-items: "
                     >
                       <div class="info-img" style="center;margin-top:0;">
-                        <img src="img/newevent-icon.svg" alt="" />
+                        <img src="/img/newevent-icon.svg" alt="" />
                       </div>
                       <h5 class="heading heading-h5">
                         <NuxtLink to="new-event">最新活動</NuxtLink>
@@ -858,16 +858,16 @@
                 <div class="portfolio with-caption mt_mobile--30">
                   <div class="thumb">
                     <NuxtLink to="visit"
-                      ><img src="img/home-02.jpg" alt="參觀資訊"
+                      ><img src="/img/home-02.jpg" alt="參觀資訊"
                     /></NuxtLink>
                   </div>
                   <div class="caption-bottom">
                     <div
                       class="info"
                       style="display: flex; align-items: center"
-                    >
+                    >                                                                                       
                       <div class="info-img" style="center;margin-top:0;">
-                        <img src="img/exibition-icon.svg" alt="" />
+                        <img src="/img/exibition-icon.svg" alt="" />
                       </div>
 
                       <h5 class="heading heading-h5">
@@ -888,7 +888,7 @@
                 <div class="portfolio with-caption mt_sm--30 mt_md--30">
                   <div class="thumb">
                     <NuxtLink to="exhibition-now"
-                      ><img src="img/home-03.jpg" alt="展覽介紹"
+                      ><img src="/img/home-03.jpg" alt="展覽介紹"
                     /></NuxtLink>
                   </div>
                   <div class="caption-bottom text-left">
@@ -897,7 +897,7 @@
                       style="display: flex; align-items: center"
                     >
                       <div class="info-img" style="center;margin-top:0;">
-                        <img src="img/visit-icon.svg" alt="" />
+                        <img src="/img/visit-icon.svg" alt="" />
                       </div>
                       <h5 class="heading heading-h5">
                         <NuxtLink to="exhibition-now">展覽介紹</NuxtLink>
@@ -930,7 +930,7 @@
                   >
                     <div class="dp-flex section-title-top">
                       <div class="head-img">
-                        <img src="img/CD-icon4.svg" alt="" />
+                        <img src="/img/CD-icon4.svg" alt="" />
                       </div>
                       <h3 style="color: #ffe793">我們的願景與使命</h3>
                     </div>
@@ -964,7 +964,7 @@
               <div class="col-lg-6">
                 <div class="portfolio portfolio_style--1">
                   <div class="thumb">
-                    <img src="img/portfolio-1.jpg" alt="鳳飛飛故事館" />
+                    <img src="/img/portfolio-1.jpg" alt="鳳飛飛故事館" />
                   </div>
                 </div>
               </div>
@@ -995,7 +995,7 @@
                     <!-- Start Single Portfolio -->
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
-                        <img src="img/portfolio-3.jpg" alt="鳳飛飛故事館" />
+                        <img src="/img/portfolio-3.jpg" alt="鳳飛飛故事館" />
                       </div>
                     </div>
                     <!-- End Single Portfolio -->
@@ -1007,7 +1007,7 @@
                   >
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
-                        <img src="img/portfolio-4.jpg" alt="鳳飛飛故事館" />
+                        <img src="/img/portfolio-4.jpg" alt="鳳飛飛故事館" />
                       </div>
                     </div>
                   </div>
@@ -1107,7 +1107,7 @@
                 >
                   <div class="heading-left dp-flex">
                     <div class="head-img" style="margin-right: 5px">
-                      <img src="img/CD-icon2.svg" alt="" />
+                      <img src="/img/CD-icon2.svg" alt="" />
                     </div>
                     <h3 class="theme-color">飛飛踩點</h3>
                   </div>
@@ -1129,22 +1129,22 @@
                   <!-- Image Wrap -->
                   <div class="image-wrap">
                     <div class="thumb">
-                      <img src="img/team-1.jpg" alt="Team images" />
+                      <img src="/img/team-1.jpg" alt="Team images" />
                       <div class="overlay"></div>
                       <div class="shape">
                         <img
                           class="shape-01"
-                          src="img/team-shape-1.png"
+                          src="/img/team-shape-1.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-02"
-                          src="img/team-shape-2.png"
+                          src="/img/team-shape-2.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-03"
-                          src="img/team-shape-3.png"
+                          src="/img/team-shape-3.png"
                           alt="shape image"
                         />
                       </div>
@@ -1176,22 +1176,22 @@
                   <!-- Image Wrap -->
                   <div class="image-wrap">
                     <div class="thumb">
-                      <img src="img/team-2.jpg" alt="Team images" />
+                      <img src="/img/team-2.jpg" alt="Team images" />
                       <div class="overlay"></div>
                       <div class="shape">
                         <img
                           class="shape-01"
-                          src="img/team-shape-1.png"
+                          src="/img/team-shape-1.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-02"
-                          src="img/team-shape-2.png"
+                          src="/img/team-shape-2.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-03"
-                          src="img/team-shape-3.png"
+                          src="/img/team-shape-3.png"
                           alt="shape image"
                         />
                       </div>
@@ -1223,22 +1223,22 @@
                   <!-- Image Wrap -->
                   <div class="image-wrap">
                     <div class="thumb">
-                      <img src="img/team-3.jpg" alt="Team images" />
+                      <img src="/img/team-3.jpg" alt="Team images" />
                       <div class="overlay"></div>
                       <div class="shape">
                         <img
                           class="shape-01"
-                          src="img/team-shape-1.png"
+                          src="/img/team-shape-1.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-02"
-                          src="img/team-shape-2.png"
+                          src="/img/team-shape-2.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-03"
-                          src="img/team-shape-3.png"
+                          src="/img/team-shape-3.png"
                           alt="shape image"
                         />
                       </div>
@@ -1270,22 +1270,22 @@
                   <!-- Image Wrap -->
                   <div class="image-wrap">
                     <div class="thumb">
-                      <img src="img/team-4.jpg" alt="Team images" />
+                      <img src="/img/team-4.jpg" alt="Team images" />
                       <div class="overlay"></div>
                       <div class="shape">
                         <img
                           class="shape-01"
-                          src="img/team-shape-1.png"
+                          src="/img/team-shape-1.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-02"
-                          src="img/team-shape-2.png"
+                          src="/img/team-shape-2.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-03"
-                          src="img/team-shape-3.png"
+                          src="/img/team-shape-3.png"
                           alt="shape image"
                         />
                       </div>
@@ -1577,8 +1577,6 @@ export default {
       }
     },
     menuClose() {
-      console.log("最新活動");
-
       this.removeClass("body", "popup-mobile-menu-wrapper");
       // let allBody = document.getElementsByTagName("body");
       // console.log("allBody", allBody);

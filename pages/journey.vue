@@ -6,7 +6,7 @@
         <div class="preloader-wrap">
           <div class="wrap-2">
             <div class="">
-              <img src="img/ajax-loader.gif" alt="Brook Preloader" />
+              <img src="/img/ajax-loader.gif" alt="Brook Preloader" />
             </div>
           </div>
         </div>
@@ -38,7 +38,7 @@
               <div class="breadcaump-inner text-center">
                 <div class="newheading pb--70 pb_sm--0">
                   <div class="newheading-img">
-                    <img src="img/CD-icon3.svg" alt="" />
+                    <img src="/img/CD-icon3.svg" alt="" />
                   </div>
                   <h2>飛飛踩點</h2>
                 </div>
@@ -77,7 +77,7 @@
               >
                 <!-- Start Portfolio Image -->
                 <div class="portfolio-image">
-                  <img src="img/journey-01.jpg" alt="" style="width:100%" />
+                  <img src="/img/journey-01.jpg" alt="" style="width:100%" />
                 </div>
                 <!-- End Portfolio Image -->
               </div>
@@ -114,7 +114,7 @@
                   </p>
                   <div class="dp-flex">
                     <div class="qrcode-img mr--15">
-                      <img src="img/marqQR.png" alt="" />
+                      <img src="/img/marqQR.png" alt="" />
                     </div>
                     <!--  <a class="bk-btn black-btn mt--40 mt_sm--20" href="#">前往路線</a>  -->
                   </div>
@@ -144,7 +144,7 @@
               >
                 <!-- Start Portfolio Image -->
                 <div class="portfolio-image">
-                  <img src="img/journey-02.jpg" alt="" style="width:100%" />
+                  <img src="/img/journey-02.jpg" alt="" style="width:100%" />
                 </div>
                 <!-- End Portfolio Image -->
               </div>
@@ -180,7 +180,7 @@
                   </p>
                   <div class="dp-flex">
                     <div class="qrcode-img mr--15">
-                      <img src="img/marqQR.png" alt="" style="width:100%" />
+                      <img src="/img/marqQR.png" alt="" style="width:100%" />
                     </div>
                     <!-- <a class="bk-btn black-btn mt--40 mt_sm--20" href="#">前往路線</a> -->
                   </div>
@@ -210,7 +210,7 @@
               >
                 <!-- Start Portfolio Image -->
                 <div class="portfolio-image">
-                  <img src="img/journey-03.jpg" alt="" style="width:100%" />
+                  <img src="/img/journey-03.jpg" alt="" style="width:100%" />
                 </div>
                 <!-- End Portfolio Image -->
               </div>
@@ -243,7 +243,7 @@
                   </p>
                   <div class="dp-flex">
                     <div class="qrcode-img mr--15">
-                      <img src="img/marqQR.png" alt="" style="width:100%" />
+                      <img src="/img/marqQR.png" alt="" style="width:100%" />
                     </div>
                     <!-- <a class="bk-btn black-btn mt--40 mt_sm--20" href="#">前往路線</a> -->
                   </div>
@@ -273,7 +273,7 @@
               >
                 <!-- Start Portfolio Image -->
                 <div class="portfolio-image">
-                  <img src="img/journey-04.jpg" alt="" style="width:100%" />
+                  <img src="/img/journey-04.jpg" alt="" style="width:100%" />
                 </div>
                 <!-- End Portfolio Image -->
               </div>
@@ -306,7 +306,7 @@
                   </p>
                   <div class="dp-flex">
                     <div class="qrcode-img mr--15">
-                      <img src="img/marqQR.png" alt="" style="width:100%" />
+                      <img src="/img/marqQR.png" alt="" style="width:100%" />
                     </div>
                     <!-- <a class="bk-btn black-btn mt--40 mt_sm--20" href="#">前往路線</a> -->
                   </div>

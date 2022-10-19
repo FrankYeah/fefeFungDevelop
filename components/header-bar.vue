@@ -20,7 +20,7 @@
               <div class="header-left flex-20">
                 <div class="logo">
                   <NuxtLink to="/"
-                    ><img src="img/home-logo-W.svg" alt="鳳飛飛故事館"
+                    ><img src="/img/home-logo-W.svg" alt="鳳飛飛故事館"
                   /></NuxtLink>
                 </div>
               </div>
@@ -33,12 +33,12 @@
                         <NuxtLink to="/"><span>首頁</span></NuxtLink>
                       </li>
                       <li class="lavel-1">
-                        <NuxtLink to="new-event"
+                        <NuxtLink to="/new-event"
                           ><span>最新活動</span></NuxtLink
                         >
                       </li>
                       <li class="lavel-1">
-                        <NuxtLink to="visit"><span>參觀資訊</span></NuxtLink>
+                        <NuxtLink to="/visit"><span>參觀資訊</span></NuxtLink>
                       </li>
 
                       <li class="lavel-1 with--drop slide-dropdown">
@@ -46,12 +46,12 @@
                         <!-- Start Dropdown Menu -->
                         <ul class="dropdown__menu">
                           <li>
-                            <NuxtLink to="exhibition-now"
+                            <NuxtLink to="/exhibition-now"
                               ><span>本期展覽</span></NuxtLink
                             >
                           </li>
                           <li>
-                            <NuxtLink to="exhibition-past"
+                            <NuxtLink to="/exhibition-past"
                               ><span>過去展覽</span></NuxtLink
                             >
                           </li>
@@ -63,22 +63,22 @@
                         <!-- Start Dropdown Menu -->
                         <ul class="dropdown__menu">
                           <li>
-                            <NuxtLink to="style-music"
+                            <NuxtLink to="/style-music"
                               ><span>音樂作品</span></NuxtLink
                             >
                           </li>
                           <li>
-                            <NuxtLink to="style-awards"
+                            <NuxtLink to="/style-awards"
                               ><span>獎項紀錄</span></NuxtLink
                             >
                           </li>
                           <li>
-                            <NuxtLink to="style-voice"
+                            <NuxtLink to="/style-voice"
                               ><span>飛飛聲影</span></NuxtLink
                             >
                           </li>
                           <li>
-                            <NuxtLink to="style-list"
+                            <NuxtLink to="/style-list"
                               ><span>飛飛大事記</span></NuxtLink
                             >
                           </li>
@@ -87,12 +87,12 @@
                       </li>
 
                       <li class="lavel-1">
-                        <NuxtLink to="journey"><span>飛飛踩點</span></NuxtLink>
+                        <NuxtLink to="/journey"><span>飛飛踩點</span></NuxtLink>
                       </li>
                       <!-- <li class="lavel-1"><a href="smalltalk.html"><span>飛飛敲敲話</span></a></li> -->
                       <!-- <li class="lavel-1"><a href="event-list.html"><span>活動記事</span></a></li> -->
                       <li class="lavel-1">
-                        <NuxtLink to="about"><span>關於我們</span></NuxtLink>
+                        <NuxtLink to="/about"><span>關於我們</span></NuxtLink>
                       </li>
                     </ul>
                   </nav>
@@ -141,7 +141,7 @@
             <NuxtLink to="/">
               <img
                 @click="menuClose()"
-                src="img/home-logo.svg"
+                src="/img/home-logo.svg"
                 alt="Multipurpose"
               />
             </NuxtLink>

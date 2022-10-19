@@ -49,7 +49,7 @@
               <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
                   <div class="footer-widget text-var--2 menu--instagram">
                       <div style="max-width:70%;">
-                          <img src="img/home-logo-W.svg" alt="">
+                          <img src="/img/home-logo-W.svg" alt="">
                       </div>
                       <div class="social-share social--transparent text-white mt--20 mb--20">
                           <a href="https://www.facebook.com/DaxiTakoham"><i class="fab fa-facebook"></i></a>

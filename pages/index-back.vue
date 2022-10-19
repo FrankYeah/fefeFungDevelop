@@ -7,7 +7,7 @@
         <div class="preloader-wrap">
           <div class="wrap-2">
             <div class="">
-              <img src="img/ajax-loader.gif" alt="Brook Preloader" />
+              <img src="/img/ajax-loader.gif" alt="Brook Preloader" />
             </div>
           </div>
         </div>
@@ -34,7 +34,7 @@
                 <div class="header-left flex-20">
                   <div class="logo logo-top">
                     <a to="/"
-                      ><img src="img/home-logo-01.svg" alt="鳳飛飛故事館"
+                      ><img src="/img/home-logo-01.svg" alt="鳳飛飛故事館"
                     /></a>
                     <!-- <a href="index.html">
                       <img src="img/home-logo-01.svg" alt="鳳飛飛故事館" />
@@ -42,7 +42,7 @@
                   </div>
                   <div class="logo logo-sticky">
                     <NuxtLink to="/"
-                      ><img src="img/home-logo-白.svg" alt="鳳飛飛故事館"
+                      ><img src="/img/home-logo-白.svg" alt="鳳飛飛故事館"
                     /></NuxtLink>
                   </div>
                 </div>
@@ -163,7 +163,7 @@
           <div class="mobileheader">
             <div class="logo">
               <NuxtLink to="/" @click="menuClose()">
-                <img src="img/home-logo.svg" alt="Multipurpose" />
+                <img src="/img/home-logo.svg" alt="Multipurpose" />
               </NuxtLink>
             </div>
             <a class="mobile-close" href="#"></a>
@@ -257,16 +257,16 @@
         <div class="swiper mySwiper" ref="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="img/slider-1.jpg" />
+              <img src="/img/slider-1.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="img/slider-2.jpg" />
+              <img src="/img/slider-2.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="img/slider-3.jpg" />
+              <img src="/img/slider-3.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="img/slider-4.jpg" />
+              <img src="/img/slider-4.jpg" />
             </div>
           </div>
           <div class="swiper-button-next"></div>
@@ -809,7 +809,7 @@
                 >
                   <div class="dp-flex section-title-top">
                     <div class="head-img">
-                      <img src="img/CD-icon2.svg" alt="" />
+                      <img src="/img/CD-icon2.svg" alt="" />
                     </div>
                     <h3>鳳飛飛故事館</h3>
                   </div>
@@ -829,7 +829,7 @@
                 <div class="portfolio with-caption mt_mobile--30">
                   <div class="thumb">
                     <NuxtLink to="new-event"
-                      ><img src="img/home-01.jpg" alt="最新活動"
+                      ><img src="/img/home-01.jpg" alt="最新活動"
                     /></NuxtLink>
                   </div>
                   <div class="caption-bottom text-left">
@@ -838,7 +838,7 @@
                       style="display: flex; align-items: "
                     >
                       <div class="info-img" style="center;margin-top:0;">
-                        <img src="img/newevent-icon.svg" alt="" />
+                        <img src="/img/newevent-icon.svg" alt="" />
                       </div>
                       <h5 class="heading heading-h5">
                         <NuxtLink to="new-event">最新活動</NuxtLink>
@@ -858,7 +858,7 @@
                 <div class="portfolio with-caption mt_mobile--30">
                   <div class="thumb">
                     <NuxtLink to="visit"
-                      ><img src="img/home-02.jpg" alt="參觀資訊"
+                      ><img src="/img/home-02.jpg" alt="參觀資訊"
                     /></NuxtLink>
                   </div>
                   <div class="caption-bottom">
@@ -867,7 +867,7 @@
                       style="display: flex; align-items: center"
                     >
                       <div class="info-img" style="center;margin-top:0;">
-                        <img src="img/exibition-icon.svg" alt="" />
+                        <img src="/img/exibition-icon.svg" alt="" />
                       </div>
 
                       <h5 class="heading heading-h5">
@@ -888,7 +888,7 @@
                 <div class="portfolio with-caption mt_sm--30 mt_md--30">
                   <div class="thumb">
                     <NuxtLink to="exhibition-now"
-                      ><img src="img/home-03.jpg" alt="展覽介紹"
+                      ><img src="/img/home-03.jpg" alt="展覽介紹"
                     /></NuxtLink>
                   </div>
                   <div class="caption-bottom text-left">
@@ -897,7 +897,7 @@
                       style="display: flex; align-items: center"
                     >
                       <div class="info-img" style="center;margin-top:0;">
-                        <img src="img/visit-icon.svg" alt="" />
+                        <img src="/img/visit-icon.svg" alt="" />
                       </div>
                       <h5 class="heading heading-h5">
                         <NuxtLink to="exhibition-now">展覽介紹</NuxtLink>
@@ -930,7 +930,7 @@
                   >
                     <div class="dp-flex section-title-top">
                       <div class="head-img">
-                        <img src="img/CD-icon4.svg" alt="" />
+                        <img src="/img/CD-icon4.svg" alt="" />
                       </div>
                       <h3 style="color: #ffe793">我們的願景與使命</h3>
                     </div>
@@ -964,7 +964,7 @@
               <div class="col-lg-6">
                 <div class="portfolio portfolio_style--1">
                   <div class="thumb">
-                    <img src="img/portfolio-1.jpg" alt="鳳飛飛故事館" />
+                    <img src="/img/portfolio-1.jpg" alt="鳳飛飛故事館" />
                   </div>
                 </div>
               </div>
@@ -995,7 +995,7 @@
                     <!-- Start Single Portfolio -->
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
-                        <img src="img/portfolio-3.jpg" alt="鳳飛飛故事館" />
+                        <img src="/img/portfolio-3.jpg" alt="鳳飛飛故事館" />
                       </div>
                     </div>
                     <!-- End Single Portfolio -->
@@ -1007,7 +1007,7 @@
                   >
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
-                        <img src="img/portfolio-4.jpg" alt="鳳飛飛故事館" />
+                        <img src="/img/portfolio-4.jpg" alt="鳳飛飛故事館" />
                       </div>
                     </div>
                   </div>
@@ -1107,7 +1107,7 @@
                 >
                   <div class="heading-left dp-flex">
                     <div class="head-img" style="margin-right: 5px">
-                      <img src="img/CD-icon2.svg" alt="" />
+                      <img src="/img/CD-icon2.svg" alt="" />
                     </div>
                     <h3 class="theme-color">飛飛踩點</h3>
                   </div>
@@ -1129,22 +1129,22 @@
                   <!-- Image Wrap -->
                   <div class="image-wrap">
                     <div class="thumb">
-                      <img src="img/team-1.jpg" alt="Team images" />
+                      <img src="/img/team-1.jpg" alt="Team images" />
                       <div class="overlay"></div>
                       <div class="shape">
                         <img
                           class="shape-01"
-                          src="img/team-shape-1.png"
+                          src="/img/team-shape-1.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-02"
-                          src="img/team-shape-2.png"
+                          src="/img/team-shape-2.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-03"
-                          src="img/team-shape-3.png"
+                          src="/img/team-shape-3.png"
                           alt="shape image"
                         />
                       </div>
@@ -1176,22 +1176,22 @@
                   <!-- Image Wrap -->
                   <div class="image-wrap">
                     <div class="thumb">
-                      <img src="img/team-2.jpg" alt="Team images" />
+                      <img src="/img/team-2.jpg" alt="Team images" />
                       <div class="overlay"></div>
                       <div class="shape">
                         <img
                           class="shape-01"
-                          src="img/team-shape-1.png"
+                          src="/img/team-shape-1.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-02"
-                          src="img/team-shape-2.png"
+                          src="/img/team-shape-2.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-03"
-                          src="img/team-shape-3.png"
+                          src="/img/team-shape-3.png"
                           alt="shape image"
                         />
                       </div>
@@ -1223,22 +1223,22 @@
                   <!-- Image Wrap -->
                   <div class="image-wrap">
                     <div class="thumb">
-                      <img src="img/team-3.jpg" alt="Team images" />
+                      <img src="/img/team-3.jpg" alt="Team images" />
                       <div class="overlay"></div>
                       <div class="shape">
                         <img
                           class="shape-01"
-                          src="img/team-shape-1.png"
+                          src="/img/team-shape-1.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-02"
-                          src="img/team-shape-2.png"
+                          src="/img/team-shape-2.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-03"
-                          src="img/team-shape-3.png"
+                          src="/img/team-shape-3.png"
                           alt="shape image"
                         />
                       </div>
@@ -1270,22 +1270,22 @@
                   <!-- Image Wrap -->
                   <div class="image-wrap">
                     <div class="thumb">
-                      <img src="img/team-4.jpg" alt="Team images" />
+                      <img src="/img/team-4.jpg" alt="Team images" />
                       <div class="overlay"></div>
                       <div class="shape">
                         <img
                           class="shape-01"
-                          src="img/team-shape-1.png"
+                          src="/img/team-shape-1.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-02"
-                          src="img/team-shape-2.png"
+                          src="/img/team-shape-2.png"
                           alt="shape image"
                         />
                         <img
                           class="shape-03"
-                          src="img/team-shape-3.png"
+                          src="/img/team-shape-3.png"
                           alt="shape image"
                         />
                       </div>
