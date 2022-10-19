@@ -3,7 +3,7 @@ import webpack from 'webpack';
 export default {
   mode: 'universal',
   generate: {
-    // dir: '../dist'
+    dir: '../dist'
   },
   // Target: https://go.nuxtjs.dev/config-target
   //  壓縮圖片 https://squoosh.app/editor
@@ -212,7 +212,7 @@ export default {
       login: '/login',
       logout: '/login?logout=1',
       callback: '/login',
-      home: '/'
+      home: ''
     },
     // watchLoggedIn: true,
     // rewriteRedirects: false,

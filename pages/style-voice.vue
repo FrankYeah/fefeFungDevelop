@@ -6,7 +6,7 @@
         <div class="page-load-inner">
             <div class="preloader-wrap">
                 <div class="wrap-2">
-                    <div class=""> <img src="img/ajax-loader.gif" alt="Brook Preloader"></div>
+                    <div class=""> <img src="/img/ajax-loader.gif" alt="Brook Preloader"></div>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
                         <div class="breadcaump-inner text-center">
                             <div class="newheading pb--70 pb_sm--0">
                                 <div class="newheading-img">
-                                    <img src="img/CD-icon3.svg" alt="">
+                                    <img src="/img/CD-icon3.svg" alt="">
                                 </div>
                                 <h2>飛飛聲影</h2>
                             </div>

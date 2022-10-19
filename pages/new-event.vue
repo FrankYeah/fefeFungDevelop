@@ -5,7 +5,7 @@
       <div class="page-load-inner">
         <div class="preloader-wrap">
           <div class="wrap-2">
-            <div><img src="img/ajax-loader.gif" alt="Brook Preloader" /></div>
+            <div><img src="/img/ajax-loader.gif" alt="Brook Preloader" /></div>
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
               <div class="breadcaump-inner text-center">
                 <div class="newheading pb--70 pb_sm--0">
                   <div class="newheading-img">
-                    <img src="img/CD-icon3.svg" alt="" />
+                    <img src="/img/CD-icon3.svg" alt="" />
                   </div>
                   <h2>最新活動</h2>
                 </div>
@@ -151,7 +151,7 @@ export default {
           date: "2021.12.15",
           category: "",
           link: "https://www.takoham.org.tw/news/4/107",
-          images: "img/newEvent/20210721pic0.jpg",
+          images: "/img/newEvent/20210721pic0.jpg",
           link2: "https://www.takoham.org.tw/",
         },
 
@@ -160,7 +160,7 @@ export default {
           date: "2021.12.15",
           category: "",
           link: "https://www.takoham.org.tw/news/3/108",
-          images: "img/newEvent/newEvent-bg.jpg",
+          images: "/img/newEvent/newEvent-bg.jpg",
           link2: "https://www.takoham.org.tw/",
         },
 
@@ -169,7 +169,7 @@ export default {
           date: "2021.12.10",
           category: "",
           link: "https://www.takoham.org.tw/news/3/106",
-          images: "img/newEvent/newEvent-bg.jpg",
+          images: "/img/newEvent/newEvent-bg.jpg",
           link2: "https://www.takoham.org.tw/",
         },
 
@@ -178,7 +178,7 @@ export default {
           date: "2021.12.09",
           category: "",
           link: "https://www.takoham.org.tw/news/3/105",
-          images: "img/newEvent/newEvent-bg.jpg",
+          images: "/img/newEvent/newEvent-bg.jpg",
           link2: "https://www.takoham.org.tw/",
         },
 
@@ -188,7 +188,7 @@ export default {
           date: "2021.12.08",
           category: "",
           link: "https://www.takoham.org.tw/news/3/104",
-          images: "img/newEvent/newEvent-bg.jpg",
+          images: "/img/newEvent/newEvent-bg.jpg",
           link2: "https://www.takoham.org.tw/",
         },
 
@@ -198,7 +198,7 @@ export default {
           date: "2021.12.02",
           category: "活動錄取名單",
           link: "https://www.takoham.org.tw/news/3/103",
-          images: "img/newEvent/newEvent-bg.jpg",
+          images: "/img/newEvent/newEvent-bg.jpg",
           link2: "https://www.takoham.org.tw/",
         },
 
@@ -208,7 +208,7 @@ export default {
           date: "2021.12.02",
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/3/102",
-          images: "img/newEvent/newEvent-bg.jpg",
+          images: "/img/newEvent/newEvent-bg.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         {
@@ -217,7 +217,7 @@ export default {
           date: "2021.11.26",
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/3/101",
-          images: "img/newEvent/newEvent-bg.jpg",
+          images: "/img/newEvent/newEvent-bg.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         {
@@ -226,7 +226,7 @@ export default {
           date: "2021.11.26",
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/3/100",
-          images: "img/newEvent/newEvent-bg.jpg",
+          images: "/img/newEvent/newEvent-bg.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         {
@@ -234,7 +234,7 @@ export default {
           date: "2021.11.23",
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/3/97",
-          images: "img/newEvent/newEvent-bg.jpg",
+          images: "/img/newEvent/newEvent-bg.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         {
@@ -242,7 +242,7 @@ export default {
           date: "2021.11.05",
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/3/93",
-          images: "img/newEvent/newEvent-bg.jpg",
+          images: "/img/newEvent/newEvent-bg.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         {
@@ -251,7 +251,7 @@ export default {
           date: "2021.12.08",
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/6/98",
-          images: "img/newEvent/20210721pic0.jpg",
+          images: "/img/newEvent/20210721pic0.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         // {
@@ -269,7 +269,7 @@ export default {
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/6/90",
           images:
-            "img/newEvent/【新聞稿】傳習鳳飛飛 《大河與小飛》紀念閩南語親子劇首演 萬聖節前夕扮鳳飛飛 變裝來看戲.jpg",
+            "/img/newEvent/【新聞稿】傳習鳳飛飛 《大河與小飛》紀念閩南語親子劇首演 萬聖節前夕扮鳳飛飛 變裝來看戲.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         {
@@ -278,7 +278,7 @@ export default {
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/1/96",
           images:
-            "img/newEvent/《大河與小飛》親子劇場－鳳飛飛紀念閩南語親子劇.jpg",
+            "/img/newEvent/《大河與小飛》親子劇場－鳳飛飛紀念閩南語親子劇.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         {
@@ -287,7 +287,7 @@ export default {
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/1/83",
           images:
-            "img/newEvent/《大河與小飛》繪本說故事活動-八德場 直播預告.jpg",
+            "/img/newEvent/《大河與小飛》繪本說故事活動-八德場 直播預告.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         // {
@@ -303,7 +303,7 @@ export default {
           date: "2021.09.08",
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/3/52",
-          images: "img/newEvent/《大河與小飛》繪本說故事活動錄取名單.jpg",
+          images: "/img/newEvent/《大河與小飛》繪本說故事活動錄取名單.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         {
@@ -311,7 +311,7 @@ export default {
           date: "2021.09.02",
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/1/11",
-          images: "img/newEvent/《大河與小飛》繪本說故事活動，開放報名！.jpg",
+          images: "/img/newEvent/《大河與小飛》繪本說故事活動，開放報名！.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         // {
@@ -327,7 +327,7 @@ export default {
           date: "2021.08.11",
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/1/15",
-          images: "img/newEvent/《大河與小飛》新書發表直播預告.jpg",
+          images: "/img/newEvent/《大河與小飛》新書發表直播預告.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         {
@@ -335,7 +335,7 @@ export default {
           date: "2021.08.01",
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/1/17",
-          images: "img/newEvent/《大河與小飛》留言抽繪本活動開跑囉！.jpg",
+          images: "/img/newEvent/《大河與小飛》留言抽繪本活動開跑囉！.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         {
@@ -343,7 +343,7 @@ export default {
           date: "2021.08.09",
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/1/16",
-          images: "img/newEvent/20210809pic0.jpg",
+          images: "/img/newEvent/20210809pic0.jpg",
           link2: "https://www.takoham.org.tw/",
         },
         {
@@ -351,13 +351,14 @@ export default {
           date: "2021.07.27",
           category: "志工隊招募",
           link: "https://www.takoham.org.tw/news/1/19",
-          images: "img/newEvent/20210727pic0.jpg",
+          images: "/img/newEvent/20210727pic0.jpg",
           link2: "https://www.takoham.org.tw/",
         },
       ],
     };
   },
   mounted() {
+    
     myMain()
     myRevoulation()
     this.$nextTick(() => {

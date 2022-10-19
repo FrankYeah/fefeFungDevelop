@@ -5,7 +5,7 @@
       <div class="page-load-inner">
         <div class="preloader-wrap">
           <div class="wrap-2">
-            <div><img src="img/ajax-loader.gif" alt="Brook Preloader" /></div>
+            <div><img src="/img/ajax-loader.gif" alt="Brook Preloader" /></div>
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
               <div class="breadcaump-inner text-center">
                 <div class="newheading pb--70 pb_sm--0">
                   <div class="newheading-img">
-                    <img src="img/CD-icon3.svg" alt="" />
+                    <img src="/img/CD-icon3.svg" alt="" />
                   </div>
                   <h2>活動記事</h2>
                 </div>
@@ -86,7 +86,7 @@
                   <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                     <div class="brook-counter text-center">
                       <div class="icon">
-                        <img src="img/processing.svg" alt="" />
+                        <img src="/img/processing.svg" alt="" />
                       </div>
                       <div class="content">
                         <span class="count">3</span>
@@ -100,7 +100,7 @@
                   <div class="col-lg-4 col-md-4 col-sm-6 col-12 mt_mobile--40">
                     <div class="brook-counter text-center">
                       <div class="icon">
-                        <img src="img/past.svg" alt="" />
+                        <img src="/img/past.svg" alt="" />
                       </div>
                       <div class="content">
                         <span class="count">12</span>
@@ -114,7 +114,7 @@
                   <div class="col-lg-4 col-md-4 col-sm-6 col-12 mt_sm--40">
                     <div class="brook-counter text-center">
                       <div class="icon">
-                        <img src="img/involve.svg" alt="" />
+                        <img src="/img/involve.svg" alt="" />
                       </div>
                       <div class="content">
                         <span class="count">10789</span>

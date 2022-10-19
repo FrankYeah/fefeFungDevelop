@@ -24,7 +24,7 @@ export default {
   },
   mounted() {
     this.judgeBottom()
-    this.$router.push('/blank')
+    // this.$router.push('/blank')
   },
   methods: {
     judgeBottom() {

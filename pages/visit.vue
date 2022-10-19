@@ -6,7 +6,7 @@
         <div class="preloader-wrap">
           <div class="wrap-2">
             <div class="">
-              <img src="img/ajax-loader.gif" alt="Brook Preloader" />
+              <img src="/img/ajax-loader.gif" alt="Brook Preloader" />
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@
               class="thumbnail mb--60 sm_d-none thumbnail-click"
               style="cursor: pointer"
             >
-              <img class="w-100" src="img/map-new.png" alt="參觀資訊" />
+              <img class="w-100" src="/img/map-new.png" alt="參觀資訊" />
             </div>
             <div class="row">
               <!-- Start Single Career -->
@@ -116,7 +116,7 @@
       <div id="PopImg" class="thumbnail mb--60 sm_d-none">
         <div class="overlay"></div>
         <div class="thumbnail-img">
-          <img class="w-100" src="img/map-new.png" alt="參觀資訊" />
+          <img class="w-100" src="/img/map-new.png" alt="參觀資訊" />
         </div>
         <div class="close-img">×</div>
       </div>

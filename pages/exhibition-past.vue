@@ -7,7 +7,7 @@
         <div class="page-load-inner">
             <div class="preloader-wrap">
                 <div class="wrap-2">
-                    <div><img src="img/ajax-loader.gif" alt="Brook Preloader"></div>
+                    <div><img src="/img/ajax-loader.gif" alt="Brook Preloader"></div>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
                         <div class="breadcaump-inner text-center">
                             <div class="newheading pb--70 pb_sm--0">
                                 <div class="newheading-img">
-                                    <img src="img/CD-icon3.svg" alt="">
+                                    <img src="/img/CD-icon3.svg" alt="">
                                 </div>
                                 <h2>過去展覽</h2>
                             </div>
@@ -126,7 +126,7 @@ export default {
         date: '2020.07.16',
         category:'故事特展',
         link:'https://www.takoham.org.tw/news/8/47',
-        images:'img/pastEvent/pastEvent-20200716pic0.jpg'
+        images:'/img/pastEvent/pastEvent-20200716pic0.jpg'
       },
     ]
     }
