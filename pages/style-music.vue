@@ -2616,51 +2616,47 @@
           "
         >
           <div class="messonry-button text-center mb--20">
-            <button
-              @click="filterItems('music-1')"
-              id="defaultClick"
-              class="is-checked"
-            >
+            <button :class="['music-1' == currentBtn ? 'btn-color' : '']" @click="filterItems('music-1')">
               <span class="filter-text">海山唱片</span>
               <span class="filter-counter">28</span>
             </button>
-            <button @click="filterItems('music-2')">
+            <button :class="['music-2' == currentBtn ? 'btn-color' : '']" @click="filterItems('music-2')">
               <span class="filter-text">歌林唱片</span>
               <span class="filter-counter">28</span>
             </button>
-            <button @click="filterItems('music-3')">
+            <button :class="['music-3' == currentBtn ? 'btn-color' : '']" @click="filterItems('music-3')">
               <span class="filter-text">東尼唱片</span>
               <span class="filter-counter">7</span>
             </button>
-            <button @click="filterItems('music-4')">
+            <button :class="['music-4' == currentBtn ? 'btn-color' : '']" @click="filterItems('music-4')">
               <span class="filter-text">北聯唱片</span>
               <span class="filter-counter">2</span>
             </button>
-            <button @click="filterItems('music-5')">
+            <button :class="['music-5' == currentBtn ? 'btn-color' : '']" @click="filterItems('music-5')">
               <span class="filter-text">藍與白唱片</span>
               <span class="filter-counter">3</span>
             </button>
-            <button @click="filterItems('music-6')">
+            <button :class="['music-6' == currentBtn ? 'btn-color' : '']" @click="filterItems('music-6')">
               <span class="filter-text">真善美唱片</span>
               <span class="filter-counter">2</span>
             </button>
-            <button @click="filterItems('music-7')">
+            <button :class="['music-7' == currentBtn ? 'btn-color' : '']" @click="filterItems('music-7')">
               <span class="filter-text">EMI唱片</span>
               <span class="filter-counter">3</span>
             </button>
-            <button @click="filterItems('music-8')">
+            <button :class="['music-8' == currentBtn ? 'btn-color' : '']" @click="filterItems('music-8')">
               <span class="filter-text">環球唱片</span>
               <span class="filter-counter">2</span>
             </button>
-            <button @click="filterItems('music-9')">
+            <button :class="['music-9' == currentBtn ? 'btn-color' : '']" @click="filterItems('music-9')">
               <span class="filter-text">寶麗金唱片</span>
               <span class="filter-counter">2</span>
             </button>
-            <button @click="filterItems('music-10')">
+            <button :class="['music-10' == currentBtn ? 'btn-color' : '']" @click="filterItems('music-10')">
               <span class="filter-text">金牌大風</span>
               <span class="filter-counter">1</span>
             </button>
-            <button @click="filterItems('*')">
+            <button :class="['*' == currentBtn ? 'btn-color' : '']" @click="filterItems('*')">
               <span class="filter-text">年代分類</span
               ><span class="filter-counter">78</span>
             </button>
@@ -3849,6 +3845,8 @@ export default {
       ],
 
       showList: true,
+
+      currentBtn:""
     };
   },
   mounted() {
@@ -3865,6 +3863,7 @@ export default {
   computed: {},
   methods: {
     async filterItems(filterText) {
+      this.currentBtn = filterText
       let arr_l = document.getElementsByClassName("animate__animated");
       for (const a of arr_l) {
         a.classList.add("animate__zoomOut");
@@ -3907,6 +3906,7 @@ export default {
 
 
 <style lang="scss" scoped>
-.default {
+.btn-color .filter-text{
+  color: #6001D2;
 }
 </style>
