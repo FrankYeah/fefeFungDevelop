@@ -9,22 +9,20 @@
 
               <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
                   <div class="footer-widget text-var--2 menu--contact">
-                      <h2 class="widgettitle">開放時間</h2>
+                      <h2 class="widgettitle">{{ allData[1].title }}</h2>
                       <div class="footer-address">
                           <div class="bk-hover">
-                              <p>週二至週日 09:30~17:00</p>
-                              <p>鳳飛飛故事館：335桃園市大溪區普濟路5號 <a href="https://goo.gl/maps/aUYWnLGBV328UerZA">(如何到達)</a></p>
+                              <p>{{ allData[1].content }}</p>
+                              <p>{{ allData[2].content }}</p>
                           </div>
                       </div>
                   </div>
                   <div class="footer-widget text-var--2 menu--contact">
-                      <h2 class="widgettitle">聯絡資訊</h2>
+                      <h2 class="widgettitle">{{ allData[4].title }}</h2>
                       <div class="footer-address">
                           <div class="bk-hover">
-                              <p>營運單位 財團法人大嵙崁文教基金會</p>
-                              <p>33521 桃園市大溪區中山路29號</p>
-                              <p>電話：(03)388-0871</p>
-                              <p>服務信箱：<a href = "mailto:takoham85@gmail.com">takoham85@gmail.com</a></p>
+                              <p style="white-space: pre-line;">{{ allData[4].content }}</p>
+
                           </div>
                       </div>
                   </div>
@@ -32,13 +30,10 @@
 
               <div class="col-lg-5 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
                   <div class="footer-widget text-var--2 menu--contact">
-                      <h2 class="widgettitle">休館時間</h2>
+                      <h2 class="widgettitle">{{ allData[3].title }}</h2>
                       <div class="footer-address">
                           <div class="bk-hover">
-                              <p>• 每週一休館(如遇國定假日照常開放，翌日休館)</p>
-                              <p>• 農曆除夕、大年初一休館</p>
-                              <p>• 政府公告之天然災害停止上班日</p>
-                              <p>• 桃園市立大溪木藝生態博物館及營運單位 另行公告之必要<a href="https://www.takoham.org.tw/news/3/117" target="_blank">休館日</a></p>
+                              <p style="white-space: pre-line;">{{ allData[3].content }}</p>
                           </div>
 
 
@@ -80,6 +75,8 @@
           </div>
       </div>
   </div>
+
+  <loading v-if="isLoading" />
   <!-- End Copyright Area -->
   </footer>
   <!--// Footer -->
@@ -94,17 +91,36 @@ export default {
   auth: false,
   layout: 'default',
   components: {
-
+    loading: require('~/components/loading.vue').default,
   },
   props: {
 
   },
   data () {
     return {
-
+      isLoading: false,
+      allData: []
+    }
+  },
+  created() {
+    for(let i = 0; i < 30; i++) {
+      this.allData.push({
+        auth: null,
+        category: null,
+        content: null,
+        image: null,
+        indexR: null,
+        module: null,
+        postDate: null,
+        remark: null,
+        states: null,
+        title: null,
+        url: null
+      })
     }
   },
   mounted () {
+    this.getData()
     // myMain()
     // myRevoulation()
   },
@@ -115,7 +131,21 @@ export default {
 
   },
   methods: {
+    getData() {
+      this.isLoading = true
+      this.$axios.get(`/api/func/content/module/A03`)
+        .then( res => {
+          this.isLoading = false
+          this.allData = res.data.data
+          console.log(this.allData)
+          this.isLoading = false
 
+        })
+        .catch(res => {
+          console.log(res)
+          this.isLoading = false
+        })
+    }
   }
 }
 </script>

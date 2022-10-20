@@ -57,7 +57,7 @@
               class="thumbnail mb--60 sm_d-none thumbnail-click"
               style="cursor: pointer"
             >
-              <img class="w-100" src="/img/map-new.png" alt="參觀資訊" />
+              <img class="w-100" :src="allData[0].image" alt="參觀資訊" />
             </div>
             <div class="row">
               <!-- Start Single Career -->
@@ -67,39 +67,28 @@
                     <div class="content">
                       <h5 class="heading heading-h5 head-gray-bg">開放時間</h5>
                       <div class="desc mt--25">
-                        <p>週二至週日 09:30~17:00</p>
+                        <p>{{ allData[1].content }}</p>
                       </div>
                     </div>
 
                     <div class="content mt--35">
                       <h5 class="heading heading-h5 head-gray-bg">館舍位置</h5>
                       <div class="desc mt--25">
-                        <p>鳳飛飛故事館（335桃園市大溪區普濟路5號）</p>
+                        <p>{{ allData[2].content }}</p>
                       </div>
                     </div>
 
                     <div class="content mt--35">
-                      <h5 class="heading heading-h5 head-gray-bg">休館時間</h5>
+                      <h5 class="heading heading-h5 head-gray-bg">{{ allData[3].title }}</h5>
                       <div class="desc mt--25">
-                        <p>△每週一休館 (如遇國定假日照常開放，翌日休館)</p>
-                        <p>△農曆除夕、大年初一休館</p>
-                        <p>△政府公告之天然災害停止上班日</p>
-                        <p>△本館另行公告之必要休館日</p>
-                        <p>
-                          <a href="https://www.takoham.org.tw/news/3/117"
-                            >△111年連假休館日詳細資訊</a
-                          >
-                        </p>
+                        <p style="white-space: pre-line;">{{ allData[3].content }}</p>
                       </div>
                     </div>
 
                     <div class="content mt--35">
-                      <h5 class="heading heading-h5 head-gray-bg">聯絡資訊</h5>
+                      <h5 class="heading heading-h5 head-gray-bg">{{ allData[4].title }}</h5>
                       <div class="desc mt--25">
-                        <p>財團法人大嵙崁文教基金會</p>
-                        <p>聯絡地址：335桃園市大溪區中山路29號</p>
-                        <p>服務電話： (03)388-0871</p>
-                        <p>服務信箱：takoham85@gmail.com</p>
+                        <p style="white-space: pre-line;">{{ allData[4].content }}</p>
                       </div>
                     </div>
                   </div>
@@ -120,6 +109,7 @@
         </div>
         <div class="close-img">×</div>
       </div>
+      <loading v-if="isLoading" />
     </div>
   </div>
 </template>
@@ -133,19 +123,58 @@ import custom from "@/static/js/custom.js";
 export default {
   auth: false,
   layout: "default",
-  components: {},
+  components: {
+    loading: require('~/components/loading.vue').default,
+  },
   props: {},
   data() {
-    return {};
+    return {
+      isLoading: false,
+      allData: []
+    };
+  },
+  created() {
+    for(let i = 0; i < 30; i++) {
+      this.allData.push({
+        auth: null,
+        category: null,
+        content: null,
+        image: null,
+        indexR: null,
+        module: null,
+        postDate: null,
+        remark: null,
+        states: null,
+        title: null,
+        url: null
+      })
+    }
   },
   mounted() {
     myMain();
     myRevoulation();
     custom();
+    this.getData()
   },
   destroyed() {},
   computed: {},
-  methods: {},
+  methods: {
+    getData() {
+      this.isLoading = true
+      this.$axios.get(`/api/func/content/module/A03`)
+        .then( res => {
+          this.isLoading = false
+          this.allData = res.data.data
+          console.log(this.allData)
+          this.isLoading = false
+
+        })
+        .catch(res => {
+          console.log(res)
+          this.isLoading = false
+        })
+    }
+  },
 };
 </script>
 

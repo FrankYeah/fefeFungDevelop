@@ -55,23 +55,23 @@
                 <div class="container">
                     <div class="row">
                         <!-- Start Single Blog -->
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 move-up wow mt--30"
-                          v-for="(item, index) in eventRecordContent"
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt--30"
+                          v-for="(item, index) in exhibitionContent"
                           :key="index"
                         >
                             <div class="blog-grid">
                                 <div class="post-thumb blog-slick-initial poss_relative" style="width: 100%;">
-                                    <a :href="item.link">
-                                        <img :src="item.images" alt="過去展覽">
+                                    <a :href="item.url">
+                                        <img :src="item.image" alt="過去展覽">
                                     </a>
                                 </div>
 
                                 <div class="post-content">
                                     <div class="post-inner">
-                                        <h5 class="heading heading-h5"><a :href="item.link">{{ item.title }}</a></h5>
-                                        <div class="post-meta">
-                                            <div class="post-date">{{ item.date }}</div>
-                                            <div class="post-category"><a :href="item.link">{{ item.category }}</a></div>
+                                        <h5 class="heading heading-h5"><a :href="item.url">{{ item.title }}</a></h5>
+                                        <div style="display:flex;" class="post-meta">
+                                            <div class="post-date" v-html="item.content"></div>
+                                            <div class="post-category"><a :href="item.url">{{ item.remark }}</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -120,13 +120,19 @@ export default {
   },
   data () {
     return {
-      eventRecordContent: [
+      exhibitionContent: [
       {
-        title: '鳳飛飛的一百種樣子 故事特展',
-        date: '2020.07.16',
-        category:'故事特展',
-        link:'https://www.takoham.org.tw/news/8/47',
-        images:'/img/pastEvent/pastEvent-20200716pic0.jpg'
+        auth: null,
+        category: null,
+        content: null,
+        image: null,
+        indexR: null,
+        module: null,
+        postDate: null,
+        remark: null,
+        states: null,
+        title: null,
+        url: null
       },
     ]
     }
@@ -134,6 +140,7 @@ export default {
   mounted () {
     myMain()
     myRevoulation()
+    this.getData()
   },
   destroyed () {
 
@@ -142,7 +149,16 @@ export default {
 
   },
   methods: {
-
+    getData() {
+      this.$axios.get(`/api/func/content/module/A07`)
+        .then( res => {
+          this.exhibitionContent = res.data.data
+          console.log(this.allData)
+        })
+        .catch(res => {
+          console.log(res)
+        })
+    }
   }
 }
 </script>

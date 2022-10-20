@@ -78,7 +78,7 @@
                 <!-- Start Portfolio Image -->
                 <div class="portfolio-image mb--50">
                   <img
-                    src="/img/about-img-logo.jpg"
+                    :src="allData[0].image"
                     alt=""
                     style="width: 100%"
                   />
@@ -103,15 +103,10 @@
               >
                 <div class="portfolio-main-info">
                   <h3 class="heading heading-h3 line-height-1-42 p-purple">
-                    鳳飛飛故事館的起源
+                    {{ allData[0].title }}
                   </h3>
-                  <p class="bk_pra mb--20" style="white-space: pre-line">
-                    取自1980年11月「就是溜溜的她」專輯唱片的字型為故事館標準字。
-                    而「就是溜溜的她」正是日後揚名國際的大導演侯孝賢所執導的第一部電影。一位是聲勢如日中天的歌后鳳飛飛，一位是日後享譽國際的出道導演，兩人好似偶然又似注定地創造了彼此的生涯高峰。
-                    我們以此紀念這空前絕後的歷史一頁。
-                  </p>
-                  <p class="bk_pra mb--20">
-                    鳳飛飛故事館是鳳飛飛與我們的故事館；有鳳飛飛輝煌燦爛的演藝生涯，也有動人溫暖的人生啟示。故事館更希望匯流台灣流行音樂史與文化產業，作為一個互相激盪的平台，故事館將不斷地把故事流傳下去。
+                  <p class="bk_pra mb--20" style="white-space: pre-line" v-html="allData[0].content">
+
                   </p>
 
                   <a
@@ -142,15 +137,51 @@ export default {
   components: {},
   props: {},
   data() {
-    return {};
+    return {
+      allData: []
+    };
+  },
+  created() {
+    for(let i = 0; i < 30; i++) {
+      this.allData.push({
+        auth: null,
+        category: null,
+        content: null,
+        image: null,
+        indexR: null,
+        module: null,
+        postDate: null,
+        remark: null,
+        states: null,
+        title: null,
+        url: null
+      })
+    }
   },
   mounted() {
     myMain();
     myRevoulation();
+    this.getData()
   },
   destroyed() {},
   computed: {},
-  methods: {},
+  methods: {
+    getData() {
+      this.isLoading = true
+      this.$axios.get(`/api/func/content/module/A10`)
+        .then( res => {
+          this.isLoading = false
+          this.allData = res.data.data
+          console.log(this.allData)
+          this.isLoading = false
+
+        })
+        .catch(res => {
+          console.log(res)
+          this.isLoading = false
+        })
+    }
+  },
 };
 </script>
 
