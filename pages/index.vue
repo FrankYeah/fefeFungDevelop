@@ -256,10 +256,13 @@
       <client-only>
         <div class="swiper mySwiper" ref="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img style="width:100%" src="/img/slider-1.jpg" />
+            <div v-for="(item, index) in allData.filter(data => data.category == 'carousel')"
+                :key="index"
+                class="swiper-slide"
+              >
+              <img style="width:100%" :src="item.image" />
             </div>
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <img src="/img/slider-2.jpg" />
             </div>
             <div class="swiper-slide">
@@ -267,7 +270,7 @@
             </div>
             <div class="swiper-slide">
               <img src="/img/slider-4.jpg" />
-            </div>
+            </div> -->
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
@@ -290,10 +293,10 @@
                     <div class="head-img">
                       <img src="/img/CD-icon2.svg" alt="" />
                     </div>
-                    <h3>鳳飛飛故事館</h3>
+                    <h3>{{ allData[4].title }}</h3>
                   </div>
 
-                  <h2>鳳飛飛的故事不只鳳飛飛 鳳飛飛的故事還有鳳迷跟你跟我</h2>
+                  <h2>{{ allData[4].content }}</h2>
                 </div>
               </div>
             </div>
@@ -865,7 +868,25 @@ export default {
       count2: 40,
       isShowInfo: false,
       key: 0,
+      allData: []
     };
+  },
+  created() {
+    for(let i = 0; i < 30; i++) {
+      this.allData.push({
+        auth: null,
+        category: null,
+        content: null,
+        image: null,
+        indexR: null,
+        module: null,
+        postDate: null,
+        remark: null,
+        states: null,
+        title: null,
+        url: null
+      })
+    }
   },
   mounted() {
     if (process.browser) {
@@ -875,43 +896,56 @@ export default {
     myMain();
     myRevoulation();
     custom();
-
-    this.$nextTick(() => {
-      window.addEventListener("scroll", this.handleScroll());
-
-      new Swiper(this.$refs.swiper, {
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          type: "bullets",
-          clickable: true,
-          renderBullet: (index, className) => {
-            return (
-              '<span class="' + className + '">' + `0${index + 1}` + "</span>"
-            );
-          },
-        },
-        effect: "creative",
-        creativeEffect: {
-          prev: {
-            translate: [0, 0, -400],
-          },
-          next: {
-            translate: ["100%", 0, 0],
-          },
-        },
-      });
-      if (process.browser) {
-        new WOW({ animateClass: "animate__animated" }).init();
-      }
-    });
+    this.getData()
   },
   destroyed() {},
   computed: {},
   methods: {
+    getData() {
+      this.$axios.get(`/api/func/content/module/A02`)
+        .then( res => {
+          this.allData = res.data.data
+          console.log(this.allData)
+          this.startSwiper()
+        })
+        .catch(res => {
+          console.log(res)
+        })
+    },
+    startSwiper() {
+      this.$nextTick(() => {
+        window.addEventListener("scroll", this.handleScroll());
+
+        new Swiper(this.$refs.swiper, {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+            clickable: true,
+            renderBullet: (index, className) => {
+              return (
+                '<span class="' + className + '">' + `0${index + 1}` + "</span>"
+              );
+            },
+          },
+          effect: "creative",
+          creativeEffect: {
+            prev: {
+              translate: [0, 0, -400],
+            },
+            next: {
+              translate: ["100%", 0, 0],
+            },
+          },
+        });
+        if (process.browser) {
+          new WOW({ animateClass: "animate__animated" }).init();
+        }
+      });
+    },
     handleScroll() {
       var count = 0;
       var th = this;
