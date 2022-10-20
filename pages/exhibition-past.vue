@@ -121,20 +121,20 @@ export default {
   data () {
     return {
       exhibitionContent: [
-      {
-        auth: null,
-        category: null,
-        content: null,
-        image: null,
-        indexR: null,
-        module: null,
-        postDate: null,
-        remark: null,
-        states: null,
-        title: null,
-        url: null
-      },
-    ]
+        {
+          auth: null,
+          category: null,
+          content: null,
+          image: null,
+          indexR: null,
+          module: null,
+          postDate: null,
+          remark: null,
+          states: null,
+          title: null,
+          url: null
+        },
+      ]
     }
   },
   mounted () {
@@ -153,7 +153,7 @@ export default {
       this.$axios.get(`/api/func/content/module/A07`)
         .then( res => {
           this.exhibitionContent = res.data.data
-          console.log(this.allData)
+          console.log(this.exhibitionContent)
         })
         .catch(res => {
           console.log(res)
