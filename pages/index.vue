@@ -296,22 +296,23 @@
                     <h3>{{ allData[4].title }}</h3>
                   </div>
 
-                  <h2>{{ allData[4].content }}</h2>
+                  <h2 v-html="allData[4].content">}</h2>
                 </div>
               </div>
             </div>
 
             <div class="row mt--70 mt_sm--20 mt_md--30">
               <!-- Start Single Portfolio -->
-              <div
+              <div v-for="(item, index) in allData.filter(data => data.category == 'block_1')"
+                :key="index"
                 class="col-lg-4 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
                 data-wow-delay=".5s"
                 data-wow-iteration="1"
               >
                 <div class="portfolio with-caption mt_mobile--30">
                   <div class="thumb">
-                    <NuxtLink to="new-event"
-                      ><img src="/img/home-01.jpg" alt="最新活動"
+                    <NuxtLink :to="item.url"
+                      ><img :src="item.image" alt="最新活動"
                     /></NuxtLink>
                   </div>
                   <div class="caption-bottom text-left">
@@ -323,7 +324,7 @@
                         <img src="/img/newevent-icon.svg" alt="" />
                       </div>
                       <h5 class="heading heading-h5">
-                        <NuxtLink to="new-event">最新活動</NuxtLink>
+                        <NuxtLink to="new-event">{{ item.title }}</NuxtLink>
                       </h5>
                     </div>
                   </div>
@@ -331,64 +332,6 @@
               </div>
               <!-- End Single Portfolio -->
 
-              <!-- Start Single Portfolio -->
-              <div
-                class="col-lg-4 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
-                data-wow-delay=".5s"
-                data-wow-iteration="1"
-              >
-                <div class="portfolio with-caption mt_mobile--30">
-                  <div class="thumb">
-                    <NuxtLink to="visit"
-                      ><img src="/img/home-02.jpg" alt="參觀資訊"
-                    /></NuxtLink>
-                  </div>
-                  <div class="caption-bottom">
-                    <div
-                      class="info"
-                      style="display: flex; align-items: center"
-                    >
-                      <div class="info-img" style="center;margin-top:0;">
-                        <img src="/img/exibition-icon.svg" alt="" />
-                      </div>
-
-                      <h5 class="heading heading-h5">
-                        <NuxtLink to="visit">參觀資訊</NuxtLink>
-                      </h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Portfolio -->
-
-              <!-- Start Single Portfolio -->
-              <div
-                class="col-lg-4 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
-                data-wow-delay=".6s"
-                data-wow-iteration="1"
-              >
-                <div class="portfolio with-caption mt_sm--30 mt_md--30">
-                  <div class="thumb">
-                    <NuxtLink to="exhibition-now"
-                      ><img src="/img/home-03.jpg" alt="展覽介紹"
-                    /></NuxtLink>
-                  </div>
-                  <div class="caption-bottom text-left">
-                    <div
-                      class="info dp-flex"
-                      style="display: flex; align-items: center"
-                    >
-                      <div class="info-img" style="center;margin-top:0;">
-                        <img src="/img/visit-icon.svg" alt="" />
-                      </div>
-                      <h5 class="heading heading-h5">
-                        <NuxtLink to="exhibition-now">展覽介紹</NuxtLink>
-                      </h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Portfolio -->
             </div>
           </div>
         </div>
@@ -414,14 +357,11 @@
                       <div class="head-img">
                         <img src="/img/CD-icon4.svg" alt="" />
                       </div>
-                      <h3 style="color: #ffe793">我們的願景與使命</h3>
+                      <h3 style="color: #ffe793">{{ allData[8].title }}</h3>
                     </div>
 
                     <h2 class="ml_sm--15 mr_sm--15" style="color: #fff">
-                      「探索鳳時代，開創鳳未來」
-                      大溪是鳳飛飛的故鄉，鳳飛飛是獨特的大溪記憶，也是台灣的共同資產。
-                      故事館不只訴說過去，也正在串連現在發生的人事物，展現鳳文化的生命力，這是所謂的「探索鳳時代，開創鳳未來」。
-                      串連與平台，正是本網站的願景與使命。
+                      <div style="white-space: pre-line;" v-html="allData[8].content"></div>
                     </h2>
                   </div>
                 </div>
@@ -446,7 +386,7 @@
               <div class="col-lg-6">
                 <div class="portfolio portfolio_style--1">
                   <div class="thumb">
-                    <img src="/img/portfolio-1.jpg" alt="鳳飛飛故事館" />
+                    <img :src="allData[9].image" alt="鳳飛飛故事館" />
                   </div>
                 </div>
               </div>
@@ -467,7 +407,7 @@
                   <img
                     class="col-lg-12 wow animate__fadeInUp"
                     data-wow-iteration="1"
-                    src="img/portfolio-2.jpg"
+                    :src="allData[10].image"
                     alt="鳳飛飛故事館"
                   />
                   <div
@@ -477,7 +417,7 @@
                     <!-- Start Single Portfolio -->
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
-                        <img src="/img/portfolio-3.jpg" alt="鳳飛飛故事館" />
+                        <img :src="allData[11].image" alt="鳳飛飛故事館" />
                       </div>
                     </div>
                     <!-- End Single Portfolio -->
@@ -489,7 +429,7 @@
                   >
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
-                        <img src="/img/portfolio-4.jpg" alt="鳳飛飛故事館" />
+                        <img :src="allData[12].image" alt="鳳飛飛故事館" />
                       </div>
                     </div>
                   </div>
@@ -509,11 +449,10 @@
                   class="section-title wow animate__fadeInUp"
                   data-wow-iteration="1"
                 >
-                  <h3 class="theme-color">台灣一代歌后</h3>
-                  <h3 class="theme-color">一個傳奇 一個希望</h3>
-                  <h2>
-                    鳳飛飛 所具備的群眾魅力 是空前絕後的 在鳳飛飛的故事、歌聲裡
-                    為大家帶來了溫暖、療癒 她是我們的一代歌后！一個傳奇！
+                  <h3 style="white-space: pre-line;" class="theme-color">{{ allData[13].title }}</h3>
+                  <!-- <h3 class="theme-color">一個傳奇 一個希望</h3> -->
+                  <h2 style="white-space: pre-line;" v-html="allData[13].content">
+
                   </h2>
                   <NuxtLink to="style-list"
                     ><a class="bk-btn theme-btn add-mt">更多內容</a></NuxtLink
@@ -542,10 +481,8 @@
                     }}</span>
                     <div class="content">
                       <h6>張專輯以上</h6>
-                      <p>
-                        鳳飛飛在國內發行的專輯唱片或合輯
-                        超過上百張，這數字還不含海外發行
-                        代表作品性的作品：祝你幸福，我是一片雲，松林的低語，愛你在心口難開，追夢人，掌聲響起，想要彈同調等等，不計其數。
+                      <p style="white-space: pre-line;" v-html="allData[14].content">
+
                       </p>
                     </div>
                   </div>
@@ -559,9 +496,7 @@
                     <span style="color: #6001d2">{{ count2 }}</span>
                     <div class="content">
                       <h6>座獎項以上</h6>
-                      <p>
-                        鳳飛飛一生獲獎無數，在鳳姐遠行之後甚至創下紀錄，獲得金曲獎與金鐘獎雙金特別獎，空前絕後。
-                        然而，您知道嗎?鳳姐此生最貴重的桂冠是什麼嗎?我們認為是國民天后大溪的女兒。您覺得呢?
+                      <p style="white-space: pre-line;" v-html="allData[15].content">
                       </p>
                     </div>
                   </div>
@@ -591,7 +526,7 @@
                     <div class="head-img" style="margin-right: 5px">
                       <img src="/img/CD-icon2.svg" alt="" />
                     </div>
-                    <h3 class="theme-color">飛飛踩點</h3>
+                    <h3 class="theme-color">{{ allData[16].title }}</h3>
                   </div>
                   <div class="heading-right">
                     <NuxtLink to="journey"
@@ -603,7 +538,8 @@
             </div>
             <div class="row">
               <!-- Start Single Team -->
-              <div
+              <div v-for="(item, index) in allData.filter(data => data.category == 'block_3')"
+                :key="index"
                 class="col-lg-3 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
                 data-wow-iteration="1"
               >
@@ -611,7 +547,7 @@
                   <!-- Image Wrap -->
                   <div class="image-wrap">
                     <div class="thumb">
-                      <img src="/img/team-1.jpg" alt="Team images" />
+                      <img :src="item.image" alt="Team images" />
                       <div class="overlay"></div>
                       <div class="shape">
                         <img
@@ -642,154 +578,14 @@
                   </div>
                   <!-- Team Info -->
                   <div class="info">
-                    <h6 class="name">鳳飛飛故居</h6>
-                    <span class="position">桃園市大溪區草店尾 (福仁宮後)</span>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Team -->
-
-              <!-- Start Single Team -->
-              <div
-                class="col-lg-3 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
-                data-wow-iteration="1"
-              >
-                <div class="team team_style--1">
-                  <!-- Image Wrap -->
-                  <div class="image-wrap">
-                    <div class="thumb">
-                      <img src="/img/team-2.jpg" alt="Team images" />
-                      <div class="overlay"></div>
-                      <div class="shape">
-                        <img
-                          class="shape-01"
-                          src="/img/team-shape-1.png"
-                          alt="shape image"
-                        />
-                        <img
-                          class="shape-02"
-                          src="/img/team-shape-2.png"
-                          alt="shape image"
-                        />
-                        <img
-                          class="shape-03"
-                          src="/img/team-shape-3.png"
-                          alt="shape image"
-                        />
-                      </div>
-                    </div>
-                    <!-- Social Network -->
-                    <!-- <div class="social-networks">
-                                        <div class="inner">
-                                            <a class="hint--bounce hint--top hint--primary" href="#" aria-label="地圖">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                            </a>
-                                        </div>
-                                    </div> -->
-                  </div>
-                  <!-- Team Info -->
-                  <div class="info">
-                    <h6 class="name">老家水井</h6>
-                    <span class="position">后尾巷和草店尾</span>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Team -->
-
-              <!-- Start Single Team -->
-              <div
-                class="col-lg-3 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
-                data-wow-iteration="1"
-              >
-                <div class="team team_style--1">
-                  <!-- Image Wrap -->
-                  <div class="image-wrap">
-                    <div class="thumb">
-                      <img src="/img/team-3.jpg" alt="Team images" />
-                      <div class="overlay"></div>
-                      <div class="shape">
-                        <img
-                          class="shape-01"
-                          src="/img/team-shape-1.png"
-                          alt="shape image"
-                        />
-                        <img
-                          class="shape-02"
-                          src="/img/team-shape-2.png"
-                          alt="shape image"
-                        />
-                        <img
-                          class="shape-03"
-                          src="/img/team-shape-3.png"
-                          alt="shape image"
-                        />
-                      </div>
-                    </div>
-                    <!-- Social Network -->
-                    <!-- <div class="social-networks">
-                                        <div class="inner">
-                                            <a class="hint--bounce hint--top hint--primary" href="#" aria-label="地圖">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                            </a>
-                                        </div>
-                                    </div> -->
-                  </div>
-                  <!-- Team Info -->
-                  <div class="info">
-                    <h6 class="name">鳳飛飛老家</h6>
-                    <span class="position">和平路105號</span>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Team -->
-
-              <!-- Start Single Team -->
-              <div
-                class="col-lg-3 col-md-6 col-sm-6 col-12 wow animate__fadeInUp"
-                data-wow-iteration="1"
-              >
-                <div class="team team_style--1">
-                  <!-- Image Wrap -->
-                  <div class="image-wrap">
-                    <div class="thumb">
-                      <img src="/img/team-4.jpg" alt="Team images" />
-                      <div class="overlay"></div>
-                      <div class="shape">
-                        <img
-                          class="shape-01"
-                          src="/img/team-shape-1.png"
-                          alt="shape image"
-                        />
-                        <img
-                          class="shape-02"
-                          src="/img/team-shape-2.png"
-                          alt="shape image"
-                        />
-                        <img
-                          class="shape-03"
-                          src="/img/team-shape-3.png"
-                          alt="shape image"
-                        />
-                      </div>
-                    </div>
-                    <!-- Social Network -->
-                    <!-- <div class="social-networks">
-                                        <div class="inner">
-                                            <a class="hint--bounce hint--top hint--primary" href="#" aria-label="地圖">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                            </a>
-                                        </div>
-                                    </div> -->
-                  </div>
-                  <!-- Team Info -->
-                  <div class="info">
-                    <h6 class="name">含笑樹</h6>
-                    <span class="position">後尾巷空地</span>
+                    <h6 class="name">{{ item.title }}</h6>
+                    <span class="position">{{ item.content }}</span>
                   </div>
                 </div>
               </div>
               <!-- End Single Team -->
             </div>
+
           </div>
         </div>
         <!-- End Team Area -->
