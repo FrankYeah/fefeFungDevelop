@@ -140,19 +140,6 @@ export default {
   data() {
     return {
       journeyContent: [
-        {
-          auth: null,
-          category: null,
-          content: null,
-          image: null,
-          indexR: null,
-          module: null,
-          postDate: null,
-          remark: null,
-          states: null,
-          title: null,
-          url: null
-        },
       ]
     };
   },

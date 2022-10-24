@@ -1181,13 +1181,21 @@ export default function () {
     const player_3 = new Plyr('#player-3');
     const player_4 = new Plyr('#player-4');
     const player_5 = new Plyr('#player-5');
-    const youtube_video = new Plyr('#youtube-video');
+    const player_6 = new Plyr('#player-6');
+    const player_7 = new Plyr('#player-7');
+    const player_8 = new Plyr('#player-8');
+    const player_9 = new Plyr('#player-9');
+    const player_10 = new Plyr('#player-10');
+    const youtube_video1 = new Plyr('#youtube-video1');
     const youtube_video2 = new Plyr('#youtube-video2');
     const youtube_video3 = new Plyr('#youtube-video3');
     const youtube_video4 = new Plyr('#youtube-video4');
     const youtube_video5 = new Plyr('#youtube-video5');
     const youtube_video6 = new Plyr('#youtube-video6');
     const youtube_video7 = new Plyr('#youtube-video7');
+    const youtube_video8 = new Plyr('#youtube-video8');
+    const youtube_video9 = new Plyr('#youtube-video9');
+    const youtube_video10 = new Plyr('#youtube-video10');
     const vimeo_player = new Plyr('#vimeo-player');
 
     /*===================================

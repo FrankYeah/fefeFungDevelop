@@ -129,8 +129,8 @@
                     <div class="post-content">
                       <h5 class="heading">{{ item.title }}</h5>
                       <div class="post-meta">
-                        <div class="post-date">{{ item.content.slice(0, 5) }}</div>
-                        <div class="post-category">{{ item.content.slice(5) }}</div>
+                        <div class="post-date" v-html="item.remark"></div>
+                        <div class="post-category" v-html="item.content"></div>
                       </div>
                     </div>
                   </div>

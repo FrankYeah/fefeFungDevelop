@@ -57,203 +57,46 @@
                     <p class="col-lg-8 mx-auto sub-title">音檔出處由鳳友提供，若想聽鳳飛飛故事完整版，歡迎前往鳳飛飛故事館聆聽</p>
                     <div class="row">
                         <!-- Single Audio Player Start -->
-                        <div class="col-lg-8 mx-auto">
+                        <div v-for="(item, index) in allData.filter(data => data.category == 'audio_voice')"
+                          :key="index"
+                          class="col-lg-8 mx-auto">
                             <div class="single-audio-player mb--20">
                                 <div class="audio-title">
-                                    <h4 class="title">鳳飛飛黃河曦石元娜72年</h4>
+                                    <h4 class="title">{{ item.title }}</h4>
                                 </div>
-                                <audio id="player-1" controls>
-                                    <source src="http://34.80.22.219/audio/%E9%B3%B3%E9%A3%9B%E9%A3%9B%E9%BB%83%E6%B2%B3%E6%9B%A6%E7%9F%B3%E5%85%83%E5%A8%9C72%E5%B9%B4_%E5%8E%BB%E9%9F%B3%E6%A8%82_30sec.mp4" type="" />
+                                <audio :id="`player-${index + 1}`" controls>
+                                    <source :src="item.image" type="" />
                                 </audio>
                             </div>
                         </div>
                         <!-- Single Audio Player End -->
-                        <!-- Single Audio Player Start -->
-                        <div class="col-lg-8 mx-auto">
-                            <div class="single-audio-player mb--20">
-                                <div class="audio-title">
-                                    <h4 class="title">鳳姐自道配唱習慣</h4>
-                                </div>
-                                <audio id="player-2" controls>
-                                    <source src="http://34.80.22.219/audio/%E9%B3%B3%E5%A7%90%E8%87%AA%E9%81%93%E9%85%8D%E5%94%B1%E7%BF%92%E6%85%A3_%E5%8E%BB%E9%9F%B3%E6%A8%82_30sec.mp4" type="audio/mp3" />
-                                </audio>
-                            </div>
-                        </div>
-                        <!-- Single Audio Player End -->
-                        <!-- Single Audio Player Start -->
-                        <div class="col-lg-8 mx-auto">
-                            <div class="single-audio-player mb--20">
-                                <div class="audio-title">
-                                    <h4 class="title">張小燕沈時華</h4>
-                                    <!-- <p class="sub-title">1994年 ｜ 偶像答客問</p> -->
-                                </div>
-                                <audio id="player-3" controls>
-                                    <source src="http://34.80.22.219/audio/%E5%BC%B5%E5%B0%8F%E7%87%95%E6%B2%88%E6%99%82%E8%8F%AF_%E5%8E%BB%E9%9F%B3%E6%A8%82_30sec.mp4" type="audio/mp3" />
-                                </audio>
-                            </div>
-                        </div>
-                        <!-- Single Audio Player End -->
-                        <!-- Single Audio Player Start -->
-                        <div class="col-lg-8 mx-auto">
-                            <div class="single-audio-player mb--20">
-                                <div class="audio-title">
-                                    <h4 class="title">李佳翁浩然聯誼會生日快樂</h4>
-                                    <!-- <p class="sub-title">1994年 ｜ 偶像答客問</p> -->
-                                </div>
-                                <audio id="player-4" controls>
-                                    <source src="http://34.80.22.219/audio/%E6%9D%8E%E4%BD%B3%E7%BF%81%E6%B5%A9%E7%84%B6%E8%81%AF%E8%AA%BC%E6%9C%83%E7%94%9F%E6%97%A5%E5%BF%AB%E6%A8%82_%E5%8E%BB%E9%9F%B3%E6%A8%82_30sec.mp4" type="audio/mp3" />
-                                </audio>
-                            </div>
-                        </div>
-                        <!-- Single Audio Player End -->
-                        <!-- Single Audio Player Start -->
-                        <div class="col-lg-8 mx-auto">
-                            <div class="single-audio-player mb--20">
-                                <div class="audio-title">
-                                    <h4 class="title">方笛鳳飛飛談盡責喜歡熱誠鳳迷聊鳳姐</h4>
-                                    <!-- <p class="sub-title">1994年 ｜ 偶像答客問</p> -->
-                                </div>
-                                <audio id="player-5" controls>
-                                    <source src="http://34.80.22.219/audio/%E6%96%B9%E7%AC%9B%E9%B3%B3%E9%A3%9B%E9%A3%9B%E8%AB%87%E7%9B%A1%E8%B2%AC%E5%96%9C%E6%AD%A1%E7%86%B1%E8%AA%A0%E9%B3%B3%E8%BF%B7%E8%81%8A%E9%B3%B3%E5%A7%90_%E5%8E%BB%E9%9F%B3%E6%A8%82_30sec.mp4" type="audio/mp3" />
-                                </audio>
-                            </div>
-                        </div>
-                        <!-- Single Audio Player End -->
+
                     </div>
                 </div>
             </div>
             <!-- End Audio Player Area -->
 
             <!-- Start Youtube Player Area -->
-            <div class="brook-player-area bg_color--1 pb--80 pt--40 pt_md--40 pt_sm--40  pb_md--40 pb_sm--40">
+            <div
+              class="brook-player-area bg_color--1 pb--80 pt--40 pt_md--40 pt_sm--40  pb_md--40 pb_sm--40"
+            >
                 <div class="container">
                     <h3 class="col-lg-8 mx-auto sm_center">飛飛之影</h3>
                     <!-- <p class="col-lg-8 mx-auto sub-title">影片出處由OOOO提供，若想聽鳳飛飛故事完整版，歡迎前往鳳飛飛故事館聆聽</p> -->
                     <div class="mt--40 mt_sm--20 mt_md--30">
                         <!-- Single Youtube Player Start -->
-                        <div class="col-lg-8 mx-auto mb--60">
+                        <div v-for="(item, index) in allData.filter(data => data.category == 'video_voice')"
+                          :key="index"
+                          class="col-lg-8 mx-auto mb--60"
+                        >
                             <div class="audio-title">
-                                <h4 class="title">1971的初見「初見鳳飛飛」</h4>
+                                <h4 class="title">{{ item.title }}</h4>
                                 <!-- <p class="sub-title">1971年 ｜ 黃金夜總會</p> -->
                             </div>
                             <div class="single-youtube-player mb--20">
-                                <div class="plyr__video-embed" id="youtube-video">
+                                <div class="plyr__video-embed" :id="`youtube-video${index + 1}`">
                                     <iframe
-                                        src="https://youtu.be/dBN9kaaz0mY"
-                                        allowfullscreen
-                                        allowtransparency
-                                        allow="autoplay"
-                                    ></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Youtube Player End -->
-
-                        <!-- Single Youtube Player Start -->
-                        <div class="col-lg-8 mx-auto mb--60">
-                            <div class="audio-title">
-                                <h4 class="title">1981的空前「全民的鳳飛飛」</h4>
-                                <!-- <p class="sub-title">2019年3月15日 ｜ 公視新聞網PNN</p> -->
-                            </div>
-                            <div class="single-youtube-player mb--20">
-                                <div class="plyr__video-embed" id="youtube-video2">
-                                    <iframe
-                                        src="https://youtu.be/To4eamicZK0"
-                                        allowfullscreen
-                                        allowtransparency
-                                        allow="autoplay"
-                                    ></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Youtube Player End -->
-
-                        <!-- Single Youtube Player Start -->
-                        <div class="col-lg-8 mx-auto mb--60">
-                            <div class="audio-title">
-                                <h4 class="title">1982的唯一「金鐘雙后交會」</h4>
-                                <!-- <p class="sub-title">2009年3月15日 ｜ 中國時報</p> -->
-                            </div>
-                            <div class="single-youtube-player mb--20">
-                                <div class="plyr__video-embed" id="youtube-video3">
-                                    <iframe
-                                        src="https://youtu.be/GcTJPsTJdBo"
-                                        allowfullscreen
-                                        allowtransparency
-                                        allow="autoplay"
-                                    ></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Youtube Player End -->
-
-                         <!-- Single Youtube Player Start -->
-                         <div class="col-lg-8 mx-auto mb--60">
-                            <div class="audio-title">
-                                <h4 class="title">2012的巔峰「飛飛的圓融智慧」</h4>
-                                <!-- <p class="sub-title">2009年3月15日 ｜ 中國時報</p> -->
-                            </div>
-                            <div class="single-youtube-player mb--20">
-                                <div class="plyr__video-embed" id="youtube-video4">
-                                    <iframe
-                                        src="https://youtu.be/GrS8Jv5StSo"
-                                        allowfullscreen
-                                        allowtransparency
-                                        allow="autoplay"
-                                    ></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Youtube Player End -->
-
-                         <!-- Single Youtube Player Start -->
-                         <div class="col-lg-8 mx-auto mb--60">
-                            <div class="audio-title">
-                                <h4 class="title">【紀錄片】2019草店尾含笑遷樹憶飛飛</h4>
-                                <!-- <p class="sub-title">2009年3月15日 ｜ 中國時報</p> -->
-                            </div>
-                            <div class="single-youtube-player mb--20">
-                                <div class="plyr__video-embed" id="youtube-video5">
-                                    <iframe
-                                        src="https://youtu.be/iERc0JiNt6A"
-                                        allowfullscreen
-                                        allowtransparency
-                                        allow="autoplay"
-                                    ></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Youtube Player End -->
-
-                         <!-- Single Youtube Player Start -->
-                         <div class="col-lg-8 mx-auto mb--60">
-                            <div class="audio-title">
-                                <h4 class="title">想念飛飛我愛大溪鳳飛飛影片製作案</h4>
-                                <!-- <p class="sub-title">2009年3月15日 ｜ 中國時報</p> -->
-                            </div>
-                            <div class="single-youtube-player mb--20">
-                                <div class="plyr__video-embed" id="youtube-video6">
-                                    <iframe
-                                        src="https://youtu.be/KLEoJQABk8I"
-                                        allowfullscreen
-                                        allowtransparency
-                                        allow="autoplay"
-                                    ></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Youtube Player End -->
-
-                         <!-- Single Youtube Player Start -->
-                         <div class="col-lg-8 mx-auto mb--60">
-                            <div class="audio-title">
-                                <h4 class="title">大溪姑娘 國民天后鳳飛飛紀錄片</h4>
-                                <!-- <p class="sub-title">2009年3月15日 ｜ 中國時報</p> -->
-                            </div>
-                            <div class="single-youtube-player mb--20">
-                                <div class="plyr__video-embed" id="youtube-video7">
-                                    <iframe
-                                        src="https://youtu.be/jR89hh5axkI"
+                                        :src="item.url"
                                         allowfullscreen
                                         allowtransparency
                                         allow="autoplay"
@@ -291,12 +134,18 @@ export default {
   },
   data () {
     return {
-
+      allData: []
     }
   },
-  mounted () {
-    myMain()
-    myRevoulation()
+  created() {
+
+  },
+  async mounted () {
+    await this.getData()
+    setTimeout(() => {
+      myMain()
+      myRevoulation()
+    }, 10)
   },
   destroyed () {
 
@@ -305,7 +154,16 @@ export default {
 
   },
   methods: {
-
+    async getData() {
+      await this.$axios.get(`/api/func/content/module/A083`)
+        .then( res => {
+          this.allData = res.data.data
+          console.log(this.allData)
+        })
+        .catch(res => {
+          console.log(res)
+        })
+    },
   }
 }
 </script>

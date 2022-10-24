@@ -165,7 +165,7 @@
                     <div class="post-inner">
                       <div class="post-m3eta">
                         <div class="post-date">發行時間</div>
-                        <div class="post-category">{{ item.content }}</div>
+                        <div class="post-category" v-html="item.content"></div>
                       </div>
                       <h5 class="heading heading-h5">
                         <!-- <span v-if="item.toptitle"
