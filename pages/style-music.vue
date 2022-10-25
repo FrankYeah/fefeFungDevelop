@@ -157,7 +157,7 @@
                   class="blog-grid blog-standard grid-simple animate__animated"
                 >
                   <div class="post-thumb">
-                    <a :href="item.url">
+                    <a>
                       <img :src="item.image" alt="音樂作品" />
                     </a>
                   </div>
