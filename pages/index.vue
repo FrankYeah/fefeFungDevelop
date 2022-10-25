@@ -171,7 +171,7 @@
           <div class="menu-content">
             <ul class="menulist object-custom-menu">
               <NuxtLink to="/">
-                <li class="manu-li" @click="menuClose()">
+                <li class="manu-li first-manu-li" @click="menuClose()">
                   <span>首頁</span>
                 </li></NuxtLink
               >
@@ -183,7 +183,7 @@
               >
 
               <NuxtLink to="visit"
-                ><li class="/manu-li" @click="menuClose()">
+                ><li class="manu-li" @click="menuClose()">
                   <span>參觀資訊</span>
                 </li></NuxtLink
               >
@@ -260,7 +260,7 @@
                 :key="index"
                 class="swiper-slide"
               >
-              <img style="width:100%" :src="item.image" />
+              <img  :src="item.image" />
             </div>
             <!-- <div class="swiper-slide">
               <img src="/img/slider-2.jpg" />
@@ -384,7 +384,7 @@
             <div class="row row--0 space_dec--110">
               <!-- Start Single Portfolio -->
               <div class="col-lg-6">
-                <div class="portfolio portfolio_style--1">
+                <div class="portfolio portfolio_style--1 ">
                   <div class="thumb">
                     <img :src="allData[9].image" alt="鳳飛飛故事館" />
                   </div>
@@ -405,7 +405,7 @@
                     </div>
                   </div> -->
                   <img
-                    class="col-lg-12 wow animate__fadeInUp"
+                    class="col-lg-12 wow animate__fadeInUp "
                     data-wow-iteration="1"
                     :src="allData[10].image"
                     alt="鳳飛飛故事館"
@@ -857,5 +857,8 @@ html {
   position: relative;
   border-top: 1px solid transparent;
   border-color: rgba(255, 255, 255, 0.15);
+}
+.first-manu-li{
+  border-top: 0
 }
 </style>
