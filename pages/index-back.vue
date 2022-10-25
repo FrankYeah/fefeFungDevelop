@@ -171,7 +171,7 @@
           <div class="menu-content">
             <ul class="menulist object-custom-menu">
               <NuxtLink to="/">
-                <li class="manu-li" @click="menuClose()">
+                <li class="manu-li first-manu-li" @click="menuClose()">
                   <span>首頁</span>
                 </li></NuxtLink
               >
@@ -1649,5 +1649,8 @@ html {
   position: relative;
   border-top: 1px solid transparent;
   border-color: rgba(255, 255, 255, 0.15);
+}
+.first-manu-li{
+  border-top: 0
 }
 </style>
