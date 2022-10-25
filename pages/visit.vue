@@ -67,28 +67,28 @@
                     <div class="content">
                       <h5 class="heading heading-h5 head-gray-bg">開放時間</h5>
                       <div class="desc mt--25">
-                        <p>{{ allData[1].content }}</p>
+                        <p v-html="allData[1].content"></p>
                       </div>
                     </div>
 
                     <div class="content mt--35">
                       <h5 class="heading heading-h5 head-gray-bg">館舍位置</h5>
                       <div class="desc mt--25">
-                        <p>{{ allData[2].content }}</p>
+                        <p v-html="allData[2].content"></p>
                       </div>
                     </div>
 
                     <div class="content mt--35">
                       <h5 class="heading heading-h5 head-gray-bg">{{ allData[3].title }}</h5>
                       <div class="desc mt--25">
-                        <p style="white-space: pre-line;">{{ allData[3].content }}</p>
+                        <p style="white-space: pre-line;" v-html="allData[3].content"></p>
                       </div>
                     </div>
 
                     <div class="content mt--35">
                       <h5 class="heading heading-h5 head-gray-bg">{{ allData[4].title }}</h5>
                       <div class="desc mt--25">
-                        <p style="white-space: pre-line;">{{ allData[4].content }}</p>
+                        <p style="white-space: pre-line;" v-html="allData[4].content"></p>
                       </div>
                     </div>
                   </div>

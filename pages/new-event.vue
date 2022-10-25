@@ -87,15 +87,20 @@
                     class="post-thumb blog-slick-initial poss_relative"
                     style="width: 100%; height: 143px"
                   >
-                    <a :href="item.url">
+                    <a v-if="item.url" :href="item.url">
                       <img :src="item.image" alt="最新活動" />
                     </a>
+                    <NuxtLink v-else :to="`/new-event-in?index=${index}`">
+                      <img :src="item.image" alt="最新活動" />
+                    </NuxtLink>
                   </div>
 
                   <div class="post-content">
                     <div class="post-inner">
                       <h5 class="heading heading-h5">
-                        <a :href="item.link">{{ item.title }}</a>
+                        <a v-if="item.url" :href="item.url">{{ item.title }}</a>
+                        <NuxtLink v-else :to="`/new-event-in?index=${index}`">
+                        {{ item.title }}</NuxtLink>
                       </h5>
                       <div class="post-meta">
                         <div class="post-date">{{ item.remark }}</div>

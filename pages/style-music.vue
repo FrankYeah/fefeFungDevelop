@@ -170,7 +170,7 @@
                       <h5 class="heading heading-h5">
                         <!-- <span v-if="item.toptitle"
                           >{{ item.toptitle }}<br /></span -->
-                        ><span></span>{{ item.title }}
+                        <span></span>{{ item.title }}
                       </h5>
                     </div>
                   </div>

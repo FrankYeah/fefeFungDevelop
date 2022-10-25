@@ -55,55 +55,9 @@
                 <div class="container">
                     <div class="row">
                         <!-- Start Single Blog -->
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt--30"
-                          v-for="(item, index) in exhibitionContent"
-                          :key="index"
-                        >
-                            <div class="blog-grid">
-                                <div class="post-thumb blog-slick-initial poss_relative" style="width: 100%;">
-                                    <a :href="item.url">
-                                        <img :src="item.image" alt="過去展覽">
-                                    </a>
-                                </div>
-
-                                <div class="post-content">
-                                    <div class="post-inner">
-                                        <h5 v-if="item.url" class="heading heading-h5"><a :href="item.url">{{ item.title }}</a></h5>
-                                        <h5 v-else class="heading heading-h5">
-                                          <NuxtLink :to="`/exhibition-past-inner?index=${index}`"
-                                          >{{ item.title }}</NuxtLink>
-                                        </h5>
-                                        <div style="display:flex;" class="post-meta">
-                                            <div class="post-date">
-                                              <a v-if="item.url" :href="item.url">{{ item.remark }}</a>
-                                              <NuxtLink v-else
-                                                :to="`/exhibition-past-inner?index=${index}`"
-                                                :href="item.url"
-                                              >{{ item.remark }}</NuxtLink>
-                                            </div>
-                                            <!-- <div class="post-category"></div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div v-html="exhibitionContent[this.queryIndex].content"></div>
                         <!-- End Single Blog -->
-
-
-
                     </div>
-
-                    <!-- <div class="row">
-                        <div class="col-lg-12">
-                            <div class="brook-pagination-wrapper text-center pt--80">
-                                <ul class="brook-pagination">
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <!-- End Blog Grid Area -->
@@ -130,6 +84,7 @@ export default {
   },
   data () {
     return {
+      queryIndex: 0,
       exhibitionContent: [
         {
           auth: null,
@@ -151,6 +106,7 @@ export default {
     myMain()
     myRevoulation()
     this.getData()
+    console.log(this.queryIndex)
   },
   destroyed () {
 
@@ -163,6 +119,7 @@ export default {
       this.$axios.get(`/api/func/content/module/A07`)
         .then( res => {
           this.exhibitionContent = res.data.data
+          this.queryIndex = this.$route.query.index
           console.log(this.exhibitionContent)
         })
         .catch(res => {

@@ -147,7 +147,7 @@
 
         <div class="copyright-alert">
           <p>
-            本網站所使用之素材，部分經所有權人授權使用，仍有一部份為網路素材，若您為所有權人請您與我們聯絡。<a
+            {{ allData[20].remark }}<a
               id="CRclose"
               class="bk-btn yellow-btn"
               href="#"
@@ -579,7 +579,7 @@
                   <!-- Team Info -->
                   <div class="info">
                     <h6 class="name">{{ item.title }}</h6>
-                    <span class="position">{{ item.content }}</span>
+                    <span class="position" v-html="item.content"></span>
                   </div>
                 </div>
               </div>

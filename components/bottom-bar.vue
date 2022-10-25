@@ -12,8 +12,8 @@
                       <h2 class="widgettitle">{{ allData[1].title }}</h2>
                       <div class="footer-address">
                           <div class="bk-hover">
-                              <p>{{ allData[1].content }}</p>
-                              <p>{{ allData[2].content }}</p>
+                              <p v-html="allData[1].content"></p>
+                              <p v-html="allData[2].content"></p>
                           </div>
                       </div>
                   </div>
@@ -21,7 +21,7 @@
                       <h2 class="widgettitle">{{ allData[4].title }}</h2>
                       <div class="footer-address">
                           <div class="bk-hover">
-                              <p style="white-space: pre-line;">{{ allData[4].content }}</p>
+                              <p style="white-space: pre-line;" v-html="allData[4].content"></p>
 
                           </div>
                       </div>
@@ -33,7 +33,7 @@
                       <h2 class="widgettitle">{{ allData[3].title }}</h2>
                       <div class="footer-address">
                           <div class="bk-hover">
-                              <p style="white-space: pre-line;">{{ allData[3].content }}</p>
+                              <p style="white-space: pre-line;" v-html="allData[3].content"></p>
                           </div>
 
 
