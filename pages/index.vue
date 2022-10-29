@@ -146,8 +146,9 @@
         </div>
 
         <div class="copyright-alert">
-          <p>
-            {{ allData[20].remark }}<a
+          <p v-if="allData.filter(data => data.category == 'warn')">
+            {{ (allData.filter(data => data.category == 'warn'))[0].remark }}
+            <a
               id="CRclose"
               class="bk-btn yellow-btn"
               href="#"
@@ -293,10 +294,10 @@
                     <div class="head-img">
                       <img src="/img/CD-icon2.svg" alt="" />
                     </div>
-                    <h3>{{ allData[4].title }}</h3>
+                    <h3>{{ (allData.filter(data => data.category == 'block_1_title'))[0].title }}</h3>
                   </div>
 
-                  <h2 v-html="allData[4].content">}</h2>
+                  <h2 v-html="(allData.filter(data => data.category == 'block_1_title'))[0].content">}</h2>
                 </div>
               </div>
             </div>
@@ -357,11 +358,11 @@
                       <div class="head-img">
                         <img src="/img/CD-icon4.svg" alt="" />
                       </div>
-                      <h3 style="color: #ffe793">{{ allData[8].title }}</h3>
+                      <h3 style="color: #ffe793">{{ (allData.filter(data => data.category == 'block_2_title'))[0].title }}</h3>
                     </div>
 
                     <h2 class="ml_sm--15 mr_sm--15" style="color: #fff">
-                      <div style="white-space: pre-line;" v-html="allData[8].content"></div>
+                      <div style="white-space: pre-line;" v-html="(allData.filter(data => data.category == 'block_2_title'))[0].content"></div>
                     </h2>
                   </div>
                 </div>
@@ -386,7 +387,7 @@
               <div class="col-lg-6">
                 <div class="portfolio portfolio_style--1 ">
                   <div class="thumb">
-                    <img :src="allData[9].image" alt="鳳飛飛故事館" />
+                    <img :src="(allData.filter(data => data.category == 'block_2_img_1'))[0].image" alt="鳳飛飛故事館" />
                   </div>
                 </div>
               </div>
@@ -407,7 +408,7 @@
                   <img
                     class="col-lg-12 wow animate__fadeInUp "
                     data-wow-iteration="1"
-                    :src="allData[10].image"
+                    :src="(allData.filter(data => data.category == 'block_2_img_2'))[0].image"
                     alt="鳳飛飛故事館"
                   />
                   <div
@@ -417,7 +418,7 @@
                     <!-- Start Single Portfolio -->
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
-                        <img :src="allData[11].image" alt="鳳飛飛故事館" />
+                        <img :src="(allData.filter(data => data.category == 'block_2_img_3'))[0].image" alt="鳳飛飛故事館" />
                       </div>
                     </div>
                     <!-- End Single Portfolio -->
@@ -429,7 +430,7 @@
                   >
                     <div class="portfolio portfolio_style--1">
                       <div class="thumb">
-                        <img :src="allData[12].image" alt="鳳飛飛故事館" />
+                        <img :src="(allData.filter(data => data.category == 'block_2_img_4'))[0].image" alt="鳳飛飛故事館" />
                       </div>
                     </div>
                   </div>
@@ -449,9 +450,9 @@
                   class="section-title wow animate__fadeInUp"
                   data-wow-iteration="1"
                 >
-                  <h3 style="white-space: pre-line;" class="theme-color">{{ allData[13].title }}</h3>
+                  <h3 style="white-space: pre-line;" class="theme-color">{{ (allData.filter(data => data.category == 'block_2_1'))[0].title }}</h3>
                   <!-- <h3 class="theme-color">一個傳奇 一個希望</h3> -->
-                  <h2 style="white-space: pre-line;" v-html="allData[13].content">
+                  <h2 style="white-space: pre-line;" v-html="(allData.filter(data => data.category == 'block_2_1'))[0].content">
 
                   </h2>
                   <NuxtLink to="style-list"
@@ -481,7 +482,7 @@
                     }}</span>
                     <div class="content">
                       <h6>張專輯以上</h6>
-                      <p style="white-space: pre-line;" v-html="allData[14].content">
+                      <p style="white-space: pre-line;" v-html="(allData.filter(data => data.category == 'block_2_2'))[0].content">
 
                       </p>
                     </div>
@@ -496,7 +497,7 @@
                     <span style="color: #6001d2">{{ count2 }}</span>
                     <div class="content">
                       <h6>座獎項以上</h6>
-                      <p style="white-space: pre-line;" v-html="allData[15].content">
+                      <p style="white-space: pre-line;" v-html="(allData.filter(data => data.category == 'block_2_3'))[0].content">
                       </p>
                     </div>
                   </div>
@@ -526,7 +527,7 @@
                     <div class="head-img" style="margin-right: 5px">
                       <img src="/img/CD-icon2.svg" alt="" />
                     </div>
-                    <h3 class="theme-color">{{ allData[16].title }}</h3>
+                    <h3 class="theme-color">{{ (allData.filter(data => data.category == 'block_3_title'))[0].title }}</h3>
                   </div>
                   <div class="heading-right">
                     <NuxtLink to="journey"
@@ -669,11 +670,35 @@ export default {
   },
   created() {
     for(let i = 0; i < 30; i++) {
+      let tempCategory = null
+      if(i == 0) {
+        tempCategory = 'warn'
+      } else if (i == 1) {
+        tempCategory = 'block_2_img_1'
+      } else if (i == 2) {
+        tempCategory = 'block_2_img_2'
+      } else if (i == 3) {
+        tempCategory = 'block_2_img_3'
+      } else if (i == 4) {
+        tempCategory = 'block_2_img_4'
+      } else if (i == 5) {
+        tempCategory = 'block_1_title'
+      } else if (i == 6) {
+        tempCategory = 'block_2_title'
+      } else if (i == 7) {
+        tempCategory = 'block_2_1'
+      } else if (i == 8) {
+        tempCategory = 'block_2_2'
+      } else if (i == 9) {
+        tempCategory = 'block_2_3'
+      } else if (i == 10) {
+        tempCategory = 'block_3_title'
+      }
       this.allData.push({
         auth: null,
-        category: null,
+        category: tempCategory,
         content: null,
-        image: null,
+        image: '',
         indexR: null,
         module: null,
         postDate: null,

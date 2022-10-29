@@ -161,7 +161,7 @@ export default {
   methods: {
     getData() {
       this.isLoading = true
-      this.$axios.get(`/api/func/content/module/A03`)
+      this.$axios.get(`/api/func/content/module/A05`)
         .then( res => {
           this.isLoading = false
           this.allData = res.data.data
