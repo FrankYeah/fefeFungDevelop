@@ -139,7 +139,7 @@ export default {
         image: null,
         indexR: null,
         module: null,
-        postDate: null,
+        postDate: '1111111111111111',
         remark: null,
         states: null,
         title: null,
