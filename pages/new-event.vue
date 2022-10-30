@@ -103,7 +103,7 @@
                         {{ item.title }}</NuxtLink>
                       </h5>
                       <div class="post-meta">
-                        <div class="post-date">{{ item.remark }}</div>
+                        <div class="post-date">{{ item.postDate.substr(0, 11) }}</div>
                       </div>
                     </div>
                   </div>
