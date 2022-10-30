@@ -61,22 +61,24 @@
                         >
                             <div class="blog-grid">
                                 <div class="post-thumb blog-slick-initial poss_relative" style="width: 100%;">
-                                    <a :href="item.url">
+                                    <!-- <a :href="item.url"> -->
+                                      <NuxtLink :to="`/exhibition-past-inner?index=${index}`">
                                         <img :src="item.image" alt="過去展覽">
-                                    </a>
+                                      </NuxtLink>
+                                    <!-- </a> -->
                                 </div>
 
                                 <div class="post-content">
                                     <div class="post-inner">
-                                        <h5 v-if="item.url" class="heading heading-h5"><a :href="item.url">{{ item.title }}</a></h5>
-                                        <h5 v-else class="heading heading-h5">
+                                        <!-- <h5 v-if="item.url" class="heading heading-h5"><a :href="item.url">{{ item.title }}</a></h5> -->
+                                        <h5 class="heading heading-h5">
                                           <NuxtLink :to="`/exhibition-past-inner?index=${index}`"
                                           >{{ item.title }}</NuxtLink>
                                         </h5>
                                         <div style="display:flex;" class="post-meta">
                                             <div class="post-date">
-                                              <a v-if="item.url" :href="item.url">{{ item.remark }}</a>
-                                              <NuxtLink v-else
+                                              <!-- <a v-if="item.url" :href="item.url">{{ item.remark }}</a> -->
+                                              <NuxtLink
                                                 :to="`/exhibition-past-inner?index=${index}`"
                                                 :href="item.url"
                                               >{{ item.remark }}</NuxtLink>
