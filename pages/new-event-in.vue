@@ -53,7 +53,11 @@
             <!-- Start Blog Grid Area -->
             <div id="pastEvent" class="bk-blog-grid-area pt--70 pb--100 pt_md--80 pb_md--80 pb_sm--80 pt_sm--0 bg_color--5">
                 <div class="container">
-                    <div class="row">
+                    <h1 style="font-size: 30px; color: black; margin-bottom: 8px;">{{ eventContent[this.queryIndex].title }}</h1>
+                    <h1 style="font-size: 18px; color: black; ">{{ eventContent[this.queryIndex].postDate.substr(0, 11) }}</h1>
+                    <br>
+                    <div>
+
                         <!-- Start Single Blog -->
                         <div v-html="eventContent[this.queryIndex].content"></div>
                         <!-- End Single Blog -->
@@ -93,7 +97,7 @@ export default {
           image: null,
           indexR: null,
           module: null,
-          postDate: null,
+          postDate: '1111111111111111',
           remark: null,
           states: null,
           title: null,
