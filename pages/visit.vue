@@ -57,7 +57,7 @@
               class="thumbnail mb--60 sm_d-none thumbnail-click"
               style="cursor: pointer"
             >
-              <img class="w-100" :src="allData[0].image" alt="參觀資訊" />
+              <img class="w-100" :src="(allData.filter(data => data.category == 'visit_img'))[0].image" alt="參觀資訊" />
             </div>
             <div class="row">
               <!-- Start Single Career -->
@@ -67,28 +67,28 @@
                     <div class="content">
                       <h5 class="heading heading-h5 head-gray-bg">開放時間</h5>
                       <div class="desc mt--25">
-                        <p v-html="allData[1].content"></p>
+                        <p v-html="(allData.filter(data => data.category == 'visit_open'))[0].content"></p>
                       </div>
                     </div>
 
                     <div class="content mt--35">
                       <h5 class="heading heading-h5 head-gray-bg">館舍位置</h5>
                       <div class="desc mt--25">
-                        <p v-html="allData[2].content"></p>
+                        <p v-html="(allData.filter(data => data.category == 'visit_position'))[0].content"></p>
                       </div>
                     </div>
 
                     <div class="content mt--35">
-                      <h5 class="heading heading-h5 head-gray-bg">{{ allData[3].title }}</h5>
+                      <h5 class="heading heading-h5 head-gray-bg">{{ (allData.filter(data => data.category == 'visit_rest'))[0].title }}</h5>
                       <div class="desc mt--25">
-                        <p style="white-space: pre-line;" v-html="allData[3].content"></p>
+                        <p style="white-space: pre-line;" v-html="(allData.filter(data => data.category == 'visit_rest'))[0].content"></p>
                       </div>
                     </div>
 
                     <div class="content mt--35">
-                      <h5 class="heading heading-h5 head-gray-bg">{{ allData[4].title }}</h5>
+                      <h5 class="heading heading-h5 head-gray-bg">{{ (allData.filter(data => data.category == 'visit_contact'))[0].title }}</h5>
                       <div class="desc mt--25">
-                        <p style="white-space: pre-line;" v-html="allData[4].content"></p>
+                        <p style="white-space: pre-line;" v-html="(allData.filter(data => data.category == 'visit_contact'))[0].content"></p>
                       </div>
                     </div>
                   </div>
@@ -135,9 +135,22 @@ export default {
   },
   created() {
     for(let i = 0; i < 30; i++) {
+      let tempCategory = null
+      if(i == 0) {
+        tempCategory = 'visit_open'
+      } else if (i == 1) {
+        tempCategory = 'visit_img'
+      } else if (i == 2) {
+        tempCategory = 'visit_position'
+      } else if (i == 3) {
+        tempCategory = 'visit_contact'
+      } else if (i == 4) {
+        tempCategory = 'visit_rest'
+      }
+
       this.allData.push({
         auth: null,
-        category: null,
+        category: tempCategory,
         content: null,
         image: null,
         indexR: null,

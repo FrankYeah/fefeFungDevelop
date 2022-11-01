@@ -9,19 +9,19 @@
 
               <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
                   <div class="footer-widget text-var--2 menu--contact">
-                      <h2 class="widgettitle">{{ allData[1].title }}</h2>
+                      <h2 class="widgettitle">{{ (allData.filter(data => data.category == 'footer_open'))[0].title }}</h2>
                       <div class="footer-address">
                           <div class="bk-hover">
-                              <p v-html="allData[1].content"></p>
-                              <p v-html="allData[2].content"></p>
+                              <p v-html="(allData.filter(data => data.category == 'footer_open'))[0].content"></p>
+                              <p v-html="(allData.filter(data => data.category == 'footer_position'))[0].content"></p>
                           </div>
                       </div>
                   </div>
                   <div class="footer-widget text-var--2 menu--contact">
-                      <h2 class="widgettitle">{{ allData[4].title }}</h2>
+                      <h2 class="widgettitle">{{ (allData.filter(data => data.category == 'footer_contact'))[0].title }}</h2>
                       <div class="footer-address">
                           <div class="bk-hover">
-                              <p style="white-space: pre-line;" v-html="allData[4].content"></p>
+                              <p style="white-space: pre-line;" v-html="(allData.filter(data => data.category == 'footer_contact'))[0].content"></p>
 
                           </div>
                       </div>
@@ -30,10 +30,10 @@
 
               <div class="col-lg-5 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
                   <div class="footer-widget text-var--2 menu--contact">
-                      <h2 class="widgettitle">{{ allData[3].title }}</h2>
+                      <h2 class="widgettitle">{{ (allData.filter(data => data.category == 'footer_rest'))[0].title }}</h2>
                       <div class="footer-address">
                           <div class="bk-hover">
-                              <p style="white-space: pre-line;" v-html="allData[3].content"></p>
+                              <p style="white-space: pre-line;" v-html="(allData.filter(data => data.category == 'footer_rest'))[0].content"></p>
                           </div>
 
 
@@ -104,9 +104,22 @@ export default {
   },
   created() {
     for(let i = 0; i < 30; i++) {
+      let tempCategory = null
+      if(i == 0) {
+        tempCategory = 'footer_open'
+      } else if (i == 1) {
+        tempCategory = 'footer_img'
+      } else if (i == 2) {
+        tempCategory = 'footer_position'
+      } else if (i == 3) {
+        tempCategory = 'footer_contact'
+      } else if (i == 4) {
+        tempCategory = 'footer_rest'
+      }
+
       this.allData.push({
         auth: null,
-        category: null,
+        category: tempCategory,
         content: null,
         image: null,
         indexR: null,
