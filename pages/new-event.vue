@@ -82,7 +82,7 @@
                 v-for="(item, index) in eventContent"
                 :key="index"
               >
-                <div class="blog-grid">
+                <div v-if="isShow" class="blog-grid">
                   <div
                     class="post-thumb blog-slick-initial poss_relative"
                     style="width: 100%; height: 143px"
@@ -132,6 +132,7 @@ export default {
   props: {},
   data() {
     return {
+      isShow: false,
       eventContent: [{
         auth: null,
         category: null,
@@ -166,6 +167,7 @@ export default {
       this.$axios.get(`/api/func/content/module/A04`)
         .then( res => {
           this.eventContent = res.data.data
+          this.isShow = true
           console.log(this.eventContent)
 
         })

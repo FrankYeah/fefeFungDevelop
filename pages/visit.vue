@@ -40,7 +40,7 @@
                     <li class="current">參觀資訊</li>
                   </ul>
                 </div>
-                <h1 class="mt--20">參觀資訊</h1>
+                <h1 class="mt--20" style="text-align: center;" v-html="(allData.filter(data => data.category == 'visit_title'))[0].content"></h1>
               </div>
             </div>
           </div>
@@ -146,6 +146,8 @@ export default {
         tempCategory = 'visit_contact'
       } else if (i == 4) {
         tempCategory = 'visit_rest'
+      } else if (i == 5) {
+        tempCategory = 'visit_title'
       }
 
       this.allData.push({

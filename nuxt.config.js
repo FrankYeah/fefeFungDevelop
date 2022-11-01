@@ -19,19 +19,19 @@ export default {
   // },
   head: {
     titleTemplate: '%s',
-    title: '鳳飛飛',
+    title: '鳳飛飛故事館',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'og:title'  , property: 'og:title'  , content: '鳳飛飛'},
+      { hid: 'og:title'  , property: 'og:title'  , content: '鳳飛飛故事館'},
       { hid: 'og:image' , property: 'og:image' , content: 'icon.png'},
       { hid: 'og:type' , property: 'og:type' , content: 'website'},
       // { hid: 'og:url' , property: 'og:url' , content: ''},
-      { hid: 'description', name: 'description', content: '鳳飛飛' },
-      { hid: 'og:description' , property: 'og:description' , content: '鳳飛飛'},
+      { hid: 'description', name: 'description', content: '鳳飛飛故事館' },
+      { hid: 'og:description' , property: 'og:description' , content: '鳳飛飛故事館'},
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

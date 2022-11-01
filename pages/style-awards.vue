@@ -127,10 +127,10 @@
                       style="background-image: url(img/record-1.jpg)"
                     ></div>
                     <div class="post-content">
-                      <h5 class="heading">{{ item.title }}</h5>
+                      <h5 class="heading" style="color: black;">{{ item.title }}</h5>
                       <div class="post-meta">
                         <div class="post-date" v-html="item.remark"></div>
-                        <div class="post-category" v-html="item.content"></div>
+                        <div class="post-category" style="color: black;" v-html="item.content"></div>
                       </div>
                     </div>
                   </div>

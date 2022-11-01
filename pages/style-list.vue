@@ -65,7 +65,7 @@
                                     <div class="grid-overlay" style="background-image: url(img/history-1.jpg)">
                                     </div>
                                     <div class="post-content">
-                                        <h5 style="display: flex;" class="heading">
+                                        <h5 style="display: flex; color: black;" class="heading">
                                           《<div v-html="item.content"></div>》
                                           <div v-html="item.title"></div>
                                         </h5>

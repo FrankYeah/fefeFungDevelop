@@ -62,7 +62,7 @@
                           class="col-lg-8 mx-auto">
                             <div class="single-audio-player mb--20">
                                 <div class="audio-title">
-                                    <h4 class="title">{{ item.title }}</h4>
+                                    <h4 class="title" v-html="item.content"></h4>
                                 </div>
                                 <audio :id="`player-${index + 1}`" controls>
                                     <source :src="item.image" type="" />
@@ -90,7 +90,7 @@
                           class="col-lg-8 mx-auto mb--60"
                         >
                             <div class="audio-title">
-                                <h4 class="title">{{ item.title }}</h4>
+                                <h4 class="title" v-html="item.content"></h4>
                                 <!-- <p class="sub-title">1971年 ｜ 黃金夜總會</p> -->
                             </div>
                             <div class="single-youtube-player mb--20">

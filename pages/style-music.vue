@@ -70,14 +70,14 @@
         >
           <div class="container">
             <div class="portfolio-main-info">
-              <h3 class="heading heading-h3 line-height-1-42 p-purple">
+              <h3 class="heading heading-h3 line-height-1-42 p-purple" style="margin-bottom: 20px;">
                 <span class="head-inner-big">賞</span>鳳飛飛的歌，<span
                   class="head-inner-big"
                   >聽</span
                 >鳳飛飛的歌，<span class="head-inner-big">想</span>鳳飛飛的故事
               </h3>
-              <p class="bk_pra mb--20" style="white-space: pre-line">
-                鳳飛飛的77張專輯及1張林茜時期的合輯的封面，並分享鳳迷與鳳飛飛之間的故事，為了鳳飛飛溫暖歌聲環繞，選擇六首具代表性的金曲，透過AR互動讓參觀者可親身體驗並聆聽，實際傳頌鳳飛飛故事館的存在真義。
+              <p class="bk_pra mb--20" v-html="headerText.content">
+
               </p>
             </div>
           </div>
@@ -164,14 +164,14 @@
                   <div class="post-content text-center">
                     <div class="post-inner">
                       <div class="post-m3eta">
-                        <div class="post-date">發行時間</div>
+                        <!-- <div class="post-date">發行時間</div> -->
                         <div class="post-category" v-html="item.content"></div>
                       </div>
-                      <h5 class="heading heading-h5">
+                      <!-- <h5 class="heading heading-h5"> -->
                         <!-- <span v-if="item.toptitle"
                           >{{ item.toptitle }}<br /></span -->
-                        <span></span>{{ item.title }}
-                      </h5>
+                        <!-- <span></span>{{ item.title }} -->
+                      <!-- </h5> -->
                     </div>
                   </div>
                 </div>
@@ -205,7 +205,11 @@ export default {
       musicContent: [],
       filterTable: [],
       showList: true,
-      currentBtn:""
+      currentBtn:"",
+      headerText: {
+        title: '',
+        content: ''
+      }
     };
   },
   mounted() {
@@ -220,6 +224,15 @@ export default {
       this.$axios.get(`/api/func/content/module/A081`)
         .then( res => {
           this.musicContent = res.data.data
+          this.headerText = {
+            title : (this.musicContent.filter(data => data.category == 'music_title'))[0].content,
+            content: (this.musicContent.filter(data => data.category == 'music_title'))[0].content
+          }
+          for(let i = 0; i < this.musicContent.length; i++) {
+            if(this.musicContent[i].category == 'music_title') {
+              this.musicContent.splice(i, 1)
+            }
+          }
           this.filterTable = res.data.data
           console.log(this.musicContent)
           this.$nextTick(() => {
