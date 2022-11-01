@@ -80,7 +80,7 @@
               >
                 <!-- Start Portfolio Image -->
                 <div class="portfolio-image">
-                  <img :src="item[0].image" alt="" style="width:100%" />
+                  <img :src="item.image" alt="" style="width:100%" />
                 </div>
                 <!-- End Portfolio Image -->
               </div>
@@ -102,16 +102,22 @@
               >
                 <div class="portfolio-main-info">
                   <h3 class="heading heading-h3 line-height-1-42 p-purple">
-                    {{ item[0].title }}
+                    {{ item.title }}
                   </h3>
-                  <p class="bk_pra mb--20 mt--20" v-html="item[0].content">
+                  <p class="bk_pra mb--20 mt--20" v-html="item.content">
                   </p>
-                  <h4 class="heading line-height-1-95">{{ item[1].title }}</h4>
-                  <p class="bk_pra mb--20"  v-html="item[1].content">
+                  <!-- {{ item[1].title }} -->
+                  <h4 class="heading line-height-1-95">操作方式</h4>
+                  <p class="bk_pra mb--20"  v-html="item.remark">
                   </p>
                   <div class="dp-flex">
-                    <div class="qrcode-img mr--15">
-                      <img  :src="item[1].image" alt="" />
+                    <div class="qrcode-img mr--15" v-if="item.url">
+                      <!-- <img  :src="item.image" alt="" /> -->
+                        <vue-qrcode
+                          style="width: 100px; height: 100px;"
+                          :value="item.url"
+                          :options="qrcodeSet"
+                        />
                     </div>
                     <!--  <a class="bk-btn black-btn mt--40 mt_sm--20" href="#">前往路線</a>  -->
                   </div>
@@ -131,16 +137,24 @@
 // import $ from 'jquery'
 import myMain from "@/static/js/main.js";
 import myRevoulation from "@/static/js/revoulation.js";
+import VueQrcode from '@chenfengyuan/vue-qrcode';
 
 export default {
   auth: false,
   layout: "default",
-  components: {},
+  components: {
+    VueQrcode: VueQrcode
+  },
   props: {},
   data() {
     return {
-      journeyContent: [
-      ]
+      journeyContent: [],
+      qrcodeSet: {
+        with: 100,
+        height: 90,
+        quality: 0.3,
+        marign: 1
+      }
     };
   },
   mounted() {
@@ -155,13 +169,13 @@ export default {
       this.$axios.get(`/api/func/content/module/A09`)
         .then( res => {
           this.journeyContent = res.data.data
-          let temp = []
-          for(let i = 0; i < (this.journeyContent.length / 2); i++) {
-            temp.push([
-              this.journeyContent[i * 2], this.journeyContent[(i * 2) + 1]
-            ])
-          }
-          this.journeyContent = temp
+          // let temp = []
+          // for(let i = 0; i < (this.journeyContent.length / 2); i++) {
+          //   temp.push([
+          //     this.journeyContent[i * 2], this.journeyContent[(i * 2) + 1]
+          //   ])
+          // }
+          // this.journeyContent = temp
           console.log(this.journeyContent)
         })
         .catch(res => {
