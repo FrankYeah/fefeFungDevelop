@@ -53,8 +53,7 @@
             <!-- Start Audio Player Area -->
             <div class="brook-player-area bg_color--1 pb--80 pt--80 pt_md--40 pt_sm--40  pb_md--40 pb_sm--40">
                 <div class="container">
-                    <h3 class="col-lg-8 mx-auto sm_center">飛飛之聲</h3>
-                    <p class="col-lg-8 mx-auto sub-title">音檔出處由鳳友提供，若想聽鳳飛飛故事完整版，歡迎前往鳳飛飛故事館聆聽</p>
+                    <p class="col-lg-8 mx-auto sub-title" v-html="(allData.filter(data => data.category == 'audio_title'))[0].content"></p>
                     <div class="row">
                         <!-- Single Audio Player Start -->
                         <div v-for="(item, index) in allData.filter(data => data.category == 'audio_voice')"
@@ -81,7 +80,7 @@
               class="brook-player-area bg_color--1 pb--80 pt--40 pt_md--40 pt_sm--40  pb_md--40 pb_sm--40"
             >
                 <div class="container">
-                    <h3 class="col-lg-8 mx-auto sm_center">飛飛之影</h3>
+                    <h3 class="col-lg-8 mx-auto sm_center" v-html="(allData.filter(data => data.category == 'video_title'))[0].content"></h3>
                     <!-- <p class="col-lg-8 mx-auto sub-title">影片出處由OOOO提供，若想聽鳳飛飛故事完整版，歡迎前往鳳飛飛故事館聆聽</p> -->
                     <div class="mt--40 mt_sm--20 mt_md--30">
                         <!-- Single Youtube Player Start -->
@@ -138,7 +137,32 @@ export default {
     }
   },
   created() {
+    for(let i = 0; i < 30; i++) {
+      let tempCategory = null
+      if(i == 0) {
+        tempCategory = 'video_title'
+      } else if (i == 1) {
+        tempCategory = 'video_voice'
+      } else if (i == 2) {
+        tempCategory = 'audio_title'
+      } else if (i == 3) {
+        tempCategory = 'audio_voice'
+      }
 
+      this.allData.push({
+        auth: null,
+        category: tempCategory,
+        content: null,
+        image: null,
+        indexR: null,
+        module: null,
+        postDate: null,
+        remark: null,
+        states: null,
+        title: null,
+        url: null
+      })
+    }
   },
   async mounted () {
     await this.getData()

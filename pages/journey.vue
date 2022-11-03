@@ -101,15 +101,15 @@
                 "
               >
                 <div class="portfolio-main-info">
-                  <h3 class="heading heading-h3 line-height-1-42 p-purple">
+                  <!-- <h3 class="heading heading-h3 line-height-1-42 p-purple">
                     {{ item.title }}
-                  </h3>
+                  </h3> -->
                   <p class="bk_pra mb--20 mt--20" v-html="item.content">
                   </p>
                   <!-- {{ item[1].title }} -->
-                  <h4 class="heading line-height-1-95">操作方式</h4>
+                  <!-- <h4 class="heading line-height-1-95">操作方式</h4>
                   <p class="bk_pra mb--20"  v-html="item.remark">
-                  </p>
+                  </p> -->
                   <div class="dp-flex">
                     <div class="qrcode-img mr--15" v-if="item.url">
                       <!-- <img  :src="item.image" alt="" /> -->
