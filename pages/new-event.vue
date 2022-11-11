@@ -84,18 +84,17 @@
               >
                 <div v-if="isShow" class="blog-grid">
                   <div
-                    class="post-thumb blog-slick-initial poss_relative"
-                    style="width: 100%; height: 143px"
+                    class="post-thumb blog-slick-initial poss_relative new-event-box"
                   >
                     <!-- <a v-if="item.url" :href="item.url">
                       <img :src="item.image" alt="最新活動" />
                     </a> -->
-                    <NuxtLink :to="`/new-event-in?index=${index}`">
-                      <img :src="item.image" alt="最新活動" />
+                    <NuxtLink class="new-event-link" :to="`/new-event-in?index=${index}`">
+                      <img class="new-event-img" :src="item.image" alt="最新活動" />
                     </NuxtLink>
                   </div>
 
-                  <div class="post-content">
+                  <div class="post-content new-event-content">
                     <div class="post-inner">
                       <h5 class="heading heading-h5">
                         <!-- <a v-if="item.url" :href="item.url">{{ item.title }}</a> -->
@@ -180,6 +179,51 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.default {
+
+.new-event {
+
+  &-box {
+    width: 210px;
+    height: 143px;
+  }
+
+  &-content {
+
+  }
+
+  &-link {
+    width: 210px;
+    height: 160px;
+  }
+
+  &-img {
+
+  }
 }
+
+@media( max-width: 575px ){
+
+.new-event {
+
+  &-box {
+    width: auto;
+    height: auto;
+  }
+
+  &-content {
+
+  }
+
+  &-link {
+    width: auto;
+    height: auto;
+  }
+
+  &-img {
+
+  }
+}
+
+}
+
 </style>

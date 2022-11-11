@@ -14,11 +14,51 @@
     </div>
     <!-- End PReloader -->
 
+
+
     <!-- Wrapper -->
     <div id="wrapper" class="wrapper">
     <headerBar></headerBar>
 
+    <!-- Start Breadcaump Area -->
       <div
+        class="
+          breadcaump-area
+          pt--170
+          pt_lg--170
+          pt_md--250
+          pt_sm--100
+          pb--40
+          pb_sm--0
+          bg_image--8
+          breadcaump-title-bar breadcaump-title-white
+        "
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="breadcaump-inner text-center">
+                <div class="newheading pb--70 pb_sm--0">
+                  <div class="newheading-img">
+                    <img src="/img/CD-icon3.svg" alt="" />
+                  </div>
+                  <h2>參觀資訊</h2>
+                </div>
+
+                <div class="breadcrumb-insite">
+                  <ul class="core-breadcaump">
+                    <li><NuxtLink to="/">首頁</NuxtLink></li>
+                    <li class="current">參觀資訊</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Breadcaump Area -->
+
+      <!-- <div
         class="
           breadcaump-area
           pt--100
@@ -45,19 +85,19 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- End Breadcaump Area -->
 
       <!-- Page Conttent -->
       <main class="page-content">
         <!-- Start Career Area -->
-        <div class="brook-career-area pb--70 pt_md--70 pt_sm--100">
+        <div class="brook-career-area pb--70 pt_md--70 pt_sm--30">
           <div class="container">
             <div
               class="thumbnail mb--60 sm_d-none thumbnail-click"
               style="cursor: pointer"
             >
-              <img class="w-100" :src="(allData.filter(data => data.category == 'visit_img'))[0].image" alt="參觀資訊" />
+              <img class="w-100" style="margin-top: 30px;" :src="(allData.filter(data => data.category == 'visit_img'))[0].image" alt="參觀資訊" />
             </div>
             <div class="row">
               <!-- Start Single Career -->
@@ -65,14 +105,14 @@
                 <div class="career mb--30">
                   <div class="inner">
                     <div class="content">
-                      <h5 class="heading heading-h5 head-gray-bg">開放時間</h5>
+                      <h5 class="heading heading-h5 head-gray-bg" v-html="(allData.filter(data => data.category == 'visit_open'))[0].title"></h5>
                       <div class="desc mt--25">
                         <p v-html="(allData.filter(data => data.category == 'visit_open'))[0].content"></p>
                       </div>
                     </div>
 
                     <div class="content mt--35">
-                      <h5 class="heading heading-h5 head-gray-bg">館舍位置</h5>
+                      <h5 class="heading heading-h5 head-gray-bg" v-html="(allData.filter(data => data.category == 'visit_position'))[0].title"></h5>
                       <div class="desc mt--25">
                         <p v-html="(allData.filter(data => data.category == 'visit_position'))[0].content"></p>
                       </div>

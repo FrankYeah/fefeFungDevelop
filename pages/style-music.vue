@@ -65,9 +65,10 @@
             ptb-md--50
             ptb-sm--30
             bg_color--1
-            sm_d-none
+
           "
         >
+        <!-- sm_d-none -->
           <div class="container">
             <div class="portfolio-main-info">
               <h3 class="heading heading-h3 line-height-1-42 p-purple" style="margin-bottom: 20px;">
@@ -92,9 +93,10 @@
             ptb-sm--40
             bg_color--1
             bk-masonary-wrapper
-            sm_d-none
+
           "
         >
+        <!-- sm_d-none -->
           <div class="messonry-button text-center mb--20">
             <button :class="['01海山唱片' == currentBtn ? 'btn-color' : '']" @click="filterItems('01海山唱片')">
               <span class="filter-text">海山唱片</span>

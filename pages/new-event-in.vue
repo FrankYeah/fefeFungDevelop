@@ -52,11 +52,11 @@
 
             <!-- Start Blog Grid Area -->
             <div id="pastEvent" class="bk-blog-grid-area pt--70 pb--100 pt_md--80 pb_md--80 pb_sm--80 pt_sm--0 bg_color--5">
-                <div class="container">
-                    <h1 style="font-size: 30px; color: black; margin-bottom: 8px;">{{ eventContent[this.queryIndex].title }}</h1>
-                    <h1 style="font-size: 18px; color: black; ">{{ eventContent[this.queryIndex].postDate.substr(0, 11) }}</h1>
+                <div  class="container">
+                    <h1 v-if="isShow" style="font-size: 30px; color: black; margin-bottom: 8px;">{{ eventContent[this.queryIndex].title }}</h1>
+                    <h1 v-if="isShow" style="font-size: 18px; color: black; ">{{ eventContent[this.queryIndex].postDate.substr(0, 11) }}</h1>
                     <br>
-                    <div>
+                    <div >
 
                         <!-- Start Single Blog -->
                         <div v-html="eventContent[this.queryIndex].content"></div>
@@ -89,6 +89,7 @@ export default {
   data () {
     return {
       queryIndex: 0,
+      isShow: false,
       eventContent: [
         {
           auth: null,
@@ -124,6 +125,7 @@ export default {
         .then( res => {
           this.eventContent = res.data.data
           this.queryIndex = this.$route.query.index
+          this.isShow = true
           console.log(this.eventContent)
         })
         .catch(res => {
