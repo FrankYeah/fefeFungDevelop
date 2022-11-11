@@ -125,7 +125,8 @@
                       pr_sm--20
                     "
                   >
-                    <div
+                    <img @click="showMenu()" class="header-menu" src="/img/menu.png" alt="">
+                    <!-- <div
                       class="
                         manu-hamber
                         popup-mobile-click
@@ -137,7 +138,7 @@
                       <div>
                         <i></i>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -159,7 +160,7 @@
       </header>
 
       <!-- Start Popup Menu -->
-      <div class="popup-mobile-manu popup-mobile-visiable">
+      <div v-if="isShowRwd" class="popup-mobile-manu">
         <div class="inner">
           <div class="mobileheader">
             <div class="logo">
@@ -167,7 +168,10 @@
                 <img src="/img/home-logo.svg" alt="Multipurpose" />
               </NuxtLink>
             </div>
-            <a class="mobile-close" href="#"></a>
+            <img @click="hideMenu()"
+              src="/img/closeMenu.png"
+            />
+            <!-- <a class="mobile-close" href="#"></a> -->
           </div>
           <div class="menu-content">
             <ul class="menulist object-custom-menu">
@@ -665,7 +669,8 @@ export default {
       count2: 40,
       isShowInfo: false,
       key: 0,
-      allData: []
+      allData: [],
+      isShowRwd: false
     };
   },
   created() {
@@ -722,6 +727,12 @@ export default {
   destroyed() {},
   computed: {},
   methods: {
+    showMenu() {
+      this.isShowRwd = true
+    },
+    hideMenu() {
+      this.isShowRwd = false
+    },
     getData() {
       this.$axios.get(`/api/func/content/module/A02`)
         .then( res => {
@@ -834,10 +845,18 @@ body,
 html {
   overflow-x: hidden;
 }
+
+.header-menu {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
 .swiper {
   width: 100%;
   height: 100vh;
 }
+
 
 .swiper-slide {
   text-align: center;

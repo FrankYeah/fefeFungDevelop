@@ -32041,8 +32041,8 @@ Header Font Family
   height: 100%;
   z-index: 9999999;
   background: rgba(0, 0, 0, 0.9);
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
   cursor: url(../img/icons/light-close.png) 16 16, pointer;
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -32061,9 +32061,9 @@ Header Font Family
   transition: all 0.3s;
   overflow-y: auto;
   padding-top: 85px;
-  -webkit-transform: translateX(-100%);
+  /* -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
+  transform: translateX(-100%); */
   cursor: default;
 }
 .popup-mobile-manu .inner .mobileheader {

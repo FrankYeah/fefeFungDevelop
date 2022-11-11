@@ -110,10 +110,11 @@
                   "
                 >
                   <!-- Start Hamberger -->
-                  <div
+                  <!-- popup-mobile-click -->
+                  <img @click="showMenu()" class="header-menu" src="/img/menu.png" alt="">
+                  <!-- <div
                     class="
                       manu-hamber
-                      popup-mobile-click
                       d-block d-lg-none
                       light-version
                       d-block d-xl-none
@@ -122,7 +123,7 @@
                     <div>
                       <i></i>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- End Hamberger -->
                 </div>
               </div>
@@ -134,7 +135,8 @@
     <!--// Header -->
 
     <!-- Start Popup Menu -->
-    <div class="popup-mobile-manu popup-mobile-visiable">
+     <!-- popup-mobile-visiable -->
+    <div v-if="isShowRwd" class="popup-mobile-manu">
       <div class="inner">
         <div class="mobileheader">
           <div class="logo">
@@ -146,7 +148,10 @@
               />
             </NuxtLink>
           </div>
-          <a class="mobile-close" href="#"></a>
+          <img @click="hideMenu()"
+            src="/img/closeMenu.png"
+          />
+          <!-- <a class="mobile-close" href="#"></a> -->
         </div>
         <div class="menu-content">
           <ul class="menulist object-custom-menu">
@@ -235,12 +240,20 @@ export default {
   components: {},
   props: {},
   data() {
-    return {};
+    return {
+      isShowRwd: false
+    };
   },
   mounted() {},
   destroyed() {},
   computed: {},
   methods: {
+    showMenu() {
+      this.isShowRwd = true
+    },
+    hideMenu() {
+      this.isShowRwd = false
+    },
     removeClass(elements, classname) {
       // elements 為空字串或空陣列
       if (!elements) {
@@ -273,6 +286,13 @@ export default {
 <style lang="scss" scoped>
 .default {
 }
+
+.header-menu {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
 .manu-li {
   padding-top: 19px;
   padding-bottom: 19px;
