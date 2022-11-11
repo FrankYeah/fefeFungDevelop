@@ -847,8 +847,10 @@ html {
 }
 
 .header-menu {
+  display: none;
   width: 24px;
   height: 24px;
+  margin-top: 8px;
   cursor: pointer;
 }
 
@@ -905,4 +907,13 @@ html {
 .first-manu-li{
   border-top: 0
 }
+
+@media (max-width: 992px) {
+
+  .header-menu {
+    display: initial;
+  }
+
+}
+
 </style>

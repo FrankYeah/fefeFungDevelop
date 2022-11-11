@@ -53,6 +53,10 @@
                       <div >
                           <img style="max-width:70%; margin: 0 auto;" src="/img/footer-icon.png" alt="">
                       </div>
+                      <div style="margin: 8px 0px 4px; color: white;">
+                        <div>日瀏覽數：{{ count.dailyCount }}</div>
+                        <div>總瀏覽數：{{ count.totalCount }}</div>
+                      </div>
                   </div>
               </div>
 
@@ -99,7 +103,11 @@ export default {
   data () {
     return {
       isLoading: false,
-      allData: []
+      allData: [],
+      count: {
+        dailyCount: 1,
+        totalCount: 5
+      }
     }
   },
   created() {
@@ -132,8 +140,9 @@ export default {
       })
     }
   },
-  mounted () {
-    this.getData()
+  async mounted () {
+    await this.getData()
+    await this.getCount()
     // myMain()
     // myRevoulation()
   },
@@ -144,9 +153,9 @@ export default {
 
   },
   methods: {
-    getData() {
+    async getData() {
       this.isLoading = true
-      this.$axios.get(`/api/func/content/module/A03`)
+      await this.$axios.get(`/api/func/content/module/A03`)
         .then( res => {
           this.isLoading = false
           this.allData = res.data.data
@@ -157,6 +166,16 @@ export default {
         .catch(res => {
           console.log(res)
           this.isLoading = false
+        })
+    },
+    async getCount() {
+      await this.$axios.get(`/api/func/count`)
+        .then( res => {
+          console.log(res.data)
+          this.count = res.data
+        })
+        .catch(res => {
+          console.log(res)
         })
     }
   }
