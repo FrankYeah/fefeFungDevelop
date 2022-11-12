@@ -20,13 +20,26 @@ export default {
   data() {
     return {
       isShowBottom: true,
+      showAll: {}
     };
   },
   mounted() {
     this.judgeBottom()
+    this.getShowAll()
     // this.$router.push('/blank')
   },
   methods: {
+    async getShowAll() {
+      await this.$axios.get(`/api/func/content/module/A99`)
+        .then( res => {
+          this.showAll = res.data.data
+          this.$store.commit('getShowAll', this.showAll)
+          console.log(this.showAll)
+        })
+        .catch(res => {
+          console.log(res)
+        })
+    },
     judgeBottom() {
       if (this.$route.name == "login" || this.$route.name == 'register' || this.$route.name == 'control') {
           this.isShowBottom = false;

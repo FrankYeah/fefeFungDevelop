@@ -32,12 +32,12 @@
                       <li class="lavel-1">
                         <NuxtLink to="/"><span>首頁</span></NuxtLink>
                       </li>
-                      <li class="lavel-1">
+                      <li v-if="(showAll.filter(data => data.category == 'newActivity'))[0].remark == '顯示'" class="lavel-1">
                         <NuxtLink to="/new-event"
                           ><span>最新活動</span></NuxtLink
                         >
                       </li>
-                      <li class="lavel-1">
+                      <li v-if="(showAll.filter(data => data.category == 'visit'))[0].remark == '顯示'" class="lavel-1">
                         <NuxtLink to="/visit"><span>參觀資訊</span></NuxtLink>
                       </li>
 
@@ -45,12 +45,12 @@
                         <a href="#"><span>展覽資訊</span></a>
                         <!-- Start Dropdown Menu -->
                         <ul class="dropdown__menu">
-                          <li>
+                          <li v-if="(showAll.filter(data => data.category == 'newEvent'))[0].remark == '顯示'">
                             <NuxtLink to="/exhibition-now"
                               ><span>本期展覽</span></NuxtLink
                             >
                           </li>
-                          <li>
+                          <li v-if="(showAll.filter(data => data.category == 'pastEvent'))[0].remark == '顯示'">
                             <NuxtLink to="/exhibition-past"
                               ><span>過去展覽</span></NuxtLink
                             >
@@ -62,22 +62,22 @@
                         <a href="#"><span>飛飛風采</span></a>
                         <!-- Start Dropdown Menu -->
                         <ul class="dropdown__menu">
-                          <li>
+                          <li v-if="(showAll.filter(data => data.category == 'styleMusic'))[0].remark == '顯示'">
                             <NuxtLink to="/style-music"
                               ><span>音樂作品</span></NuxtLink
                             >
                           </li>
-                          <li>
+                          <li v-if="(showAll.filter(data => data.category == 'styleAward'))[0].remark == '顯示'">
                             <NuxtLink to="/style-awards"
                               ><span>獎項紀錄</span></NuxtLink
                             >
                           </li>
-                          <li>
+                          <li v-if="(showAll.filter(data => data.category == 'styleVoice'))[0].remark == '顯示'">
                             <NuxtLink to="/style-voice"
                               ><span>飛飛聲影</span></NuxtLink
                             >
                           </li>
-                          <li>
+                          <li v-if="(showAll.filter(data => data.category == 'styleList'))[0].remark == '顯示'">
                             <NuxtLink to="/style-list"
                               ><span>飛飛大事記</span></NuxtLink
                             >
@@ -86,12 +86,12 @@
                         <!-- End Dropdown Menu -->
                       </li>
 
-                      <li class="lavel-1">
+                      <li v-if="(showAll.filter(data => data.category == 'journey'))[0].remark == '顯示'" class="lavel-1">
                         <NuxtLink to="/journey"><span>飛飛踩點</span></NuxtLink>
                       </li>
                       <!-- <li class="lavel-1"><a href="smalltalk.html"><span>飛飛敲敲話</span></a></li> -->
                       <!-- <li class="lavel-1"><a href="event-list.html"><span>活動記事</span></a></li> -->
-                      <li class="lavel-1">
+                      <li v-if="(showAll.filter(data => data.category == 'about'))[0].remark == '顯示'" class="lavel-1">
                         <NuxtLink to="/about"><span>關於我們</span></NuxtLink>
                       </li>
                     </ul>
@@ -161,13 +161,13 @@
               </li></NuxtLink
             >
 
-            <NuxtLink to="new-event"
+            <NuxtLink v-if="(showAll.filter(data => data.category == 'newActivity'))[0].remark == '顯示'" to="new-event"
               ><li class="manu-li" @click="menuClose()">
                 <span>最新活動</span>
               </li></NuxtLink
             >
 
-            <NuxtLink to="visit"
+            <NuxtLink v-if="(showAll.filter(data => data.category == 'visit'))[0].remark == '顯示'" to="visit"
               ><li class="manu-li" @click="menuClose()">
                 <span>參觀資訊</span>
               </li></NuxtLink
@@ -176,11 +176,11 @@
             <li class="has-mega-menu">
               <a href="#"><span>展覽資訊</span></a>
               <ul class="object-submenu">
-                <NuxtLink to="exhibition-now"
+                <NuxtLink v-if="(showAll.filter(data => data.category == 'newEvent'))[0].remark == '顯示'" to="exhibition-now"
                   ><li @click="menuClose()"><span>本期展覽</span></li></NuxtLink
                 >
 
-                <NuxtLink to="exhibition-past"
+                <NuxtLink v-if="(showAll.filter(data => data.category == 'pastEvent'))[0].remark == '顯示'" to="exhibition-past"
                   ><li @click="menuClose()"><span>過去展覽</span></li></NuxtLink
                 >
               </ul>
@@ -189,19 +189,19 @@
             <li class="has-mega-menu">
               <a href="#"><span>飛飛風采</span></a>
               <ul class="object-submenu">
-                <NuxtLink to="style-music"
+                <NuxtLink v-if="(showAll.filter(data => data.category == 'styleMusic'))[0].remark == '顯示'" to="style-music"
                   ><li @click="menuClose()"><span>音樂作品</span></li></NuxtLink
                 >
 
-                <NuxtLink to="style-awards">
+                <NuxtLink v-if="(showAll.filter(data => data.category == 'styleAward'))[0].remark == '顯示'" to="style-awards">
                   <li @click="menuClose()"><span>獎項紀錄</span></li></NuxtLink
                 >
 
-                <NuxtLink to="style-voice">
+                <NuxtLink v-if="(showAll.filter(data => data.category == 'styleVoice'))[0].remark == '顯示'" to="style-voice">
                   <li @click="menuClose()"><span>飛飛聲影</span></li></NuxtLink
                 >
 
-                <NuxtLink to="style-list">
+                <NuxtLink v-if="(showAll.filter(data => data.category == 'styleList'))[0].remark == '顯示'" to="style-list">
                   <li @click="menuClose()">
                     <span>飛飛大事記</span>
                   </li></NuxtLink
@@ -209,7 +209,7 @@
               </ul>
             </li>
 
-            <NuxtLink to="journey">
+            <NuxtLink v-if="(showAll.filter(data => data.category == 'journey'))[0].remark == '顯示'" to="journey">
               <li class="manu-li" @click="menuClose()">
                 <span>飛飛踩點</span>
               </li></NuxtLink
@@ -218,7 +218,7 @@
             <!--<li><a href="smalltalk.html"><span>飛飛敲敲話</span></a></li> -->
             <!-- <li><a href="event-list.html"><span>活動記事</span></a></li> -->
 
-            <NuxtLink to="about">
+            <NuxtLink v-if="(showAll.filter(data => data.category == 'about'))[0].remark == '顯示'" to="about">
               <li class="manu-li" @click="menuClose()">
                 <span>關於我們</span>
               </li></NuxtLink
@@ -244,9 +244,12 @@ export default {
       isShowRwd: false
     };
   },
-  mounted() {},
+  mounted() {
+  },
   destroyed() {},
-  computed: {},
+  computed: {
+    showAll() { return this.$store.state.showAll },
+  },
   methods: {
     showMenu() {
       this.isShowRwd = true
