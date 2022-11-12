@@ -194,8 +194,8 @@
               >
 
               <li class="has-mega-menu">
-                <a href="#"><span>展覽資訊</span></a>
-                <ul class="object-submenu">
+                <a @click="isShowEvent = !isShowEvent" href="#"><span>展覽資訊</span></a>
+                <ul v-if="isShowEvent" class="object-submenu">
                   <NuxtLink v-if="(showAll.filter(data => data.category == 'newEvent'))[0].remark == '顯示'" to="/exhibition-now"
                     ><li @click="menuClose()">
                       <span>本期展覽</span>
@@ -211,8 +211,8 @@
               </li>
 
               <li class="has-mega-menu">
-                <a href="#"><span>飛飛風采</span></a>
-                <ul class="object-submenu">
+                <a @click="isShowProduct = !isShowProduct" href="#"><span>飛飛風采</span></a>
+                <ul v-if="isShowProduct" class="object-submenu">
                   <NuxtLink v-if="(showAll.filter(data => data.category == 'styleMusic'))[0].remark == '顯示'" to="/style-music"
                     ><li @click="menuClose()">
                       <span>音樂作品</span>
@@ -670,7 +670,9 @@ export default {
       isShowInfo: false,
       key: 0,
       allData: [],
-      isShowRwd: false
+      isShowRwd: false,
+      isShowEvent: false,
+      isShowProduct: false
     };
   },
   created() {
