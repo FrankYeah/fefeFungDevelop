@@ -1,26 +1,18 @@
-## Setup  
-
-```bash
-yarn install
-/ npm install .
-```
-
 ## 部署流程
 
 
-1. git clone https://github.com/FrankYeah/sugardaddyDevelop.git
+1. git clone https://github.com/FrankYeah/fefeFungDevelop.git
 2. git checkout develop
 3. npm i
-4. 在專案下建立 .env 檔，寫入 API_URL=http://34.81.113.186:8082/sweetNet
-5. npm run generate
-6. dist 資料夾內 build 出 html 檔案，是 entry point
+4. npm run generate
+5. dist 資料夾內 build 出 html 檔案，是 entry point
 node v16.14.0
 
 
 ## API 路徑
 
 ```
-在專案底下新增 .env 檔案，寫入：API_URL=http://34.81.113.186:8082/sweetNet
+在專案底下新增 .env 檔案，寫入：API_URL=http://34.81.110.243:8081/fongff
 ```
 
 
