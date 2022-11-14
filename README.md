@@ -2,10 +2,9 @@
 
 
 1. git clone https://github.com/FrankYeah/fefeFungDevelop.git
-2. git checkout develop
-3. npm i
-4. npm run generate
-5. dist 資料夾內 build 出 html 檔案，是 entry point
+2. npm i
+3. npm run generate
+4. dist 資料夾內 build 出 html 檔案，是 entry point
 node v16.14.0
 
 
