@@ -62,7 +62,8 @@
                               :key="index"
                             >
                                 <div class="blog-grid-minimal overlay-image-list">
-                                    <div class="grid-overlay" style="background-image: url(img/history-1.jpg)">
+                                    <!-- style="background-image: url(img/history-1.jpg)" -->
+                                    <div class="grid-overlay style-list-bg-img">
                                     </div>
                                     <div class="post-content style-awards-text">
                                         <h5 style="display: flex;" class="heading">
@@ -145,6 +146,10 @@ export default {
 
 
 <style lang="scss" scoped>
+
+.style-list-bg-img {
+  background-image: url('../assets/img/history-1.jpg');
+}
 
 .style-awards-text {
   color: black;

@@ -122,9 +122,9 @@
                   :key="index"
                 >
                   <div class="blog-grid-minimal overlay-image-list">
+                    <!-- style="background-image: url(img/record-1.jpg)" -->
                     <div
-                      class="grid-overlay"
-                      style="background-image: url(img/record-1.jpg)"
+                      class="grid-overlay style-award-bg-img"
                     ></div>
                     <div class="post-content style-awards-text">
                       <h5 class="heading">{{ item.title }}</h5>
@@ -197,6 +197,10 @@ export default {
 
 
 <style lang="scss" scoped>
+
+.style-award-bg-img {
+  background-image: url('../assets/img/record-1.jpg');
+}
 
 .style-awards-text {
   color: black;
