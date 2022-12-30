@@ -47,8 +47,8 @@
                           <img src="/img/home-logo-W.svg" alt="">
                       </div>
                       <div class="social-share social--transparent text-white mt--20 mb--20">
-                          <a href="https://www.facebook.com/DaxiTakoham"><i class="fab fa-facebook"></i></a>
-                          <a href="https://www.youtube.com/channel/UCX_5DKCU3VDqPcyQLyhT2Hg"><i class="fab fa-youtube"></i></a>
+                          <!-- <a href="https://www.facebook.com/DaxiTakoham"><i class="fab fa-facebook"></i></a>
+                          <a href="https://www.youtube.com/channel/UCX_5DKCU3VDqPcyQLyhT2Hg"><i class="fab fa-youtube"></i></a> -->
                       </div>
                       <div >
                           <img style="max-width:70%; margin: 0 auto;" src="/img/footer-icon.png" alt="">
