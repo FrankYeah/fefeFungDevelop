@@ -145,7 +145,7 @@
       <div id="PopImg" class="thumbnail mb--60 sm_d-none">
         <div class="overlay"></div>
         <div class="thumbnail-img">
-          <img class="w-100" src="/img/map-new.png" alt="參觀資訊" />
+          <img class="w-100" :src="(allData.filter(data => data.category == 'visit_img'))[0].image" alt="參觀資訊" />
         </div>
         <div class="close-img">×</div>
       </div>
